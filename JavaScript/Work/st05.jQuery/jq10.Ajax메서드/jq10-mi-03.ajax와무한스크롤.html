@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Infinity Scroll</title>
+
+<style>
+	#message3 {
+		background-color: red;
+		width: 100px;
+		height: 100px;
+	}
+	div {
+		background-color: red;
+		width: 100px;
+		height: 1000px;
+	}
+</style>
+
+<script src='../jquery-3.1.0.js'></script>
+
+    <script>
+    var a = 0;
+    var appendText = {};
+    $(document).ready(function(){
+        	$(document).scroll(function(e){
+        		if($(window).scrollTop() == $(document).height() - $(window).height()){
+
+        		    var b = {};
+                    $.ajax({
+                        url : 'http://localhost:3000/board',
+                        data: { data1:'test1', data2:'test2' }, // 사용하는 경우에는 { data1:'test1', data2:'test2' }
+                        type: 'get', // get, post
+                        timeout: 30000, // 30초
+                        dataType: 'json', // text, html, xml, json, jsonp, script
+                        beforeSend : function() {
+                            $('#message1').after("<img src='loading.gif'/>");
+                        }
+
+                    }).done( function(data, textStatus, xhr ){
+                        $('#message1').next().remove();
+
+                        appendText = '<tr><td>id</td><td>name</td><td>price</td></tr>';
+                        for(var i=0; i< data.length; i=i+1){
+                            appendText = appendText + '<tr>';
+                            appendText = appendText + '<td>'+ data[i].id + '</td>';
+                            appendText = appendText + '<td>'+ data[i].name + '</td>';
+                            appendText = appendText + '<td>'+ data[i].price + '</td>';
+                            appendText = appendText + '</tr>';
+                        }
+
+
+                    }).fail( function(xhr, textStatus, error ) {
+                        consol.log('error');
+
+                    }).always( function(data, textStatus, xhr ) {
+
+                    });
+
+
+                    $('body').append('<p>' + a++ + appendText+ ' 무한 스크롤 추가!!! </p> ');
+                };
+        });
+    });
+
+    </script>
+
+</head>
+<body>
+
+    <span id="message3">
+        <table id="treeData"></table>
+    </span>
+<div></div>
+
+</body>
+</html>
+
+

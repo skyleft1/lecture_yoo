@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    
+</head>
+<body>
+<script>
+    var arr = ['포도', '사과', '수박', '참외'] ;
+    for(var i = 0; i < arr.length; i++){
+        console.log(i, arr[i]);
+    }
+    var arr = ['포도', '사과', '수박', '참외'] ;
+    for(var i in arr){
+        console.log(i, arr[i]);
+    }
+
+    var stoog = {
+        name1 : 'a1',
+        name2 : 'a2',
+        name3 : 'a3',
+    }
+
+    for(var name in stoog){
+        console.log(name +':'+stoog[name]);
+
+    }
+
+
+    var book = {
+        title : '자바스크립트',
+        publish : '기술평론사',
+        price : 3500,
+    }
+
+    for(var name in book){
+        console.log(name +':'+book[name]);
+
+    }
+
+
+</script>
+</body>
+</html>
+

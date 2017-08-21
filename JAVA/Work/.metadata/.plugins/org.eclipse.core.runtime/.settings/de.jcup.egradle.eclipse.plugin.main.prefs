@@ -1,0 +1,5 @@
+commandGradle=gradle.bat
+eclipse.preferences.version=1
+gradleCallType=windows.installed
+pathGradleRootProject=D\:\\DevTool\\workspace\\Lecture\\Spring\\Work\\spring09.jstl
+testTasks=egradle.junit.clean.all

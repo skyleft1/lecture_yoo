@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="./css/master.css">
+<style>
+    .mgt40 { padding:20px 0 10px 0; text-align: center; }
+
+    /* step2인증 css.script */
+    /* clearfix */
+    .clearfix:after { content:"."; display:block; height:0; clear:both; visibility:hidden; }
+    .clearfix { display:inline-block; clear:both; }/* Hides from IE-mac \*/
+    * html .clearfix {height: 1px;}
+    .clearfix {display: block;}/* End hide from IE-mac */
+
+    #wrapperContent {padding: 50px 30px 30px 0;}
+
+    /* 추가 인증 영역 시작 */
+    .add_certiArea { margin:0 auto;width:840px; text-align:center;background-color:#eee; }
+    .add_certiArea img { vertical-align:top; }
+    .add_certiArea .addCont { margin:0 auto;padding:30px 0;width:620px; }
+    .add_certiArea .addCont .tit { text-align:center; }
+    .add_certiArea .addCont .sub_tit { padding:10px 0 15px 0;color:#666;text-align:center; }
+    .add_certiArea .addCont .cerfifyMethod { margin:0 auto;width:614px; }
+
+    .add_certiArea .tab_method { height:60px;overflow:hidden; }
+    .add_certiArea .tab_method:after { content:'';clear:both;display:block; }
+    .add_certiArea .tab_method li { width:302px;height:58px;border:solid 1px #c6c6c6;background:#fff url('http://secimage.yes24.com/sysimage/member/bg_tab01.gif') no-repeat right top; }
+    .add_certiArea .tab_method li a { display:block;width:302px;height:58px; }
+    .add_certiArea .tab_method li a img { margin-top:20px; }
+    .add_certiArea .tab_method li.tab_sms { float:left; }
+    .add_certiArea .tab_method li.tab_mail { float:right; }
+    .add_certiArea .tab_method.tab_act1 { background:url('http://secimage.yes24.com/sysimage/member/bg_ln.gif') repeat-x left 59px; }
+    .add_certiArea .tab_method.tab_act1 li.tab_sms { height:62px;border-bottom:none !important;background:#fff url('http://secimage.yes24.com/sysimage/member/bg_tab02.gif') no-repeat right top; }
+    .add_certiArea .tab_method.tab_act1 li.tab_mail { background-color:#eee; }
+    .add_certiArea .tab_method.tab_act2 { background:url('http://secimage.yes24.com/sysimage/member/bg_ln.gif') repeat-x left 59px; }
+    .add_certiArea .tab_method.tab_act2 li.tab_sms { background-color:#eee; }
+    .add_certiArea .tab_method.tab_act2 li.tab_mail { height:62px;border-bottom:none !important;background:#fff url('http://secimage.yes24.com/sysimage/member/bg_tab02.gif') no-repeat right top; }
+    .add_certiArea .methodCon { padding:20px 30px;border:solid 1px #c6c6c6;border-top:none;background-color:#fff; }
+    .add_certiArea .methodCon .methodConArea { text-align:center; }
+    .add_certiArea .methodCon .iptBoxW { float:left;display:inline-block;padding:4px;border:solid 1px #c6c6c6;background-color:#fff; }
+    .add_certiArea .methodCon .iptBox { height:18px;line-height:18px;color:#666;border:none; }
+    .add_certiArea .methodCon .selBoxW { display:inline-block;padding:6px 1px;_padding:5px 1px;border:solid 1px #c6c6c6;background-color:#fff; }
+    .add_certiArea .methodCon .selBoxW span { _height:18px;overflow:hidden;border:solid 2px #fff; }
+    .add_certiArea .methodCon .selBoxW span select { margin:-1px;border:none; }
+    .add_certiArea .formSelect { _float:left;display:inline-block; }
+    .add_certiArea .formSelect dt { float:none;display:inline-block;padding:0;font-size:12px;line-height:28px;border:solid 1px #c6c6c6;background:#fff url('http://secimage.yes24.com/sysimage/member/bl_select.gif') no-repeat right top; }
+    .add_certiArea .formSelect.full dt { display:block; }
+    .add_certiArea .formSelect.open dt { background:#fff url('http://secimage.yes24.com/sysimage/member/bl_select2.gif') no-repeat right top; }
+    .add_certiArea .formSelect dt a { padding:0 20px 0 10px;display:block; }
+    .add_certiArea .formSelect dt a:hover { color:#333;text-decoration:none; }
+    .add_certiArea .formSelect dd { position:relative; }
+    .add_certiArea .formSelect dd ul { position:absolute;left:0;right:0;padding:5px 0;border:solid 1px #c6c6c6;background-color:#fff; }
+    .add_certiArea .formSelect dd ul li { height:20px;line-height:20px; }
+    .add_certiArea .formSelect dd ul li a { display:block;padding:0 0 0 5px;height:20px;overflow:hidden;white-space:nowrap;text-overflow:ellipsis; }
+    .add_certiArea .formSelect dd ul li a:hover { color:#333;text-decoration:none; }
+
+    .add_certiArea .addCont .methodCon .methodConTopBox { margin-top:15px;padding:10px 0 0 0;text-align:center;border-top:solid 1px #d7d7d7; }
+    .add_certiArea .addCont .methodCon .methodConBox { margin-top:19px;padding:10px 0;text-align:center;border-top:solid 1px #d7d7d7;border-bottom:solid 1px #d7d7d7;background-color:#f8f8f8; }
+    .add_certiArea .addCont .methodCon .tb_method { margin:0 auto; }
+    .add_certiArea .addCont .methodCon .tb_method em.divi { float:left;display:inline-block;margin:0 4px;height:30px;line-height:30px;vertical-align:top; }
+    .add_certiArea .addCont .methodCon .tb_method em.divi2 { float:left;display:inline-block;margin:0 4px 0 0;height:30px;line-height:30px;vertical-align:top; }
+    .add_certiArea .addCont .methodCon .tb_method th { text-align:left;font-size:14px;height:38px; }
+    .add_certiArea .addCont .methodCon .tb_method td.rowItem { padding:0 15px 0 5px; }
+    .add_certiArea .addCont .methodCon .tb_method .infoItemValue { display:inline-block;width:250px; }
+    .add_certiArea .addCont .methodCon .tb_method .infoItemValue2 { display:inline-block; }
+    .add_certiArea .addCont .methodCon .tb_method .jqTransformSelectWrapper { margin-right:5px; }
+    .add_certiArea .addCont .methodCon caption { display:none; }
+    .add_certiArea .addCont .methodCon .txt_cmt { padding:6px 0 3px;font-weight:bold;color:#f67676;line-height:1.4em; }
+
+    .add_certiArea .addCont .qnLi { margin-top:20px;text-align:left; }
+    .add_certiArea .addCont .qnLi li { padding:2px 0 2px 11px;background:url('http://secimage.yes24.com/sysimage/member/bl_rnd_gray02.gif') no-repeat 3px 6px; }
+
+
+    /* -------------
+     * Selects
+     * ------------- */
+    .jqTransformSelectWrapper {
+        position:relative;
+        z-index:999;
+        width: 45px;
+        height: 26px;
+        _height: 30px;
+        float:left;
+        border:solid 1px #c6c6c6;
+        background:#fff;
+    }
+
+    .jqTransformSelectWrapper div span {
+
+        font-size: 12px;
+        float: none;
+        position: absolute;
+        white-space: nowrap;
+        height: 26px;
+        _height: 30px;
+        line-height: 26px;
+        _line-height: 30px;
+        padding:0 0 0 7px;
+        overflow: hidden;
+        cursor:pointer;
+        /*border: 1px solid #CCCCCC;*/
+        /*	border-right: none;*/
+    }
+
+    .jqTransformSelectWrapper  a.jqTransformSelectOpen {
+        display: block;
+        position: absolute;
+        right: 0px;
+        width: 17px;
+        height: 26px;
+        _height: 30px;
+        background: url(https://secimage.yes24.com/sysimage/member/bl_select.gif) no-repeat center center;
+    }
+
+    .jqTransformSelectWrapper ul {
+        position: absolute;
+        width:43px;
+        height:250px;
+        top: 25px;
+        _top: 29px;
+        left: 0px;
+        list-style: none;
+        background-color: #FFF;
+        border: solid 1px #CCC;
+        display: none;
+        margin: 0px;
+        padding: 0px;
+        overflow: auto;
+        overflow-y: auto;
+        z-index:999;
+        overflow-x:hidden;
+        scrollbar-face-color:#fff;
+        scrollbar-arrow-color:#3a85c7;
+        scrollbar-track-color:#eeeeee;
+        scrollbar-highlight-color:#c9c9c9;
+        scrollbar-3dlight-color:#fff;
+        scrollbar-shadow-color:#a0a0a0;
+        scrollbar-darkshadow-color:#fff;
+    }
+
+    .jqTransformSelectWrapper ul a {
+        display: block;
+        padding: 5px;
+        text-decoration: none;
+        color:#333;
+        background-color: #FFF;
+        font-size: 12px;
+    }
+
+    .jqTransformSelectWrapper ul a.selected {
+        background: #EDEDED;
+        color: #333;
+    }
+
+    .jqTransformSelectWrapper ul a:hover, .jqTransformSelectWrapper ul a.selected:hover {
+        background:#3582c4;
+        color: #fff;
+    }
+
+    /* -------------
+     * Hidden - used to hide the original form elements
+     * ------------- */
+    .jqTransformHidden {display: none;}
+</style>
+
+    <script src='../../jquery-3.1.0.js'></script>
+    <script>
+        $(document).ready(function(e){
+
+            $(document).on('click', '.tab_sms', function(e){
+                if($('#methodCon_1').css('display') == 'none'){
+                    $('#methodCon_2').css('display', 'none');
+                    $('#methodCon_1').css('display', '');
+                }
+                else
+                    $('#methodCon_1').css('display', 'none');
+
+            });
+
+            $(document).on('click', '.tab_mail', function(e){
+                if($('#methodCon_2').css('display') == 'none'){
+                    $('#methodCon_1').css('display', 'none');
+                    $('#methodCon_2').css('display', '');
+                }
+                else
+                    $('#methodCon_2').css('display', 'none');
+
+
+            });
+            $(document).on('click', '.mJoinTpBtn > a:first-child', function(e) {
+                location.href = 'step3.html';
+            });
+        });
+    </script>
+   
+    
+    
+</head>
+<body>
+
+<div id="wrapper">
+    <!-- Container -->
+    <div id="container">
+
+        <!-- content -->
+        <div id="content">
+
+            <ul class="loginstep">
+                <li>step 1 <br>약관동의</li>
+                <li class="arrimg"></li>
+                <li class="stepon">step 2 <br>가입인증</li>
+                <li class="arrimg"></li>
+                <li>step 3 <br>정보입력</li>
+                <li class="arrimg"></li>
+                <li>step 4 <br>가입완료</li>
+            </ul>
+
+
+            <!-- step2 인증-->
+            <div id="yesWrap">
+
+                <div id="wrapperContent">
+
+                    <form method="post" name="MemberAcc" id="MemberAcc" action="../Member/FTMemReg01.aspx">
+
+                        <div class="memberJoinTpArea">
+
+                            <!-- 888888888888888888888888888888 인증 추가 SMS,이메일 영역 시작 888888888888888888888888888888 -->
+                            <div class="add_certiArea"  id="divCertify">
+                                <div class="addCont">
+
+                                    <div class="cerfifyMethod">
+                                        <!-- 탭 영역 시작 -->
+                                        <ul id="tabCertify" class="tab_method clearfix">
+                                            <li class="tab_sms" ><a href="#TabSmsCert" id="TabSmsCert" ><img src="http://secimage.yes24.com/sysimage/member/tab_certi01.png" border="0" alt="SMS 인증" title=""></a></li>
+                                            <li class="tab_mail"><a href="#TabEmailCert" id="TabEmailCert" ><img src="http://secimage.yes24.com/sysimage/member/tab_certi02.png" border="0" alt="이메일 인증" title=""></a></li>
+                                        </ul>
+                                        <!-- 탭 영역 끝 -->
+                                        <!-- SMS 인증 방법 시작 -->
+                                        <div class="methodCon" id="methodCon_1" style="display:none;">
+                                            <div class="methodConArea">
+                                                <!-- 가입 알림 내용 시작 -->
+                                                <ul class="qnLi">
+                                                    <li>가입을 위한 인증정보를 보내드리니 정확한 연락처를 입력해주세요.</li>
+                                                    <li>일부 제휴사를 통한 <strong style="color:#f67676">제휴포인트 적립혜택</strong>, 연령인증이 필요한 <strong style="color:#f67676">19금 상품구매나 영화예매는 본인인증 (휴대폰인증 또는 아이핀) 후에 사용</strong> 가능합니다.</li>
+                                                </ul>
+                                                <!-- 가입 알림 내용 끝 -->
+                                                <!-- 이름, 생년월일, 성별 영역 시작 -->
+                                                <div class="methodConTopBox">
+                                                    <table class="tb_method">
+                                                        <tr>
+                                                            <th scope="row" id="smsCertifyName">이름</th>
+                                                            <td class="rowItem" headers="smsCertifyName"><span class="iptBoxW"><input type="text" id="txtSmsCertName" class="iptBox" style="width:70px"/></span></td>
+                                                            <th scope="row" id="smsCertifyBirth">생년월일</th>
+                                                            <td class="rowItem" headers="smsCertifyBirth">
+                                                                <select style="width:50px" id="ddlSmsCertYear">
+                                                                    <option value="">123</option>
+                                                                </select>
+                                                                <select style="width:40px" id="ddlSmsCertMonth">
+                                                                    <option value="">234</option>
+                                                                </select>
+                                                                <select style="width:40px" id="ddlSmsCertDay">
+                                                                    <option value="">345</option>
+                                                                </select>
+                                                            </td>
+                                                            <th scope="row" id="smsCertifySex">성별</th>
+                                                            <td class="rowItem" headers="smsCertifySex">
+                                                                <select style="width:40px" id="ddlSmsCertSex">
+                                                                    <option value="">선택</option>
+                                                                    <option value="M">남</option>
+                                                                    <option value="F">여</option>
+                                                                </select>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                                <!-- 이름, 생년월일, 성별 영역 끝 -->
+                                                <!-- 인증 수단 정보 시작 -->
+                                                <div style="position:relative;text-align:left;">
+                                                    <div id="divmethodConBoxSMS" style="display:none;margin-left:-14px;position:absolute;left:50%;"></div>
+                                                </div>
+                                                <div class="methodConBox">
+                                                    <table class="tb_method">
+                                                        <colgroup>
+                                                            <col width="88"/>
+                                                        </colgroup>
+                                                        <caption>인증수단 정보</caption>
+                                                        <tr>
+                                                            <th scope="row">휴대폰 번호</th>
+                                                            <td>
+                                                                <select style="width:40px"  id="ddlSmsCertPhone1" >
+                                                                    <option value="010">010</option>
+                                                                    <option value="010">011</option>
+                                                                    <option value="016">016</option>
+                                                                    <option value="017">017</option>
+                                                                    <option value="018">018</option>
+                                                                    <option value="019">019</option>
+                                                                </select>
+                                                                <em class="divi2">-</em>
+                                                                <span class="iptBoxW"><input type="text" id="txtSmsCertPhone2" class="iptBox" style="width:60px" maxlength="4"/></span>
+                                                                <em class="divi">-</em>
+                                                                <span class="iptBoxW"><input type="text" id="txtSmsCertPhone3" class="iptBox" style="width:60px" maxlength="4"/></span>
+                                                                <a id="SmsConfirmCheck" href="javascript:void(0);" style="margin-left:5px;"><img src="http://secimage.yes24.com/sysimage/member/btn_get_certifyNum.gif" border="0" alt="인증번호받기"></a>
+                                                            </td>
+                                                        </tr>
+                                                        <tr id="trCerNoInput">
+                                                            <th scope="row">인증 번호</th>
+                                                            <td>
+                                                                <span class="iptBoxW"><input type="text" id="txtSmsCertNo" class="iptBox" style="width:216px"/></span>
+                                                                <a id="ValidateSms" href="javascript:void(0);" style="margin-left:5px;"><img src="http://secimage.yes24.com/sysimage/member/btn_confirm02.gif" border="0" alt="확인"></a>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                                <!-- 인증 수단 정보 끝 -->
+                                            </div>
+                                        </div>
+                                        <!-- SMS 인증 방법 끝 -->
+                                        <!-- mail 인증 방법 시작 -->
+                                        <div class="methodCon" id="methodCon_2" style="display:none;">
+                                            <div class="methodConArea">
+                                                <!-- 가입 알림 내용 시작 -->
+                                                <ul class="qnLi">
+                                                    <li>가입을 위한 인증정보를 보내드리니 정확한 연락처를 입력해주세요.</li>
+                                                    <li>일부 제휴사를 통한 <strong style="color:#f67676">제휴포인트 적립혜택</strong>, 연령인증이 필요한 <strong style="color:#f67676">19금 상품구매나 영화예매는 본인인증 (휴대폰인증 또는 아이핀) 후에 사용</strong> 가능합니다.</li>
+                                                </ul>
+                                                <!-- 가입 알림 내용 끝 -->
+                                                <!-- 이름, 생년월일, 성별 영역 시작 -->
+                                                <div class="methodConTopBox">
+                                                    <table class="tb_method">
+                                                        <tr>
+                                                            <th scope="row" id="smsCertifyName">이름</th>
+                                                            <td class="rowItem" headers="smsCertifyName"><span class="iptBoxW"><input type="text" id="txtEmailCertName" class="iptBox" style="width:70px"/></span></td>
+                                                            <th scope="row" id="smsCertifyBirth">생년월일</th>
+                                                            <td class="rowItem" headers="smsCertifyBirth">
+                                                                <select style="width:50px" id="ddlEmailCertYear"></select>
+                                                                <select style="width:40px" id="ddlEmailCertMonth"></select>
+                                                                <select style="width:40px" id="ddlEmailCertDay"></select>
+                                                            </td>
+                                                            <th scope="row" id="smsCertifySex">성별</th>
+                                                            <td class="rowItem" headers="smsCertifySex">
+                                                                <select style="width:40px"  id="ddlEmailCertSex">
+                                                                    <option value="">선택</option>
+                                                                    <option value="M">남</option>
+                                                                    <option value="F">여</option>
+                                                                </select>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                </div>
+                                                <!-- 이름, 생년월일, 성별 영역 끝 -->
+                                                <!-- 인증 수단 정보 시작 -->
+                                                <div style="position:relative;text-align:left;">
+                                                    <div id="divmethodConBoxEmail" style="display:none;margin-left:-14px;position:absolute;left:50%;"></div>
+                                                </div>
+                                                <div class="methodConBox">
+                                                    <table class="tb_method">
+                                                        <colgroup>
+                                                            <col width="55"/>
+                                                        </colgroup>
+                                                        <caption>인증수단 정보</caption>
+                                                        <tr>
+                                                            <th scope="row">이메일</th>
+                                                            <td style="white-space:nowrap">
+                                                                <span class="iptBoxW"><input type="text" id="txtEmailAddress1" class="iptBox" style="width:80px"/></span>
+                                                                <em class="divi">@</em>
+                                                                <span id="certifyEmailAddr" class="iptBoxW"><input type="text" id="txtEmailAddress2" class="iptBox" style="width:80px"/></span>
+                                                            </td>
+                                                            <td>
+                                                                <select style="width:140px" id="ddlEmailSelectAddress" onChange="changeEmail(this.value);" >
+                                                                    <option value="-">선택</option>
+                                                                    <option value="hanmail.net">hanmail.net	</option>
+                                                                    <option value="naver.com">naver.com	</option>
+                                                                    <option value="nate.com">nate.com	</option>
+                                                                    <option value="gmail.com">gmail.com	</option>
+                                                                    <option value="hotmail.com">hotmail.com	</option>
+                                                                    <option value="paran.com">paran.com	</option>
+                                                                    <option value="empal.com">empal.com	</option>
+                                                                    <option value="korea.com">korea.com	</option>
+                                                                    <option value="freechal.com">freechal.com</option>
+                                                                    <option value="">직접등록</option>
+                                                                </select>
+                                                            </td>
+                                                            <td>
+                                                                <a id="EmailConfirmCheck" href="javascript:void(0);"><img src="http://secimage.yes24.com/sysimage/member/btn_get_certifyMail.gif" border="0" alt="인증메일 받기"></a>
+                                                            </td>
+                                                        </tr>
+                                                    </table>
+                                                    <p class="txt_cmt" id="EmailCertSussceMSG">입력하신 이메일로 인증메일이 발송되었습니다. <br/>인증메일을 통해서 회원가입을 진행해 주세요.</p>
+                                                </div>
+                                                <!-- 인증 수단 정보 끝 -->
+                                            </div>
+                                        </div>
+                                        <!-- mail 인증 방법 끝 -->
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 888888888888888888888888888888 인증 추가 SMS,이메일 영역 끝 888888888888888888888888888888 -->
+                            <!-- 888888888888888888888888888888 회원가입 버튼 시작 888888888888888888888888888888 -->
+                            <div class="mJoinTpBtn" id="divbtnAgreement">
+                                <a href="#"><img src="http://secimage.yes24.com/sysimage/member/b_joinYES24.gif" width="81" height="29" vspace="12" hspace="2" alt="회원가입"></a>
+                                <a href="#"><img src="http://secimage.yes24.com/sysimage/member/i_Cancel.gif" width="64" height="29" vspace="12" hspace="2" alt="취소"></a>
+                            </div>
+                            <!-- 888888888888888888888888888888 회원가입 버튼 끝 888888888888888888888888888888 -->
+
+                        </div>
+                    </form>
+
+
+                    <!-- ################################################## 회원구분 및 본인인증 영역 끝 ################################################## -->
+
+                </div>
+            </div>
+            <!-- //step2 인증-->
+
+        </div>
+        <!-- //content -->
+    </div>
+    <!-- //Container -->
+</div>
+
+
+</body>
+</html>
+

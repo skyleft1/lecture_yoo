@@ -1,0 +1,9 @@
+computeSourcePath=true
+contextsDir=D\:\\DevTool\\tomcat\\7.0.73\\win32\\conf\\Catalina\\localhost
+eclipse.preferences.version=1
+managerUrl=http\://localhost\:8080/manager
+projectsInSourcePath=spring08.mybatis.diXaop;spring10.jstl;spring11.mvc;
+tomcatConfigFile=D\:\\DevTool\\tomcat\\7.0.73\\win32\\conf\\server.xml
+tomcatDir=D\:\\DevTool\\tomcat\\7.0.73\\win32
+tomcatJRE=1478595707280
+tomcatVersion=tomcatV7

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>효과 메서드</title>
+    <style>
+        span { width: 120px; height: 30px; float:left; vertical-align: middle;
+            background-color: greenyellow; cursor: pointer; margin: 5px; }
+
+        div.jqStandardEvent { width:400px; height:65px; font-size:36px; text-align:center;
+            color:yellow; background:red; display:none; clear: both; }
+
+        div.jqClassicEvent { background: #3d9a44;   margin: 3px; width: 80px;   height: 40px; float: left; display:block; }
+
+        p { clear: both; display: block; background: yellow; }
+
+        br, hr { clear: both; }
+
+        #region { position: relative; width: 200px; height:200px; overflow:hidden;  margin:auto; }
+        #images{ width: 400px; height: 200px; }
+        #images a img { width:200px; height:200px; border:0; position: relative; }
+        #direction { width: 360px;  margin:auto; }
+
+        .leftbtn { margin-top:10px; }
+        .rightbtn { margin-left:290px;margin-top:10px; }
+    </style>
+    
+    
+</head>
+
+<body>
+<h2>JavaScript >> 고전 이벤트 방식</h2>
+<span class="classicEvent">이벤트 설정</span>
+<span class="classicEvent">이벤트 제거</span>
+<span class="classicEvent">일회 이벤트</span>
+<span class="classicEvent">이벤트 취소</span>
+<br>
+
+<p id="classicEvent">JavaScript >> 고전 이벤트 방식</p>
+<hr>
+
+<h2>JavaScript >> 표준 이벤트 방식</h2>
+<span class="domEvent">이벤트 설정</span>
+<span class="domEvent">이벤트 제거</span>
+<span class="domEvent">일회 이벤트</span>
+<span class="domEvent">이벤트 취소</span>
+<br>
+
+<p id="domEvent">JavaScript >> DOM 이벤트 방식</p>
+<hr>
+
+<h2>jQuery >> 고전 이벤트 방식</h2>
+<span class="jqClassicEvent">이벤트 설정</span>
+<span class="jqClassicEvent">이벤트 제거</span>
+<span class="jqClassicEvent">일회 이벤트</span>
+<span class="jqClassicEvent">이벤트 취소</span>
+<br>
+
+<p id="jqClassicEvent">jQuery >> 고전 이벤트 방식</p>
+<hr>
+
+<h2>jQuery >> 표준 이벤트 방식</h2>
+<span class="jqStandardEvent">이벤트 설정</span>
+<span class="jqStandardEvent">이벤트 제거</span>
+<span class="jqStandardEvent">일회 이벤트</span>
+<span class="jqStandardEvent">이벤트 취소</span>
+<br>
+
+<p id="jqStandardEvent">jQuery >> 표준 이벤트 방식</p>
+</body>
+</html>
+

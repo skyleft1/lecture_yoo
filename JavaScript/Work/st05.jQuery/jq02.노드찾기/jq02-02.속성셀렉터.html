@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<style>
+	    div, span { background: #FFF; padding: 10px; margin: 10px; }
+        hr { clear:both; }
+    </style>
+
+<script src='../jquery-3.1.0.js'></script>
+	<script>
+
+		var MYAPP = {};
+		MYAPP.init = function(e){
+			$('*').css('background-color', '' );
+		};
+
+		$(document).ready(function(e) {
+            $('#has').click(function (e) {
+                alert('has');
+                MYAPP.init();
+//				$('a').attr('target','_blank').css('background-color', 'red');
+                $('a[target="_blank"]').css('background-color', 'red');
+            });
+            $('#equal').click(function (e) {
+                alert('equal');
+                MYAPP.init();
+                $('a[href="http://slqer.com"]').css('background-color', 'red');
+            });
+            $('#notequal').click(function (e) {
+                alert('notequal');
+                MYAPP.init();
+                $('a[href!="http://slqer.com"]').css('background-color', 'red');
+            });
+            $('#startwith').click(function (e) {
+                alert('startwith');
+                MYAPP.init();
+                $('a[name^="man"]').css('background-color', 'red');
+            });
+            $('#endwith').click(function (e) {
+                alert('endwith');
+                MYAPP.init();
+                $('a[name$="man"]').css('background-color', 'red');
+            });
+            $('#contains').click(function (e) {
+                alert('contains');
+                MYAPP.init();
+                $('a[href*="hoons"]').css('background-color', 'red');
+            });
+            $('#findword').click(function (e) {
+                alert('findword');
+                MYAPP.init();
+                $('a[name~="man"]').css('background-color', 'red');
+            });
+        });
+
+
+	</script>
+	
+</head>
+<body>
+
+
+	<h2>Attribute Selector</h2>
+	<div>
+	    <a name='man'      href="http://slqer.com">SQLER.COM(No Target)</a><br />
+	    <a name='superman' href="http://slqer.com" target="_blank">SQLER.COM(Target)</a><br />
+	    <a name='iron man' href="http://hoons.net">Hoons.NET(No Target)</a><br />
+	    <a name='bat man'  href="http://hoons.net" target="_blank">Hoons.NET(Target)</a><br />
+	</div>
+	<a name='joker'  href="http://hows.co.kr">Hows.co.kr(No Target)</a><br />
+	<a name='manual' href="http://hows.co.kr" target="_blank">Hows.co.kr(No Target)</a><br />
+
+	<hr>
+	<input id='has'       type='button' value='has'      >
+	<input id='equal'     type='button' value='equal'    >
+	<input id='notequal'  type='button' value='notequal' >
+	<input id='startwith' type='button' value='startwith'>
+	<input id='endwith'   type='button' value='endwith' >
+	<input id='contains'  type='button' value='hoons contains' >
+	<input id='findword'  type='button' value='man findword' >
+</body>
+</html>
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		* {
+		margin:0;
+		padding:0;
+		word-break:keep-all;
+		box-sizing:border-box;
+		font-family: "나눔 고딕", 'Nanum Gothic', 'ng';
+		}
+		html,body{width:100%; height:100%;}
+		.wrap {width:100%; height:100%; position:relative;}
+		.bbsbox {width:400px; height:600px; border:1px #dad3d3 solid; margin:0 auto; position:absolute; top:50%; left:50%; margin-left:-200px; margin-top:-300px; position:relative;}
+		.box_top {width:100%; height:85px; background-color:#efebdb; border-bottom:1px #231f20 solid;}
+		.box_top #userID{padding-top:20px; font-weight:bold; font-size:18px; content:"\e9a1";}
+		.box_top #date_time{color:#8e8e8e; font-size:12px; margin-top:5px;}
+		.box_top > div{padding-left:20px;}
+
+		#bbs_title{width:350px; height:50px; margin-left:25px; margin-top:25px;}
+		#bbs_content{width:90%; height:350px; overflow:hidden; outline:1px #dad3d3 solid; margin:0 auto;}
+		.liner {position:absolute; bottom:0; height:35px; background-color:#efebdb; width:100%; border-top:1px black solid;}
+	</style>
+
+	<script src='../../jquery-3.1.0.js'></script>
+	<script src='../../jquery.loadTemplate-1.4.4.js'></script>
+	<script>
+		$(document).ready(function (e) {
+		    // 템플릿에 들어갈 자료 생성
+			var info = {
+			    regdate : 'aaaa11'
+				, content : 'bbb11'
+				, img : 'apple_gray.png'
+			};
+			// 컨테이너에 템플릿과 자료 삽입
+			$('#posts-container').loadTemplate($('#post-template'), info)
+        });
+	</script>
+
+</head>
+<body>
+
+	<!-- 템플릿 생성 -->
+	<script type='text/html' id='post-template'>
+		<div class="post-container" style="border: 1px dashed #ccc;padding: 10px;margin: 10px;background: white;">
+			<div data-content="regdate" data-class="author"></div>
+			<div data-content="content"></div>
+			<img data-src="img" />
+		</div>
+	</script>
+
+	<!-- 템플릿이 들어갈 컨테이너 생성 -->
+	<div id="posts-container">
+	</div>
+
+</body>
+</html>

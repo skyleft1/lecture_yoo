@@ -1,0 +1,89 @@
+body {
+	margin: 0 auto;
+	padding: 0;
+	font-size: 11px;
+
+
+}
+
+#outline {
+	width: 520px; height: auto;
+	text-align: center;
+	border: 1px solid black;
+	margin: 0 auto;
+}
+
+#header {
+	width: 500px; height: 100px; line-height: 100px;
+	margin: 10px;
+	border: 1px solid black;
+}
+
+#navigation {
+	width: 500px;	height: 100px; 	line-height: 35px;
+	margin: 10px;
+	border: 1px solid ;
+}
+#wrapper {
+	margin: 10, auto;
+	overflow: hidden;
+}
+
+#wrapper li {
+	width: 60px; height: 30px; line-height: 30px;
+
+	text-align: center;
+	border: 1px solid ;
+	list-style:none;
+	float: left;
+}
+
+#con_ban {
+	width: 500px; height: auto;
+	margin: 10px;
+	border: 1px solid ;
+	overflow: hidden;
+}
+
+#content {
+	width: 280px;
+	height: 300px;
+	margin: 10px;
+	border: 1px solid ;
+
+	float: left;
+}
+
+#banner {
+	width: 180px;
+	height: 300px;
+	margin: 10px 10px 10px 0px;
+	border: 1px solid ;
+	float: left;
+}
+#footer {
+	width: 500px;
+	height: 100px;
+	margin: 10px;
+	border: 1px solid ;
+	line-height: 100px;
+}
+
+
+/* 중간 메뉴 - 하*/
+
+
+.사찰소개 {
+
+}
+.예약 {
+}
+.프로그램 {
+}
+
+.게시판 {
+}
+.오시는길 {
+}
+.갤러리 {
+}

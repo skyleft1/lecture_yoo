@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> </title>
+    <link rel="stylesheet" type="text/css" href="CSS.css">
+</head>
+<body>
+    <form action="http://search.naver.com/search.naver"
+          method="post"
+          enctype="application/x-www-form-urlencoded">
+        <!-- get으로 하고 전송 누르면 위 URL에 입력한 값이 다 뜨고  post로 하면 안뜬다. -->
+
+
+        <fieldset> <!-- 그룹핑한다는 의미 -->
+            <legend>로그인</legend>
+
+            <!-- 목록태그 추가 -->
+            <ul>
+                <li>
+                    <label> 아이디 <br>
+                        <input type="text" name="loginid">
+                    </label>
+                </li>
+                <li>
+                    <label> 패스워드 <br>
+                        <input type="password" name="loginqw">
+                    </label>
+                </li>
+
+            </ul>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>회원가입</legend>
+            <ui>
+                <li>
+                    <label> 아이디
+                        <input type="text" name="userid" id="userid"> <!-- name은 DB에서, id는 html에서 사용 -->
+                    </label>
+                </li>
+                <li>
+                    <label> 패스워드
+                        <input type="password" name="userpw" id="userpw">
+                    </label>
+                </li>
+                <li>
+                    <label> 패스워드 확인
+                        <input type="password" name="userpwconfirm" id="userpwconfirm">
+                    </label>
+                </li>
+                <li>
+                    <label> 이름
+                        <input type="text" name="username" id="username">
+                    </label>
+                </li>
+                <li>
+                    <label> 메일
+                        <input type="email" name="useremail" id="useremail">
+                    </label>
+                </li>
+                <li>
+                    <label> 전화번호
+                        <input type="tel" name="usertel" id="usertel">
+                    </label>
+                </li>
+                <li>
+                    <label> 생년월일
+                        <input type="date" name="userbirthdate" id="userbirthdate">
+                    </label>
+                </li>
+
+
+            </ui>
+
+        </fieldset>
+
+        <fieldset>
+            <legend> 수강신청</legend>
+            <ul> 신청과목
+                <li><label> 영어기초<input type="radio" name="spk" id="spk_1" value="1"></label></li>
+                <li><label> 영어중급<input type="radio" name="spk" id="spk_2" value="2"></label></li>
+                <li><label> 영어고급<input type="radio" name="spk" id="spk_3" value="3"></label></li>
+            </ul>
+            <ol>
+                <li><label> 영어초급<input type="checkbox" name="spk1" id="sptcheck_1" value="1"></label></li>
+                <li><label> 영어중급<input type="checkbox" name="spk2" id="sptcheck_2" value="2"></label></li>
+                <li><label> 영어고급<input type="checkbox" name="spk3" id="sptcheck_3" value="3"></label></li>
+            </ol>
+
+            <ul> 신청과목
+                <li><label> 영어기초<input type="radio" name="spk1" value="1"></label></li>
+                <li><label> 영어중급<input type="radio" name="spk1" value="2"></label></li>
+                <li><label> 영어고급<input type="radio" name="spk1" value="3"></label></li>
+            </ul>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>select BOX</legend>
+            <ul>
+                <li> 학과
+                    <select name="dept" id="dept">
+                        <option value="건축과">건축과</option>
+                        <option value="토복과">토복과</option>
+                        <option value="전자과">전자과</option>
+                    </select>
+                </li>
+            </ul>
+        </fieldset>
+
+
+            <input type="submit" name="send" id="send">
+
+
+            <input type="reset" name="reset" id="reset">
+
+    </form>
+</body>
+</html>

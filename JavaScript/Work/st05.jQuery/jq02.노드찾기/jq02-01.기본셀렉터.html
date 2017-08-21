@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div.rect, span.rect {
+            width: 60px;
+            height: 40px;
+            float: left;
+            margin: 10px;
+            background-color: #EEEEEE;
+
+        }
+        hr { clear:both; }
+    </style>
+    <script src='../jquery-3.1.0.js'></script>
+    <script>
+
+        var MYAPP = {};
+        MYAPP.init = function(){
+            $('*').css('border', '');
+            $('*').css('background-color', '');
+            $('*').removeClass('yellow');
+        }
+
+
+        $(document).ready(function(e) {
+            $('#all').click(function(e){
+                MYAPP.init();
+                $('*').css('border', '1px red dotted');
+            });
+            $('#id').click(function(e){
+                MYAPP.init();
+                $('#content').css('background-color', 'yellow');
+            });
+            $('#element').click(function(e){
+                MYAPP.init();
+                $('div').css('border', '1px red solid');
+            });
+            $('#class').click(function(e){
+                MYAPP.init();
+                $('.myClass').css('border', '1px red dotted');
+            });
+            $('#multi').click(function(e){
+                MYAPP.init();
+                $('#content , p').css('border', '3px blue dotted');
+            });
+
+        });
+    </script>
+    
+</head>
+<body>
+    <h2>jQuery Selector</h2>
+    <p>jQuery에 대한 자세한 내용을 보려면 jquery.com 을 방문할 수 있다.</p>
+    <div>
+        div 전
+        <div id="content">이 부분은 ID값이 content 이다.</div>
+    </div>
+    <span class="rect">SPAN2</span>
+    <div  class="rect">DIV1</div>
+    <span class="rect">SPAN1</span>
+    <div  class="rect myClass">DIV2</div>
+
+    <hr>
+    <input id='all'     type='button' value="*">
+    <input id='id'      type='button' value="id">
+    <input id='element' type='button' value="element">
+    <input id='class'   type='button' value="class">
+    <input id='multi'   type='button' value="multi">
+</body>
+</html>
+

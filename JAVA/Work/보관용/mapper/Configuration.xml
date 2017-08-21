@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+        
+<!-- http://mybatis.github.io/mybatis-3/ko/configuration.html#settings  -->        
+<configuration> 
+
+    <settings>
+        <setting name="jdbcTypeForNull" value="NULL" />
+    </settings>
+    
+    <!-- Model 클래스를 등록한다. -->
+    <typeAliases>
+        <package name="java23.mybatis.model" />
+    </typeAliases>
+    
+
+    <!-- sql 이 저장되는 xml 파일 등록: 주의 사항은 경로로 설정해야 한다. -->
+    <mappers>
+        <mapper resource="mapper/mapperBook.xml" />
+    </mappers>
+    
+</configuration>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>계산기</title>
+    <style type="text/css">
+        .mybtn {
+            width: 50px;
+            height: 30px;
+            border: 1px solid #9A9A9A;
+            background-color: #515151;
+            color: #9A9A9A;
+            vertical-align: middle;
+            position: relative;
+            cursor: pointer;
+        }
+    </style>
+    
+    
+</head>
+<body>
+    <input type="button" id="cal_reset" class="mybtn" value="reset">
+    <div id="cal_content">
+        <div id="calrow">
+            <input type="button" class="mybtn" id="number" value="7">
+            <input type="button" class="mybtn" id="number" value="8">
+            <input type="button" class="mybtn" id="number" value="9">
+        </div>
+        <div id="calrow">
+            <input type="button" class="mybtn" id="number" value="4">
+            <input type="button" class="mybtn" id="number" value="5">
+            <input type="button" class="mybtn" id="number" value="6">
+        </div>
+        <div id="calrow">
+            <input type="button" class="mybtn" id="number" value="1">
+            <input type="button" class="mybtn" id="number" value="2">
+            <input type="button" class="mybtn" id="number" value="3">
+        </div>
+        <div id="calrow">
+            <input type="button" class="mybtn" id="number" value="0">
+        </div>
+        <div id="calrow">
+            <input type="button" class="mybtn" id="number" value="+">
+            <input type="button" class="mybtn" id="number" value="-">
+            <input type="button" class="mybtn" id="number" value="*">
+            <input type="button" class="mybtn" id="number" value="/">
+            <input type="button" class="mybtn" id="number" value="=">
+        </div>
+        <div id="calrow">
+            <div id="expr"></div>
+        </div>
+    </div>
+</body>
+</html>

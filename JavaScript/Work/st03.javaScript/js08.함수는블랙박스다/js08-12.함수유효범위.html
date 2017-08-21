@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    
+</head>
+<body>
+
+<script>
+    console.log(x);
+    var x = 1;
+    console.log(x);
+
+    var outer = function () {
+
+        console.log(x);
+        console.log(y);
+
+        if(true){
+            var y = 5;
+        }
+
+        console.log(y);
+    }
+
+    outer();
+
+
+
+</script>
+
+</body>
+</html>
+

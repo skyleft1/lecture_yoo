@@ -1,0 +1,44 @@
+1480976744851	Rename package 'di04.xml.collections'
+1480976752975	Rename resource 'context-xml-collections.xml'
+1480976762538	Rename resource 'context-annotation.xml'
+1480977242714	Delete element
+1480977770840	Delete element
+1480977783482	Delete element
+1480977816350	Delete element
+1480978371754	Move compilation units
+1480978387169	Delete element
+1480978507622	Rename type 'RepositoryDocumentData'
+1480978516199	Rename type 'RepositoryTypeData'
+1480978780624	Rename package 'di04.xml.collections'
+1480978795709	Rename package 'di03'
+1481024709624	Rename package 'di03.repo'
+1481025654140	Rename package 'di04.collections.dao'
+1481025674254	Move compilation unit
+1481025677091	Delete element
+1481025699915	Delete elements
+1481025943480	Rename type 'TestInstanceInjectionWithXmlCollections'
+1481025957170	Rename type 'TestInstanceInjectionWithCollections'
+1481026272450	Rename type 'RepositoryDocumentData'
+1481026279617	Rename type 'RepositoryTypeData'
+1481049459627	Move compilation unit
+1481049463942	Move compilation unit
+1481049923337	Rename type 'SearchEngineService'
+1481049938562	Rename type 'SearchEngineAnnotation'
+1481049988267	Rename type 'IDaoTypeRepository'
+1481050009457	Rename type 'IDaoRepository'
+1481050040813	Rename type 'RepDocument'
+1481050109051	Rename type 'RepositoryDocument'
+1481050123763	Rename type 'RepositoryDocument'
+1481050134727	Rename type 'RepositoryType'
+1481050259463	Rename package 'di04.collections'
+1481050485513	Rename type 'SearchEngineService'
+1481051064652	Rename package 'di04.collections'
+1481051099924	Rename type 'TestInjectionWithCollections'
+1481051111501	Rename package 'di04.collections'
+1481051134647	Rename package 'di04.collection'
+1481051146113	Rename package 'di04.collection'
+1481051158222	Rename package 'di04.collection'
+1481051173567	Rename type 'CollectionSearchEngine'
+1481051486169	Rename type 'IRepositoryDocument'
+1481051501742	Rename type 'RepositoryArrayDocument'
+1481052331464	Rename type 'IRepositoryArray'

@@ -1,0 +1,25 @@
+package com.lecture.debugging;
+
+import org.apache.log4j.BasicConfigurator;
+import org.junit.Test;
+
+public class EmployeeTest {
+    @Test
+    public void canConstructAPersonWithAName() {
+
+        BasicConfigurator.configure();
+        
+        EmployeeList list = new EmployeeList();
+        
+        list.addEmployee(new Employee(30, "test01"));
+        list.addEmployee(new Employee(50, "test02"));
+        list.addEmployee(new Employee(10, "test03"));
+        list.addEmployee(new Employee(20, "test04"));
+        list.addEmployee(new Employee(40, "test05"));
+        
+        for(int i=10; i<=50; i+=10) {
+            Employee emp = list.findEmployee(i);
+            System.out.println("ID: " + emp.id + "\tName: " + emp.name );
+        }
+    }
+}

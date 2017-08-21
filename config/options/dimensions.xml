@@ -1,0 +1,29 @@
+<application>
+  <component name="DimensionService">
+    <location key="WELCOME_SCREEN.0.0.1920.1080" x="960" y="423" />
+    <location key="FileChooserDialogImpl.0.0.1920.1080" x="269" y="232" />
+    <location key="#com.intellij.ide.actions.ChooseComponentsToExportDialog.0.0.1920.1080" x="714" y="285" />
+    <location key="SettingsEditor.0.0.1920.1080" x="575" y="86" />
+    <location key="#Project_Structure.0.0.1920.1080" x="473" y="163" />
+    <location key="#com.intellij.ide.util.MemberChooser.0.0.1920.1080" x="699" y="203" />
+    <location key="chooseDestDirectoryDialog.0.0.1920.1080" x="688" y="292" />
+    <location key="#com.intellij.codeInsight.editorActions.RestoreReferencesDialog.0.0.1920.1080" x="624" y="269" />
+    <location key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog.0.0.1920.1080" x="403" y="431" />
+    <location key="com.intellij.testIntegration.createTest.CreateTestDialog.0.0.1920.1080" x="648" y="269" />
+    <location key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes.0.0.1920.1080" x="642" y="367" />
+    <location key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog.0.0.1920.1080" x="438" y="263" />
+    <location key="#Intentions.0.0.1920.1080" x="454" y="174" />
+    <location key="refactoring.ChangeSignatureDialog.0.0.1920.1080" x="566" y="134" />
+    <location key="com.intellij.openapi.editor.actions.MultiplePasteAction$1.0.0.1920.1080" x="749" y="115" />
+    <location key="#com.intellij.fileTypes.FileTypeChooser.0.0.1920.1080" x="585" y="312" />
+    <size key="GridCell.Tab.0.left.0.0.1920.1080" width="1788" height="270" />
+    <size key="GridCell.Tab.0.center.0.0.1920.1080" width="1788" height="270" />
+    <size key="GridCell.Tab.0.right.0.0.1920.1080" width="1788" height="270" />
+    <size key="GridCell.Tab.0.bottom.0.0.1920.1080" width="1788" height="270" />
+    <size key="GridCell.Tab.1.left.0.0.1920.1080" width="1788" height="182" />
+    <size key="GridCell.Tab.1.center.0.0.1920.1080" width="1788" height="182" />
+    <size key="GridCell.Tab.1.right.0.0.1920.1080" width="1788" height="182" />
+    <size key="GridCell.Tab.1.bottom.0.0.1920.1080" width="1788" height="182" />
+    <size key="javadoc.popup.0.0.1920.1080" width="520" height="183" />
+  </component>
+</application>

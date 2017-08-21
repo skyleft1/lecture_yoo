@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;평가지07_화면 구현/WebContent/송정환/송정환Login.html&apos; to &apos;송정환.Login.html&apos;" description="Rename resource &apos;송정환Login.html&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="WebContent/송정환/송정환Login.html" name="송정환.Login.html" stamp="1486970389294" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;평가지07_화면 구현/WebContent/송정환/송정환 회원가입.html&apos; to &apos;송정환.회원가입.html&apos;" description="Rename resource &apos;송정환 회원가입.html&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="WebContent/송정환/송정환 회원가입.html" name="송정환.회원가입.html" stamp="1486970468607" updateReferences="true"/>
+</session>

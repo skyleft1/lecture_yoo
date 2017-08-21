@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">BaseApp</string>
+    <string name="my_button">버튼입니다.</string>
+    <item name="my_button" type="dimen" format="float">버튼입니다.</item>
+</resources>

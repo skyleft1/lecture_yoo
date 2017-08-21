@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>sample2</title>
+    <style>
+        *{ margin:0; padding:0; list-style-type:none; }
+        #container{ margin:100px auto; width:537px; }
+        ul.menu li{ float:left; width:179px; height:48px; position:relative;
+        background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALMAAAAwCAYAAABaMEuFAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABx0RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTNAay06AAAAAWdEVYdENyZWF0aW9uIFRpbWUAMTEvMTAvMDkwvH1eAAADj0lEQVR4nO3dz24TVxTH8e9MrGCHjG0Y2xQk7JQNVV+AFS/QFUv6TDwGXSIh9t33HVighLi08Z+QxAlJq9Lp4s4dzx2PwZZKfAd+R8rmo3OiRDpzcv+MleDpszsJCsVXEDWAnx49cXC3HnN+NZXJKmG/vHzB7Xs108wAv71+DkAc7TGd7TtFMpnf1gDSyZwk5qsT7TE5c4tksioYYCdzQCf6nslsHwjcIpnMc7NRA9i90WFc0v0yWRXsDX8CEAKcX00WEiazxSKZzGcza2YgSYI0YcD47AB3tMtk/ltILjrRgMnsAJmsaga5ZvbpB5PJ1jEbuQ3gW3z4UyGTrWv7/AFkG0D3ZsWnp04mW9VyG8B5gul+t0gm892ySxNzcWI73R3jMpnvBrnr7Lis+5symf9mIwSIGjGTkiKZrApmowYw+zDNLk1swvi0MNplMm/NrJadSxOb4NNTJ5Otas5pxrzT3aKD4SE7kWtleTLZpgzyr4A299JOd8f45OyA96MtPswCWnHC3W5/aZ5MtgmzYW4A6/FCp3cL3f/XZcBoGHAxOyS6BWFYnieTXbf9zhBI18yzy+li0ZLjj4vTgPFwi6uLoDRPJtuUOZcmbsLiGLfx8R84Pgo5Px1yqxewVSt+83mtTHZdZtow/QxgtzlgVDLG33FIWfx9BUdvQ3bbCQ8G/dJamew6DHKnGZ1oL00ISoqWT2mAnRttRqfuW3dltTLZlzAb2Q3gKmuUYmzX4eEP9wgbJ5+tlcm+lNkwN4BrbAABghBanYT73/n1S8m+VTNTOl0zB9l19ueWFjsR7Lah115tWSKTXZc519mfGuPbdYjvQnQbeu1NP4kymWvgbACX7xqbMdRvGvtUnky2qZMMSJs5qscUPwPYbfYzs42ct7I8mWwTNsI0dw3g7HKafWwKoNvqp0dtMll1bOEV0G6rz7ikSCbz3ZzTjG6rz+ikMMZlMu/NLCvCfIIvT5hMto7ZMK+ANuK0090imawKNmEfyG4AjymO8XHxXQuZzFszkS0zliXIZFWx3CugAb1sjM+7XyargkFuMvdai+d4MlkVzIa5AWzEHJ0sFslkVbDjd2+A7AbQ3QDOu18mq4KZcP51mk3w6amTyVa1sJjgyzpIJlvHIHea0W0O0k53x7hM5rvZCAGindibJ0wmW9dsBE+f3Uke//gzr359jkJRxWj2tqnV/jXNvOkfRqH4P+I/8ZrMifG07MoAAAAASUVORK5CYII='); }
+
+        * html ul.menu li{ display:inline; zoom:1; }
+        *+html ul.menu li{ display:inline; zoom:1; }
+        ul.menu li a{ display:block; width:100%; height:100%; line-height:48px; text-indent:30px; font-weight:bold; color:#CFDFB5; text-decoration:none; position:relative; }
+        ul.menu li a:hover{ background:url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALMAAAAwCAYAAABaMEuFAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAALEgAACxIB0t1+/AAAABx0RVh0U29mdHdhcmUAQWRvYmUgRmlyZXdvcmtzIENTNAay06AAAAAWdEVYdENyZWF0aW9uIFRpbWUAMTEvMTAvMDkwvH1eAAAD1ElEQVR4nO3d3U4bRxjG8b/tBePdeG2E8EJpQgRESRpVinoQVe1RbyJ3lJvJLTRRDxoVtWqR2iRKVSkHqYoSOyT+wh8kB9uD8ZrZ9QbqSsW7zfNISOjHDDLSMMy+7wCFe/fvhijK/yAOwJ2bX8WwsuQzet+TyXJhDx99T3WtZBYzwLO/HgBQrWzQH72KTZLJsm1lYLIzh6F5890NesP4JJksDwZEO3NhMqAJFKxJgUyWeYvigDl7dAfN2AdqbiCT5cJe0gagCDB615udNEz5RDJZhm36ABhOtu1apUFn2MLexmWyPFgRK7VKg+6ohUyWNwNrMWfphclk81iUIsDKkk932IKQ6Zu/EshkubDYYh6/68dWuF8J6I2aMlmuzDRNME0TyM6TqUw2rzmn7xasAYWUSTJZdg2sndl3AzrJgrQnk2XfohQB3OWUDqAXyGS5sCgOwPCkN22agNnGzeqXyfJgJSDRNIkGZOVAL5PNY6eLOTSlju6gGa/jVQKePf9txtLGyWQLsUmsK6ABvUSv23cb9IYtnvz+B4evmtzY22WrsfPBcTLZIiyKA7Cy7NMdJNqGbiNm7U6X/Z8PuLLVZPfqNo7jpI6TyS7ajjgCoiugJ8kroA3TNkzJn4eH7P9yQOvoTeo4mWxRNjkzJwvS6Qs5yng85tenT3m4/y2j8fjMuTLZRZk5K4SmnV1PKUjXrTpeMu1Ol0c//sTO9jZffHYnda5MdhEGVgew5m6cUcc7O+WlS3QG8UP54muPso/FojgAbtn/R3W8ZFZrdb68/TXvw+Nz58pk/5W9xRw3ph3A8ybZcRyHW9evs3f5Vqa+KNnHamaXntaZw7AwGdCYOTLYubz1KTtXrrLmf5JytJidK5NdlFlXQM2AtPIHmCPFtd09qt6lD46TyRZlELsCGq10a5Jn7Oa1G2wGG3DOOJlsERbFPAAuV+kOXhPbxr31qW0GmzOWNk4mW4R14g+Affu+BnVvnc7gNchkObKZK6BZeWEy2bw27QASTs4jxylnFJks4wb2H4HxUm4kyWQ5sCjmCmjZz8x3mEw2r3UxzRQHYHTSJ/6EGK1+mSwPZjL7O4AZ+vEhk81j1hXQAvXpNn66+mWyPBhYO3Pdm+2syGR5sCjm30CUfdqJAateQybLhfXfvASsDqC9Za9667QTbUOZLLtmMr1oFPWz69467ePZbotMlnUrJgdkpTUpk81jYFUzam6DdqIgXfdksuxbFPNXQMt+Zp5MZbJ5LUrh3v274efb3/DDwQMUJY9x6w6lUmiOGY9ffEd1rbTo16Qo/zKmevE31gKd+vRR5t4AAAAASUVORK5CYII='); }
+        ul.sub{ display:none; }
+
+        * html ul.sub{ zoom:1; position:relative; }
+        *+html ul.sub{ zoom:1; position:relative; }
+        ul.sub li{ float:none; }
+        ul.sub li ul.sub{ position:absolute; left:179px; top:0; }
+        ul.menu{ zoom:1; }
+        ul.menu:after { height:0; visibility:hidden; content:"."; display:block; clear:both; }
+
+    </style>
+
+    <script src='../jquery-3.1.0.js'></script>
+    <script>
+        $(document).ready(function(){
+            $('.menu > li').mouseenter(function(e){
+               $(this).children().show();
+            }).mouseleave(function(e){
+               $(this).children('.sub').hide();
+            });
+            $('.menu > li > .sub > li').mouseenter(function(e){
+                $(this).children().show();
+            }).mouseleave(function(e){
+                $(this).children('.sub').hide();
+            });
+        });
+
+    </script>
+
+</head>
+<body>
+    <div id="container">
+    <ul class="menu">
+        <li><a href="#">메뉴A</a>
+            <ul class="sub">
+                <li><a href="#">서브메뉴A</a>
+                    <ul class="sub">
+                        <li><a href="#">서브메뉴A0</a></li>
+                        <li><a href="#">서브메뉴A0</a></li>
+                        <li><a href="#">서브메뉴A0</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">서브메뉴A</a></li>
+                <li><a href="#">서브메뉴A</a>
+                    <ul class="sub">
+                        <li><a href="#">서브메뉴A2</a></li>
+                        <li><a href="#">서브메뉴A2</a></li>
+                        <li><a href="#">서브메뉴A2</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><a href="#">메뉴B</a>
+            <ul class="sub">
+                <li><a href="#">서브메뉴B</a></li>
+                <li><a href="#">서브메뉴B</a>
+                    <ul class="sub">
+                        <li><a href="#">서브메뉴B2</a></li>
+                        <li><a href="#">서브메뉴B2</a></li>
+                        <li><a href="#">서브메뉴B2</a>
+                            <ul class="sub">
+                                <li><a href="#">서브메뉴B3</a></li>
+                                <li><a href="#">서브메뉴B3</a></li>
+                                <li><a href="#">서브메뉴B3</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#">서브메뉴B</a></li>
+            </ul>
+        </li>
+        <li><a href="#">메뉴C</a>
+            <ul class="sub">
+                <li><a href="#">서브메뉴C</a>
+                    <ul class="sub">
+                        <li><a href="#">서브메뉴C2</a></li>
+                        <li><a href="#">서브메뉴C2</a></li>
+                        <li><a href="#">서브메뉴C2</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">서브메뉴C</a></li>
+                <li><a href="#">서브메뉴C</a></li>
+            </ul>
+        </li>
+    </ul>
+    </div>
+</body>
+</html>
+
+
+

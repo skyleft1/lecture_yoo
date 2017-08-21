@@ -1,0 +1,70 @@
+.content_inner{
+    
+
+}
+.w550h470{
+    display: inline-block;
+    margin: 20px 10px;
+    width: 550px; height: 470px;
+    background-color : #efefef;
+
+}
+.w200h500{
+    display: inline-block;
+    margin: 30px 10px;
+    width: 200px; height: 500px; 
+
+
+}
+
+.content_name{
+    
+}
+
+.content_join{
+    vertical-align:top;
+    text-align :left;
+    
+}
+
+.content_join form{
+    margin : 40px;
+    margin-left: 30px;
+} 
+
+.content_join table tr{
+    
+}
+.content_join table td {
+    padding:13px;
+        
+}
+
+
+.content_join input[type='text'],
+.content_join input[type='password'],
+.content_join input[type='email' ]
+ {
+    width:350px;
+    height:30px;
+    font-size: 15px;
+    margin-top : -5px;
+}
+
+.join_confirm{
+    margin-top:40px;
+    margin-left:10px;
+    text-align: left;
+    
+}
+
+.join_confirm input{
+    width:456px;
+    height:40px;
+    background-color: #d0d0d0;
+    border: none;
+    border-radius: 3px;
+    font-size: 15px;
+    cursor : pointer;
+}
+

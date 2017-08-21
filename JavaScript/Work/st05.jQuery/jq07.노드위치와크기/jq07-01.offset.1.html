@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>해당 엘리먼트의 현재 위치 알아내기</title>
+    <style>
+    div.abs {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        left: 220px;
+        top: 35px;
+        background-color: green;
+        cursor: pointer;
+    }
+    .aa { height: 50px;
+    }
+
+    /*.parent {border : 1px solid red;*/
+        /*height:800px;*/
+        /*position: relative;*/
+        /*left: 50px;*/
+        /*top: 50px;*/
+    /*}*/
+
+    </style>
+
+    <script src='../jquery-3.1.0.js'></script>
+    <script>
+        $(document).ready(function(){
+            $('.abs').click(function () {
+                var x = $('.abs').offset().left;
+                var y = $('.abs').offset().top;
+                var w = $('.abs').width();
+                var h = $('.abs').height();
+                $('#result').text('x:'+x+' y:'+y+' w:'+w+' h:'+h);
+            })
+            $('.border').click(function () {
+                $('.abs').css('border', '4px solid red');
+            })
+            $('.padding').click(function () {
+                $('.abs').css('padding', '40px');
+            })
+            $('.margin').click(function () {
+                $('.abs').css('margin','40px');
+            })
+//        $(document).ready(function(){
+//            console.log($('.abs').position().left);
+//            console.log($('.abs').position().top);
+//            console.log($('.abs').offset().left);
+//            console.log($('.abs').offset().top);
+//            $('.abs').css({left: '10px', top: '10px'});
+//
+//            console.log($('.abs').position().left);
+//            console.log($('.abs').position().top);
+//            console.log($('.abs').offset().left);
+//            console.log($('.abs').offset().top);
+//
+//            $('.parent').offset({left: '10px', top: '10px'});
+//            $('.abs').offset({left: '10px', top: '10px'});
+//            $('.parent').offset({left: '10px', top: '10px'});
+//            $('.abs').offset({left: '10px', top: '10px'});
+//            console.log($('.abs').position().left);
+//            console.log($('.abs').position().top);
+//            console.log($('.abs').offset().left);
+//            console.log($('.abs').offset().top);
+
+//            var 지역좌표설정전_가로 = $('.abs').position().left;
+//            var 지역좌표설정전_세로 = $('.abs').position().top;
+//            $('.abs').css({left: '500px', top: '300px'});
+//            var 지역좌표설정후_가로 = $('.abs').position().left;
+//            var 지역좌표설정후_세로 = $('.abs').position().top;
+//            console.log(지역좌표설정전_가로);
+//            console.log(지역좌표설정전_세로);
+//            console.log(지역좌표설정후_가로);
+//            console.log(지역좌표설정후_세로);
+//
+//
+//            var 전역좌표설정전_가로 = $('.abs').offset().left;
+//            var 전역좌표설정전_세로 = $('.abs').offset().top;
+//            $('.abs').offset({left: '10px', top: '10px'});
+//            var 전역좌표설정후_가로 = $('.abs').offset().left;
+//            var 전역좌표설정후_세로 = $('.abs').offset().top;
+//            console.log(전역좌표설정전_가로);
+//            console.log(전역좌표설정전_세로);
+//            console.log(전역좌표설정후_가로);
+//            console.log(전역좌표설정후_세로);
+//            $('.parent').offset({left: '10px', top: '10px'});
+//            $('.abs').offset({left: '10px', top: '10px'});
+        });
+
+    </script>
+    
+</head>
+<body>
+<div id="result"></div>
+<div class="abs"></div>
+<div class="aa">
+<div class="border">border: 4px solid</div>
+<div class="padding">padding: 40px</div>
+<div class="margin">margin: 40px</div>
+</div>
+</body>
+</html>
+

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    
+</head>
+<body>
+    <form name="fm">
+        <select id="site">
+            <option value="">-바로 가기 사이트를 선택해주세요-</option>
+            <option value="mail">mail.naver.com</option>
+            <option value="cafe">cafe.naver.com</option>
+            <option value="blog">blog.naver.com</option>
+            <option value="kin">kin.naver.com</option>
+            <option value="shopping">shopping.naver.com</option>
+            <option value="news">news.naver.com</option>
+        </select>
+    </form>
+
+    <input id='naver' type="button" value="네이버 바로가기">
+
+    <p class="google">www.google.com</p>
+
+
+<script>
+    MYAPP = {};
+    window.onload = function(e){
+        MYAPP.site = document.getElementById('site');
+        MYAPP.site.onchange = function (e) {
+            if(this.value){
+                location.href = 'http://' + this.value + '.naver.com/';
+            }
+        };
+    };
+
+</script>
+
+</body>
+</html>
+
+
+
+

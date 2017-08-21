@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        button { cursor: pointer;}
+        p { cursor: pointer; width: 500px; }
+        p:hover { background: #c1ceff; }
+        div     { width: 500px; background: yellow; padding-bottom: 5px; }
+        hr      { width: 500px; float: left; }
+        ul      { width: 300px; }
+        .yellow { background: yellow; }
+        .red    { background: red;    }
+        .white  { background: white; cursor:pointer; }
+        .gray   { background: gray;   }
+    </style>
+
+<script src='../jquery-3.1.0.js'></script>
+    <script>
+        var MYAPP = {};
+        MYAPP.init = function(e){
+            $('*').css('outline', '' );
+        };
+
+        $(document).ready(function(e) {
+            $('#element_read').click(function (e) {
+                window.alert($('p.pclick').html());
+            });
+            $('#element_create').click(function (e) {
+                $('#result_element').html("<img src = 'images/fish.png'>");
+            });
+            $('#element_update').click(function (e) {
+                $('#result_element').html($('.pclick').html());
+            });
+            $('#element_delete').click(function (e) {
+                $('#result_element').html('');
+            });
+
+
+            $('.text_read').click(function (e) {
+                window.alert($('.text_read').text());
+            });
+            $('.text_create').click(function (e) {
+                $('.text_create').text($('.text_create').text()+' > 추가' );
+            });
+            $('.text_update').click(function (e) {
+                $('.text_update').text($('.pclick').text());
+            });
+            $('.text_delete').click(function (e) {
+                $('.text_delete').text('');
+            });
+        });
+    </script>
+
+</head>
+<body>
+    <p class="pclick">
+        html()은 엘리먼트의 <span id="tag"> 내용을 </span>
+        HTML 형식의<span id="text"> 문자열로 </span> 리턴한다.
+    </p>
+
+
+    <div>
+        <h3>tag node CRUD</h3>
+        <button id="element_read"  >태그 읽기(R)</button>
+        <button id="element_create">태그 추가(C)</button>
+        <button id="element_update">태그 수정(U)</button>
+        <button id="element_delete">태그 삭제(D)</button>
+        <div id="result_element" class="gray"> element CRUD
+
+        </div>
+    </div>
+    <hr>
+
+    <div>
+        <h3>text node CRUD</h3>
+        <ul>
+            <li class="white text_read"  >text 읽기(R)</li>
+            <li class="white text_create">text 추가(C)</li>
+            <li class="white text_update">text 수정(U)</li>
+            <li class="white text_delete">text 삭제(D)</li>
+        </ul>
+    </div>
+</body>
+</html>
+

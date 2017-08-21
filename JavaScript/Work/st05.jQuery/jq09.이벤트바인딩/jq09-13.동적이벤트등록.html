@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+	<head>
+	<meta charset="UTF-8">
+	<title>동적 이벤트 설정</title>
+	<style>
+	    p { background:yellow; font-weight:bold; cursor:pointer; padding:5px; }
+	    span { background:pink; font-weight:bold; cursor:pointer; padding:5px;
+	        display:block; margin-top:10px;}
+	    div { border: 1px dashed red; }
+	</style>
+
+
+    <script src='../jquery-3.1.0.js'></script>
+    <script>
+            $(document).ready(function () {
+                $('body').on('click', 'p:eq(0)', function (e) {
+                    $('#p').append('<p>p 파라그래프</p>');
+                    $('.menu').html('<p>append p 파라그래프</p>');
+                    $('body').on('click', '#p > p', function (e) {
+                        $('.menu').html('<p>append p 파라그래프</p>');
+                    });
+                });
+                $('body').on('click', 'span:eq(0)', function (e) {
+                    $('#span').append('<span>p 파라그래프</span>');
+                    $('.menu').html('<span>append span 파라그래프</span>');
+                    $('body').on('click', '#span > span', function (e) {
+                        $('.menu').html('<span>append span 파라그래프</span>');
+                    });
+                });
+            });
+    </script>
+</head>
+<body>
+    <p>Click me! 클릭하면 id=p에 추가하시고 <br> 추가된 엘리먼트에 click이벤트를 거시오.</p>
+    <div id="p"></div>
+    <hr>
+
+    <span>Click me! 클릭하면 id=span에 추가하고 <br> 추가된 엘리먼트에 click이벤트를 거시오</span>
+    <div id="span"> </div>
+    <hr>
+
+    <ul class="menu">
+        <li>menu1</li>
+        <li>menu2</li>
+        <li>menu2</li>
+        <li>menu2</li>
+    </ul>
+</body>
+</html>
+
+

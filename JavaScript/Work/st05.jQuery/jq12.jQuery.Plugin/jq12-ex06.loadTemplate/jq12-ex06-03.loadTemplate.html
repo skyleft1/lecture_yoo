@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Examples</title>
+
+    <script src='../../jquery-3.1.0.js'></script>
+    <script src='../../jquery.loadTemplate-1.4.4.js'></script>
+    <script>
+        $(document).ready(function (e) {
+            // 3. 템플릿에 들어갈 자료 생성
+            var data = [
+            { title : 'title1' , subtitle : 'sub1'}
+            , { title : 'title2' , subtitle : 'sub2'}
+            , { title : 'title3' , subtitle : ''}
+            , { title : 'title4' , subtitle : null}
+            , { title : 'title5' , subtitle : 'sub5'}
+            ];
+            // 4. 컨테이너에 템플릿과 자료 삽입
+            console.log(data);
+            $('#loadedWithFunctionParameters').loadTemplate($('#name1'), data, {bindingOptions : {ignoreNull:true}});
+        });
+    </script>
+
+</head>
+<body>
+    <!-- 1. 템플릿 생성 -->
+    <script type='text/html' id='name1'>
+        <h3><a href="#" data-content="title">Titel: </a></h3>
+        <h4 data-content-append="subtitle">Subtitle: </h4>
+    </script>
+
+    <br>
+    Loaded with function parameters
+    <hr>
+    <!-- 2. 템플릿이 들어갈 컨테이너 생성 -->
+    <div id="loadedWithFunctionParameters">
+    </div>
+
+</body>
+</html>
+

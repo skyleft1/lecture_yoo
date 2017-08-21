@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="mapper.mapperBook">
+
+    <select id="selectAll" resultType="java23.mybatis.model.ModelBook" >
+        SELECT * FROM book ORDER BY bookid ASC
+    </select>
+    
+    <select id="selectLike" parameterType="String" resultType="java23.mybatis.model.ModelBook">
+        SELECT * FROM book where bookname like concat('%', #{bookname},'%' )
+    </select>
+    
+    <select id="selectEqual" parameterType="String" resultType="java23.mybatis.model.ModelBook">
+        SELECT * FROM book where bookname = #{bookname}
+    </select>
+    
+    <insert id="insert" parameterType="ModelBook" >
+        INSERT INTO BOOK(  BOOKNAME  ,PUBLISHER   ,YEAR   ,PRICE   ,DTM   ,USE_YN   ,AUTHID)
+                  VALUES( #{bookname},#{publisher},#{year},#{price},#{dtm},#{use_yn},#{authid} )
+    </insert>
+        
+    <update id="update" parameterType="hashmap" >
+         UPDATE book
+            SET bookname    = #{updateValue.bookname}
+              , publisher   = #{updateValue.publisher}
+              , year        = #{updateValue.year}
+              , price       = #{updateValue.price}
+              , dtm         = #{updateValue.dtm}
+              , use_yn      = #{updateValue.use_yn}
+              , authid      = #{updateValue.authid}
+            WHERE 1 = 1 
+              <if test="searchValue.bookid != null" >
+              AND BOOKID    = #{searchValue.bookid}
+              </if>
+              <if test="searchValue.bookname != '' and searchValue.bookname != null " >
+              AND BOOKNAME  = #{searchValue.bookname}
+              </if>
+    </update>
+    
+    <delete id="delete" parameterType="ModelBook" >
+        DELETE FROM book WHERE bookname = #{bookname}
+     </delete>
+    
+    
+</mapper>

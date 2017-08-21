@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;context-config.xml&apos; to &apos;META-INF&apos;" description="Move &apos;context-config.xml&apos; to &apos;META-INF&apos;" destination="src/main/resources/META-INF" element1="src/main/resources/META-INF/spring/context-config.xml" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1449386665767" updateReferences="true"/>
+</session>

@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>미션</title>
+    
+    <style>
+        * { margin:0; padding:0; }
+   		pre   { font-size:13pt;	}
+        .wrap { margin:10px; }
+        .select { width:800px; height:100px; border:1px solid #000; }
+        .select img { width:150px; float:left; } 
+        .container { position: absolute; width:800px; height:400px; border:1px solid #000; } 
+        .container img { position: absolute; width:100px;    }
+    </style>
+
+    <script src='../jquery-3.1.0.js'></script>
+    <script>
+
+        $(document).ready(function() {
+            $('').click(function (e){
+
+            });
+        });
+
+    </script>
+    
+</head>
+    
+<body>
+<pre>
+ 드래그앤드 드롭만들기
+ 요구사항에 맞게 드래그앤드 드롭 기능을 만들어 주세요.
+
+ 요구사항 분석
+ 1. 초기 시작 시 컨테이너(.container) 영역의 이미지는 랜덤하게 출력되어야 합니다.
+    단, 컨테이너 영역을 벗어나면 안 됩니다.( initImagePos() 만들기 )
+ 2. 컨테이너 영역의 이미지를 드래그되게 만들어 주세요.( initEvent() 만들기 ) 
+ 3. 드래그 이미지를 선택 영역에 드롭하는 경우 해당 이미지를 선택 영역으로 이동시켜 주세요.
+</pre>
+    <div class="wrap">
+        <div class="select">
+            <!-- 여기에 이미지를 드래그&드랍 하면 추가 됩니다. -->
+        </div>
+        <div class="container">
+            <img src="images/1.png" >
+            <img src="images/2.png" >
+            <img src="images/3.png" >
+            <img src="images/4.png" >
+            <img src="images/5.png" >
+        </div>
+    </div>
+</body>
+
+</html>
+

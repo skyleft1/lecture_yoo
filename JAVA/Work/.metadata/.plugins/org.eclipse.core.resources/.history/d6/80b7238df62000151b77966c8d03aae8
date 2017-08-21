@@ -1,0 +1,32 @@
+<%@ page session="false" language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<head>
+	<title>Home</title>
+</head>
+<body>
+    <h1>
+    	Hello world!  
+    </h1>
+    
+    <P>  The time on the server is ${serverTime}. </P>    
+    
+    <a href="./board/boardlist"                 target="_blank">/spring/board/boardlist    </a> <br />
+    <a href="./board/boardview"                 target="_blank">/spring/board/boardview    </a> <br />
+    <a href="./board/boardview?boardCd=qna"     target="_blank">/spring/board/boardview?boardCd=qna    </a> <br />
+    <a href="./board/boardview/qna"             target="_blank">/spring/board/boardview/qna    </a> <br />
+    
+    <a href="./board/boardwrite/free"           target="_blank">/spring/board/boardwrite/free   </a> <br />
+    <a href="./board/boardmodify"               target="_blank">/spring/board/boardmodify  </a> <br />
+    
+    <hr />
+    
+    <a href="./board/articlelist"   target="_blank">/spring/board/articlelist  </a> <br />
+    <a href="./board/articleview"   target="_blank">/spring/board/articleview  </a> <br />
+    <a href="./board/articlewrite"  target="_blank">/spring/board/articlewrite </a> <br />
+    <a href="./board/articlemodify" target="_blank">/spring/board/articlemodify</a> <br />
+    
+</body>
+</html>

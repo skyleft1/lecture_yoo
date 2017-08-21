@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+    <meta charset="UTF-8">
+    <title>이벤트 객체</title>
+    <style>
+        img{  width: 140px; height: 120px; }
+        .nemo{width: 200px; height: 180px; border:1px solid red}
+    </style>
+
+        <script src='../jquery-3.1.0.js'></script>
+        <script>
+
+            $(document).ready(function() {
+                var wid = $('.nemo').width();
+                var hei = $('.nemo').height();
+                $('img').width(wid).height(hei);
+
+                $('img').width(wid*2).height(hei*2);
+            });
+
+        </script>
+
+</head>
+<body>   
+   <img src="images/im1.jpg" />
+   <div class='nemo'></div>
+</body>
+</html>

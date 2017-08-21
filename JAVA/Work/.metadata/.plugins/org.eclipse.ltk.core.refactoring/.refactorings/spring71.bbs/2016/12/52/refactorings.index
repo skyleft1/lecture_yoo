@@ -1,0 +1,28 @@
+1482147241615	Delete element
+1482147270305	Delete elements
+1482147560406	Delete element
+1482147607073	Rename package 'com.spring11.mvc'
+1482147640704	Rename package 'com.lecture.spring.commons'
+1482147647527	Rename package 'com.lecture.spring.controller'
+1482147654495	Rename package 'com.lecture.spring.dao'
+1482147661957	Rename package 'com.lecture.spring.model'
+1482147670692	Rename package 'com.lecture.spring.repository'
+1482149486811	Rename local variable 'article'
+1482149546663	Rename local variable 'searchValue'
+1482149735762	Rename local variable 'commentNo'
+1482149745269	Rename local variable 'articleNo'
+1482284373313	Delete element
+1482284376158	Delete element
+1482284400792	Delete element
+1482285689994	Delete element
+1482285700216	Delete elements
+1482285706953	Delete element
+1482285711900	Delete element
+1482285721991	Delete elements
+1482285775901	Delete element
+1482288531319	Delete element
+1482288539678	Delete elements
+1482288565890	Copy compilation unit
+1482296600261	Rename resource 'boardlist.jsp'
+1482296618738	Rename resource 'boardlist.js'
+1482300186980	Rename field 'board'

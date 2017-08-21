@@ -1,0 +1,21 @@
+sudo openssl genrsa -out /etc/mysql/key.pem 2048
+
+sudo openssl req -new -x509 -key key.pem -out /etc/mysql/cert.pem -days 0
+
+
+
+sudo nano /etc/mysql/mysql.conf.d/mysqld.cnf
+
+
+sudo /etc/init.d/mysql restart
+
+
+show variables like '%ssl%';
+
+
+mysql -u root -p --ssl --ssl-ca=/etc/mysql/cert.pem
+
+
+
+
+

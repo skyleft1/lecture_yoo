@@ -1,0 +1,5 @@
+eclipse.preferences.version=1
+externalMigrateFromAuthorizationDatabase/isMigrated=true
+migrateFromAuthorizationDatabase/isMigrated=true
+repositories/8010dab507db001619ae941cadfb3ef2=8010dab507db001619ae941cadfb3ef2;svn\://sjydevil.synology.me/Lecture/Spring/Work/spring22.jstl;svn\://sjydevil.synology.me/Lecture/Spring/Work/spring22.jstl;branches;tags;trunk;true;abec1dc6-a915-11e6-85ac-1dd92058c8e5;svn\://sjydevil.synology.me/Lecture;;false;;;0
+repositories/f05536ff079000151075e46aa552e181=f05536ff079000151075e46aa552e181;svn\://sjydevil.synology.me/Java/Lecture/Source/Lecture0201-Debugging;svn\://sjydevil.synology.me/Java/Lecture/Source/Lecture0201-Debugging;branches;tags;trunk;true;df75334e-6a3c-11e5-93d5-bd2b62a1d61a;svn\://sjydevil.synology.me/Java;;false;;;0

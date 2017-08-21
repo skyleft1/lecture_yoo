@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>폼 데이터를 쿼리 스트링으로 변환</title>
+    <style>
+        div { font-weight: bold; color:red; }
+    </style>
+    
+    
+</head>
+<body>
+    <form>
+        <input type="hidden" name="seq" value="1">
+        <label> 이름을 입력하세요 : </label>
+        <input type="text" name="username"/>  <br/>
+        <label> 패스워드를 입력하세요 :</label>
+        <input type="password"  name="password"/>  <br/>
+        <input type="checkbox" name="hobby" value="music"> music
+        <input type="checkbox" name="hobby" value="yoga"> yoga
+        <input type="checkbox" name="hobby" value="reading"> reading <br/>
+        <input type="button" id="submit1" value="serialize 전송"/>
+        <input type="button" id="submit2" value="serializeArray 전송"/>
+        <input type="button" id="submit3" value="serializeJSON 전송"/>
+    </form>
+    <hr>
+    <div id="result"></div>
+</body>
+</html>
+

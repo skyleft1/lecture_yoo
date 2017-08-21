@@ -1,0 +1,40 @@
+body {
+    margin: 0 auto;
+    width: 750px;
+}
+canvas {
+    border: 1px solid #AAA;
+}
+fieldset {
+    border: 1px solid #AAA;
+}
+form {
+    margin-bottom: 5%;
+}
+label {
+    display: inline-block;
+    width: 190px;
+}
+hr {
+    border: none;
+    border-bottom: 1px solid #AAA;
+}
+html {
+    font-family: "PT Serif", serif;
+}
+div#step-control {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+}
+div#step-control button {
+    -webkit-flex: 1 1 auto;
+    flex: 1 1 auto;
+    margin: 0 15px;
+    width: 150px;
+}
+span#breakpoints {
+    float: right;
+}
+

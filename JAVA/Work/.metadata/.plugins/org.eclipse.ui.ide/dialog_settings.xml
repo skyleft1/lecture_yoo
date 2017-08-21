@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+		<item value="D:\DevTool\workspace\webProject\BBS0615"/>
+		<item value="D:\java 자료\평가_개발자테스트"/>
+		<item value="D:\aaa11\WebContent"/>
+		<item value="D:\aaa11"/>
+		<item value="D:\DevTool\workspace\webProject\webProject170613"/>
+		<item value="D:\DevTool\workspace\Lecture\집\workspace\web0609"/>
+	</list>
+	<section name="CleanDialogSettings">
+		<item value="500" key="DIALOG_WIDTH"/>
+		<item value="false" key="BUILD_ALL"/>
+		<item value="true" key="TOGGLE_SELECTED"/>
+		<item value="440" key="DIALOG_HEIGHT"/>
+		<item value="269" key="DIALOG_Y_ORIGIN"/>
+		<item value="524" key="DIALOG_X_ORIGIN"/>
+		<item value="true" key="BUILD_NOW"/>
+	</section>
+	<section name="ExternalProjectImportWizard">
+		<item value="false" key="WizardProjectsImportPage.STORE_NESTED_PROJECTS"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_COPY_PROJECT_ID"/>
+		<item value="false" key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value="D:\DevTool\workspace\Lecture\Spring\Work"/>
+			<item value="D:\DevTool\workspace\webproject"/>
+			<item value="D:\git연습\webproject"/>
+			<item value="D:\git 연습"/>
+			<item value="D:\DevTool\workspace\webProject\webProject170613"/>
+			<item value="D:\aaa"/>
+			<item value="D:\aaa11"/>
+			<item value="D:\aaa11\WebContent"/>
+			<item value="D:\java 자료\평가_개발자테스트"/>
+			<item value="D:\DevTool\workspace\Lecture\JAVA\Work"/>
+			<item value="D:\Documents\GoogleBackup\Google드라이버\이젠.자바프로그래머.20160920-20170215\문서\말똥가리\2.평가지\"/>
+			<item value="D:\Documents\GoogleBackup\Google드라이버\이젠.자바프로그래머.20160920-20170215\문서\말똥가리\2.평가지\평가지05_개발자테스트\평가지_개발자테스트"/>
+			<item value="D:\DevTool\workspace\Lecture\Spring\Source"/>
+			<item value="D:\JAVA\workspace\Lecture\Source"/>
+			<item value="C:\Users\Administrator\Downloads\Controller-PhoneController-MyBatis-Spring"/>
+			<item value="C:\Users\Administrator\Downloads\MyBatis"/>
+			<item value="W:\JAVA\workspace\Lecture\임시\TestJUnit-01"/>
+			<item value="D:\JAVA\workspace\Lecture\Spring"/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value=""/>
+		</list>
+	</section>
+	<section name="WORKBENCH_SETTINGS">
+		<list key="ENABLED_TRANSFERS">
+		</list>
+	</section>
+	<section name="NewWizardAction">
+		<item value="com.springsource.sts.wizard.template" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.buildship.ui.creationwizards"/>
+			<item value="org.springframework.ide.eclipse.beans.ui.wizards.category"/>
+			<item value="org.obeonetwork.dsl.uml2.design.category"/>
+			<item value="org.eclipse.wst.web.ui"/>
+		</list>
+	</section>
+	<section name="ChooseWorkspaceDialogSettings">
+		<item value="-68" key="DIALOG_Y_ORIGIN"/>
+		<item value="189" key="DIALOG_X_ORIGIN"/>
+	</section>
+	<section name="BasicNewProjectResourceWizard">
+	</section>
+	<section name="SaveAsDialogSettings">
+		<item value="525" key="DIALOG_WIDTH"/>
+		<item value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕" key="DIALOG_FONT_NAME"/>
+		<item value="579" key="DIALOG_HEIGHT"/>
+		<item value="541" key="DIALOG_X_ORIGIN"/>
+		<item value="134" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>

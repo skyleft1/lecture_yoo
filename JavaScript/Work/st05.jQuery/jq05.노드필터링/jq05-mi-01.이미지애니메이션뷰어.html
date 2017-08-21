@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body { font-size: 9pt; } 
+        button { margin-top: 5px; padding: 5px; }
+        .panel { width: 840px; height: 415px; border: 1px solid #ccc; } 
+        .nav { width: 840px; text-align: center; } 
+    </style>
+
+    <script src='../jquery-3.1.0.js'></script>
+    <script>
+
+        var MYAPP = {timer: null, count : 0};
+//        MYAPP.images = [
+//             'images/1.jpg'   // conter = 1
+//            , 'images/2.jpg'   // conter = 2
+//            , 'images/3.jpg'   // conter = 3
+//            , 'images/4.jpg'   // conter = 4
+//            , 'images/5.jpg'   // conter = 5
+//            , 'images/6.jpg'   // conter = 6
+//            , 'images/7.jpg'   // conter = 7
+//            , 'images/8.jpg'   // conter = 8
+//            , 'images/9.jpg'   // conter = 9
+//            , 'images/10.jpg'   // conter = 10
+//            , 'images/11.jpg'   // conter = 11
+//            , 'images/12.jpg'   // conter = 12
+//            , 'images/13.jpg'   // conter = 13
+//            , 'images/14.jpg'   // conter = 14
+//            , 'images/15.jpg'
+//            , 'images/16.jpg'
+//            , 'images/17.jpg'
+//            , 'images/18.jpg'
+//            , 'images/19.jpg'
+//            , 'images/20.jpg'
+//            , 'images/21.jpg'
+//            , 'images/22.jpg'
+//            , 'images/23.jpg'
+//            , 'images/24.jpg'
+//            , 'images/25.jpg'
+//            , 'images/26.jpg'
+//            , 'images/27.jpg'
+//            , 'images/28.jpg'
+//            , 'images/29.jpg'
+//            , 'images/30.jpg'
+//            , 'images/31.jpg'
+//            , 'images/32.jpg'
+//            , 'images/33.jpg'
+//            , 'images/34.jpg'
+//            , 'images/35.jpg'
+//            , 'images/36.jpg'
+//            , 'images/37.jpg'
+//            , 'images/38.jpg'
+//            , 'images/39.jpg'
+//            , 'images/40.jpg'
+//            , 'images/41.jpg'
+//            , 'images/42.jpg'
+//            , 'images/43.jpg'
+//            , 'images/44.jpg'
+//            , 'images/45.jpg'
+//            , 'images/46.jpg'
+//            , 'images/47.jpg'
+//        ];
+
+//        function preload(arrayOfImages) {
+//            $(arrayOfImages).each(function(){
+//                $('<img/>')[0].src = this;
+//                // Alternatively you could use:
+//                // (new Image()).src = this;
+//            });
+//        }
+        // 사용법  :
+//        preload([
+//            'img/imageName.jpg',
+//            'img/anotherOne.jpg',
+//            'img/blahblahblah.jpg'
+//        ]);
+        // 사용법 :
+//        $(['img1.jpg','img2.jpg','img3.jpg']).preload();
+
+//        function complexLoad(config, fileNames) {
+//            for (var x = 0; x < fileNames.length; x++) {
+//                $("<img>").attr({
+//                    id: fileNames[x],
+//                    src: config.imgDir + fileNames[x] + config.imgFormat,
+//                    title: "The " + fileNames[x] + " nebula"
+//                }).appendTo("#" + config.imgContainer).css({ display: "none" });
+//            }
+//        };
+
+        $(document).ready(function() {
+            var a = 1;
+            MYAPP.next = $('#next').click(function (e) {
+                $('.panel img').attr('src', 'images/'+a+'.jpg');
+                a++;
+                if(a > 60){
+                    a = 1;
+                }
+            });
+
+            $('#play').click(function (e) {
+                MYAPP.timer = setInterval('next.click()', 100);
+            });
+
+            $('#prev').click(function (e) {
+                $('.panel img').attr('src', 'images/'+a+'.jpg');
+                a--;
+                if(a < 1){
+                    a = 60;
+                }
+            });
+            $('#stop').click(function (e) {
+                clearInterval(MYAPP.timer);
+            });
+        });
+
+    </script>
+    
+
+</head>
+
+<body>  
+    <div class="panel">
+        <img src="images/1.jpg" id="view">
+    </div>
+    <div class="nav">
+        <button id="play">play</button>
+        <button id="stop">stop</button>
+        <button id="prev">prev</button>
+        <button id="next">next</button>
+    </div>
+</body>
+
+</html>
+

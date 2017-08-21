@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+    <title></title>
+    <style>
+        body{ font-size:9pt; font-family:"굴림"; }
+        ul, li{ border:1px #eeeeee solid; margin:10px; }
+        ul { padding:10px; }
+        li.select { background-color:#ccc; }
+        #output { border:1px solid #000; min-height:100px; }
+    </style>
+
+    <script src ='../jquery-3.1.0.js'></script>
+    <script>
+
+        $(document).ready(function () {
+            var a = 0;
+            $('#add').on('click', function(e){
+                $('.menu').append('<li>new'+a++ +'</li>')
+                $('#output').append('<p> 추가아이템 = '+ $('.menu > li').last().text() + ', 아이템 갯수 = ' + $('.menu > li').last().index()+ '</p>')
+            });
+        });
+
+    </script>
+
+</head>
+
+<body>
+
+    <pre>
+추가 버튼을 누르면 신규 메뉴 항목을 추가하는 기능을 구현하고
+사용자 정의 이벤트를 이용해 실행될 수 있게 만드시오.
+    </pre>
+    <hr>
+    <div>
+        <button id="add">추가</button>
+    </div>
+    <ul class="menu">
+        <li>menu1</li>
+        <li>menu2</li>
+        <li>menu3</li>
+        <li>menu4</li>
+    </ul>
+
+    <p>추가/삭제 정보가 출력되는 영역</p>
+    <div id="output">
+
+    </div>
+</body>
+</html>
+

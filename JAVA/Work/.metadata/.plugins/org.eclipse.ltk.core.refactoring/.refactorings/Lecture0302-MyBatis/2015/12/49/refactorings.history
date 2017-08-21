@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;TestServiceBoard.java&apos; to &apos;docs&apos;&#x0D;&#x0A;- Original project: &apos;Lecture0302-MyBatis&apos;&#x0D;&#x0A;- Destination element: &apos;docs&apos;&#x0D;&#x0A;- Original element: &apos;com.lecture.database.TestServiceBoard.java&apos;" description="Copy compilation unit" element1="/src\/test\/java&lt;com.lecture.database{TestServiceBoard.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1449075298429" target="/Lecture0302-MyBatis/docs" units="1" version="1.0"/>
+</session>

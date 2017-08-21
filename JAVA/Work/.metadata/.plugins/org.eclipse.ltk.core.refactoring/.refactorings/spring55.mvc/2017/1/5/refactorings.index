@@ -1,0 +1,22 @@
+1485795665673	Delete element
+1485825937856	Rename field 'imageData'
+1485825967884	Rename field 'imageDataBytes'
+1485872054589	Rename type 'ModelAttachfile'
+1485872091780	Copy compilation unit
+1485872100390	Delete element
+1485872225513	Copy compilation unit
+1485873251359	Rename local variable 'attachfile'
+1485875360308	Rename field 'photo'
+1485875406206	Rename field 'photoBytes'
+1485875425502	Rename field 'photoBase64'
+1485875459297	Rename method 'getPhoto'
+1485875475683	Rename method 'setPhoto'
+1485875495143	Rename method 'getPhotoBytes'
+1485875511005	Rename method 'setPhotoBytes'
+1485875539334	Rename method 'getPhotoBase64'
+1485875553253	Rename method 'setPhotoBase64'
+1485877794688	Rename field 'attachFileNo'
+1485877841347	Rename method 'getAttachFileNo'
+1485877869200	Rename method 'setAttachFileNo'
+1485881020415	Rename resource 'uploadfile.jsp'
+1485881033571	Rename resource 'uploadimage.jsp'

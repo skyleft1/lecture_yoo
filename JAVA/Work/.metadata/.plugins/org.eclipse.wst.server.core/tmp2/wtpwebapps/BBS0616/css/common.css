@@ -1,0 +1,154 @@
+*{
+    margin : 0;
+    padding : 0;
+    word-break : keep-all;
+    box-size : border-box;
+    font-family : '나눔 고딕', 'Nanum Gothic', 'ng';
+}
+
+input[type='text'],
+input[type='password'],
+input[type='email']
+{
+    border : 1px solid #d2d2d2;;
+}
+
+html,body{
+	position:relative;
+	width:100%;
+	height:100%;
+}
+
+a {
+    text-decoration: none;
+    color: #888;
+}
+
+#header {
+    margin: 0 auto;
+    width: 100%;
+    height: 80px;
+    display: inline-block;
+    background-size: cover;
+    background-color: #333;
+    color: #888
+}
+
+.content {
+    margin: 10px auto;
+    width: 1000px;
+    text-align: center;
+    overflow: hidden;
+	font-size : 15px;
+
+	    
+}
+
+#nav_back {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+}
+
+.logo {
+    background: url('../img/logo.png') no-repeat;
+    background-position: 10px 29px;
+    display: inline-block;
+    width: 100px;
+    height: 100%;
+}
+
+.logo a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+#nav_login {
+    margin: 0 auto;
+    width: 1000px;
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+
+#nav {
+    width: 600px;
+    height: 100%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+#nav ul {
+    margin-top: 40px;
+    padding-left: 100px;
+}
+
+#nav li {
+    width: 80px;
+    height: 30px;
+    margin: 0 0 0 10px;
+    display: inline-block;
+    list-style: none;
+}
+
+#login {
+    width: 250px;
+    height: 100%;
+    display: inline-block;
+}
+
+#login ul {
+    margin-top: 30px;
+}
+
+#login li {
+    width: 80px;
+    height: 30px;
+    margin: 0 0 0 10px;
+    float: left;
+    list-style: none;
+}
+
+#logout {
+    width: 292px;
+    height: 70px;
+    float: right;
+    text-align: left;
+}
+
+#logout>ul {
+    width: 100%;
+    padding: 0;
+    margin: 30px 0;
+}
+
+#logout li {
+    width: 84px;
+    height: 30px;
+    display: inline-block;
+    list-style: none;
+    margin-right: 7px;
+    text-align: center;
+}
+
+#footer {
+    line-height : 50px;
+    background-color: #333;
+    margin: 10px auto 0;
+    width: 100%;
+    height: 50px;
+    border: 1px solid;
+    color: #888;
+    font-size : 12px;
+    
+    /*푸터를 아래로 붙이는 코드 */
+    position: fixed;
+    bottom:0;
+    text-align:center;
+    
+}
+
+#footer li {
+    display: inline-block;
+}

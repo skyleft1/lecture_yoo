@@ -1,0 +1,69 @@
+package di02.basic;
+
+import static org.junit.Assert.*;
+
+import java.util.List;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.junit.Before;
+import org.junit.Test;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import di02.basic.model.*;
+import di02.basic.service.*;
+
+public class TestMakeInstanceWithSpring {
+    
+    // SLF4J Logging 
+    private static Logger logger = LoggerFactory.getLogger(TestMakeInstanceWithSpring.class);
+    
+    ApplicationContext context;
+    ISearchEngine engine; 
+    ModelType docType;
+    ModelType webType;
+    ModelDocument docs;
+    
+    @Before
+    public void setUp() throws Exception {
+         context = new ClassPathXmlApplicationContext(new String[]{"classpath:di02/basic/context-my.xml"});
+         
+         engine =  context.getBean("engine", ISearchEngine.class);         
+         docType = context.getBean("docType", ModelType.class);         
+         webType = context.getBean("webType", ModelType.class);         
+         docs = context.getBean("docs", ModelDocument.class);
+    }
+    
+    @Test
+    public void testListAllWithSpring() {       
+        List<ModelDocument> documents = engine.listAll();
+        
+        assertNotNull(documents);
+        assertTrue(documents.size() == 4);
+    }
+    
+    @Test
+    public void testFindByTypeWithSpring() {    
+        List<ModelDocument> documents = engine.findByType(docType);
+        
+        assertNotNull(documents);
+        assertTrue(documents.size() == 1);
+        assertEquals(docType.getName(), documents.get(0).getType().getName());
+        assertEquals(docType.getDesc(), documents.get(0).getType().getDesc());
+        assertEquals(docType.getExtension(), documents.get(0).getType().getExtension());
+    }
+
+    
+    @Test
+    public void testDocType() {        
+        logger.debug( docType.toString() );
+    }
+    
+    @Test
+    public void testDocs() {
+        logger.debug( docs.toString() );
+    }
+
+    
+}

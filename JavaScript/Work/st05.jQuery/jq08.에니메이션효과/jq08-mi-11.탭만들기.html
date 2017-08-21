@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>sample1</title>
+	<style>
+	    *{ margin:0; padding:0; }
+	    #container{ width:500px; margin:50px auto; }
+	    ul.tab{ padding:0; }
+	    ul.tab li{ list-style-type:none; width:100px; height:40px; float:left; }
+	    ul.tab li a{ outline:none; background:url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2wBDAAYEBAQFBAYFBQYJBgUGCQsIBgYICwwKCgsKCgwQDAwMDAwMEAwODxAPDgwTExQUExMcGxsbHCAgICAgICAgICD/2wBDAQcHBw0MDRgQEBgaFREVGiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICD/wAARCAAoAGQDAREAAhEBAxEB/8QAGgABAQACAwAAAAAAAAAAAAAAAAYDBQIECP/EAC4QAAAEBAUDAwMFAAAAAAAAAAADBBIBAlSTBRQV0dIGdLMRQUITIlEhJTI0Nf/EABgBAQEBAQEAAAAAAAAAAAAAAAADBAEC/8QAHhEBAAICAwEBAQAAAAAAAAAAAAEREjECA1EhBIH/2gAMAwEAAhEDEQA/APRiBBhpqBKaYjTxMMJLnnj9Ev8AWaaSEY/H8i3LlN7TiIpn0zCaJPZL2HMp9dxg0zCaJPZL2DKfTGDTMJok9kvYMp9MYNMwmiT2S9gyn0xg0zCaJPZL2DKfTGDTMJok9kvYMp9MYNMwmiT2S9gyn0xg0zCaJPZL2DKfTGDTMJok9kvYMp9MYNMwmiT2S9gyn0xg0zCaJPZL2DKfTGEv1WbKhXlFJCE5ZcxMJ4wy5M33Pmh8pI+0Bo6YuPqHZ8lSYdN+2ou3J8cBn5blbjp2HDy9DgBwA4AcAOAHADgBwA4AcAjut/8ATT9vL5Jxr/Ppn7tqRDN6Yej7cnxyjPy3KsaZnjjo8AeAPAHgDwB4A8AeAPAHgJPrSPriCbt4eScaujX9Q7dqFJN6IUnbk+KUZ52rGmV446PAHgDwB4A8AeAPAHgDwB4CX6x/vJe3h5DBp6NI9u27JPTSp08kVSd0hJUk0PrlfylLhCPy/MBGYVtzzKWqT3yuQVJZmUtUnvlcgqSzMpapPfK5BUlmZS1Se+VyCpLMylqk98rkFSWZlLVJ75XIKkszKWqT3yuQVJZmUtUnvlcgqSzMpapPfK5BUlmZS1Se+VyCpLMylqk98rkFSW0vUSfOKU86c5PPLITCSaOYIh9z54+88PaMBXqmk+cW/9k='); display:block; color:blue; line-height:40px; text-align:center; }
+	    ul.tab li a.selected{ background:url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEASABIAAD/2wBDAAYEBAQFBAYFBQYJBgUGCQsIBgYICwwKCgsKCgwQDAwMDAwMEAwODxAPDgwTExQUExMcGxsbHCAgICAgICAgICD/2wBDAQcHBw0MDRgQEBgaFREVGiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICD/wAARCAAoAGQDAREAAhEBAxEB/8QAGAABAQEBAQAAAAAAAAAAAAAAAAYEAwj/xAAnEAABAwEHBAMBAAAAAAAAAAAAAQMEEgITFFR0k9IFBhGzJTWyUf/EABgBAQEBAQEAAAAAAAAAAAAAAAAEAgMB/8QAHREBAAIDAQEBAQAAAAAAAAAAAAExAhESAwQyIf/aAAwDAQACEQMRAD8A9BQoUDARFWIwqqw0qqrTaqqq2iqqqqFGWU7cYiNO2CgZOPst8TzqXuoMFAycfZb4jqTUGCgZOPst8R1JqDBQMnH2W+I6k1BgoGTj7LfEdSagwUDJx9lviOpNQYKBk4+y3xHUmoMFAycfZb4jqTUGCgZOPst8R1JqDBQMnH2W+I6k1BgoGTj7LfEdSahL93MsNT2EZasNJaYRVRuylhPN5bTz4s+P4UeM/wAcfW1VBs/Hw9Oz67JNlcu0U7Unj0pAUgKQFICkBSApAUgKQFIEn3p9hG06exwq8KcPW1b0yx56ZC07PrQlyuXfGmm7MtF2AuwF2AuwF2AuwF2AuwF2AuwIvvhPHU4+nT2Wyv56T+1rHpNn4mDp2vWhLncu+NNVJhopAUgKQFICkBSApAUgKQFIEN359sxp7Pstlvz0m9rWfRk+Hg6dr8ISZ/qVGNNlJhopAUgKQFICkBSApAUgKQFIED399wzp7P7tlvzflL7W/9k='); text-decoration:none; color:#333; cursor:default; }
+	    ul.panel{ clear:both; border:1px solid #9FB7D4; border-top:none; padding:0; }
+	    ul.panel li{ list-style-type:none; padding:10px; text-indent:1em; color:#333; }
+	</style>
+
+    <script src='../jquery-3.1.0.js'></script>
+    <script>
+        $(document).ready(function() {
+            $('.tab a').click(function(e) {
+                $('.tab a').not(this).removeClass('selected');
+                $(this).addClass('selected');
+                var a = $(this).attr('href');
+                $('.panel li').hide();
+                $(a).show();
+            });
+        });
+
+    </script>
+	
+</head>
+<body>
+<div id="container">
+    <ul class="tab">
+        <li><a href="#tab1" class="selected">JavaScript</a></li>
+        <li><a href="#tab2">CSS</a></li>
+        <li><a href="#tab3">HTML</a></li>
+        <li><a href="#tab4">jQuery</a></li>
+        <li><a href="#tab5">XHTML</a></li>
+    </ul>
+    <ul class="panel">
+        <li id="tab1">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse congue elit eu mauris sollicitudin dictum. Phasellus nec felis ut arcu placerat tincidunt. Vestibulum luctus mauris ac ante molestie eleifend. Quisque dapibus nulla ac purus volutpat posuere a quis nisl. Nam condimentum purus vitae nibh feugiat imperdiet. Cras purus mi, egestas vitae imperdiet volutpat, suscipit nec odio. Maecenas elementum aliquam metus nec ultrices. Suspendisse potenti. Praesent lobortis gravida massa in volutpat. Nunc id mauris id orci congue malesuada. Aliquam vel mauris risus, sit amet laoreet sapien. Maecenas varius gravida purus vel pharetra. Sed quis leo id mi laoreet accumsan. Vestibulum ac mauris purus, nec rutrum sem. Sed euismod magna a lacus consectetur in mattis quam suscipit. Phasellus nec enim libero. Donec sit amet justo diam. In hac habitasse platea dictumst. Sed nibh libero, iaculis eget aliquet eu, rhoncus nec ligula. 
+        </li>
+        <li id="tab2">
+Nam cursus molestie erat, a sodales erat sollicitudin ut. Maecenas nec urna mi, eu congue turpis. Duis vitae volutpat lorem. Ut vulputate tempor elit, vitae iaculis elit sollicitudin at. Ut gravida fermentum tempor. Mauris metus ante, volutpat et porta a, malesuada vel purus. In lobortis ullamcorper lorem eu malesuada. Nullam sollicitudin, urna eu euismod suscipit, eros sapien adipiscing arcu, sit amet ultricies lacus elit sed urna. Nam scelerisque, nulla eu mollis elementum, ipsum tortor ullamcorper felis, eget laoreet diam turpis dignissim metus. In eget lectus sit amet mi pretium pellentesque varius vitae augue. Integer mattis, elit nec adipiscing rhoncus, elit tellus congue sapien, et auctor mi nisi in purus. Curabitur commodo, neque sed ornare porta, purus magna rhoncus eros, quis consectetur ipsum erat ac mi. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Fusce sed turpis tortor, quis euismod enim. Integer faucibus venenatis egestas. Etiam eu metus et sem bibendum fermentum. Sed dui ante, sollicitudin at tincidunt at, pretium sit amet diam. Nunc porttitor tristique est sed pulvinar. Fusce eu ligula vitae orci venenatis sagittis sed quis ipsum. 
+        </li>
+        <li id="tab3">
+Pellentesque in metus leo. Praesent porta, dolor nec mattis ullamcorper, velit purus mollis enim, nec tincidunt magna massa ornare elit. In ipsum enim, pellentesque vitae gravida ultrices, aliquet nec ante. Mauris sed nunc ut ligula dictum convallis vel et nunc. Aenean eget enim vitae nulla lacinia consequat. Quisque blandit, ante vel sodales sollicitudin, neque ante elementum leo, ut consequat dui risus ut purus. Vestibulum viverra lacus at felis dignissim bibendum. Maecenas interdum nisl eu metus porta luctus. Suspendisse nulla neque, ultricies nec facilisis nec, mollis id sapien. Donec nec quam et felis pulvinar fringilla a non orci. Maecenas tincidunt magna a sem faucibus eu interdum magna aliquam. Suspendisse a diam lorem, nec malesuada sapien. Nam a scelerisque velit. Integer commodo malesuada odio, sit amet rutrum ante viverra ut. In egestas, arcu id pretium tempus, ligula nibh interdum enim, non bibendum velit felis sed augue. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent augue eros, posuere pharetra pharetra eu, feugiat eu velit. 
+        </li>
+        <li id="tab4">
+Vestibulum a quam scelerisque odio ultricies mollis eget a leo. Morbi dictum, velit lobortis hendrerit tincidunt, lacus nisl rhoncus felis, commodo sollicitudin magna augue non est. Nunc in felis quis purus dignissim blandit vel ut erat. In hac habitasse platea dictumst. Nullam euismod auctor rhoncus. Proin et sem ac neque placerat vulputate. Nullam consequat purus eget libero posuere pulvinar. Aenean luctus luctus leo nec vehicula. Praesent eleifend nibh sed neque vestibulum hendrerit. Nulla suscipit vehicula sem, quis congue ligula gravida vel. Aliquam risus urna, pretium eget porttitor hendrerit, gravida at libero. Curabitur nec luctus risus. Etiam ullamcorper fringilla nisl hendrerit convallis. Duis in nibh tellus. Donec porta nibh id purus mollis sodales. Nam eget libero vel metus congue ultricies ut vitae nibh. Sed ac justo ac eros luctus ullamcorper ut tincidunt nibh. Fusce dapibus bibendum urna, id tempor turpis sodales sed. Nam dui purus, posuere vel placerat eu, posuere non magna. 
+        </li>
+        <li id="tab5">
+Vestibulum consequat consequat aliquet. Aenean ut nunc dolor, vel dictum mauris. Proin neque eros, tincidunt at faucibus a, dapibus sit amet tellus. Etiam rutrum pharetra risus porta ullamcorper. Nunc convallis orci at massa suscipit porta. Sed interdum suscipit dui, eu sodales odio fermentum vitae. Nunc vitae dui metus, a laoreet ante. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed eu mauris mi, non blandit tortor. Ut fringilla cursus justo id porta. Sed in nibh nulla. Aenean consectetur arcu vel eros facilisis ac luctus lectus placerat. Fusce risus dui, adipiscing ut tempus non, malesuada quis velit. 
+        </li>
+    </ul>
+</div>
+</body>
+</html>

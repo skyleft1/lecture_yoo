@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>슬라이드식 이미지 갤러리</title>
+	<style>
+	    *{ margin:0; padding:0; border:0; }
+	    body{ background:black; }
+	    #container{ width:1000px; margin:20px auto; }
+	    #navi{ width:300px; float:left; }
+	    #navi ul{ height:460px; }
+	    #navi li{ list-style-type:none; width:150px; float:left; }
+	    #navi li img { border:3px solid white; }
+	    #navi{ overflow:hidden; }
+	    #navi .pageWrap{ width:900px; }
+	    #navi .pageWrap .page{ width:300px; float:left; }
+	    #navi p{ clear:both; width:300px; padding:10px 0; text-align:center; }
+	    #navi p img{ cursor:pointer; }
+	    #main{ width:650px; float:right; }
+	    #main img{ position:absolute; border:3px solid white; }
+	</style>
+	
+	
+</head>
+<body>
+<div id="container">
+    <div id="navi">
+        <div class="pageWrap">
+            <div  class="page">
+                <ul>
+
+                    <li><a href="images/photo1.jpg"><img src="images/photo1_thum.jpg" alt="샹제리아" /></a></li>
+                    <li><a href="images/photo2.jpg"><img src="images/photo2_thum.jpg" alt="장미" /></a></li>
+                    <li><a href="images/photo3.jpg"><img src="images/photo3_thum.jpg" alt="바다" /></a></li>
+                    <li><a href="images/photo4.jpg"><img src="images/photo4_thum.jpg" alt="문" /></a></li>
+                    <li><a href="images/photo5.jpg"><img src="images/photo5_thum.jpg" alt="바다" /></a></li>
+                    <li><a href="images/photo6.jpg"><img src="images/photo6_thum.jpg" alt="자양화" /></a></li>
+                    <li><a href="images/photo7.jpg"><img src="images/photo7_thum.jpg" alt="하늘" /></a></li>
+                    <li><a href="images/photo8.jpg"><img src="images/photo8_thum.jpg" alt="건물" /></a></li>
+                </ul>
+                <p><img src="images/btn_next.jpg" alt="뒤로" class="next" /></p>
+            </div>
+            <div  class="page">
+                <ul>
+                    <li><a href="images/photo9.jpg"><img src="images/photo9_thum.jpg" alt="손" /></a></li>
+                    <li><a href="images/photo10.jpg"><img src="images/photo10_thum.jpg" alt="마루" /></a></li>
+                    <li><a href="images/photo11.jpg"><img src="images/photo11_thum.jpg" alt="나무" /></a></li>
+                    <li><a href="images/photo12.jpg"><img src="images/photo12_thum.jpg" alt="잎" /></a></li>
+                    <li><a href="images/photo13.jpg"><img src="images/photo13_thum.jpg" alt="꽃" /></a></li>
+                    <li><a href="images/photo14.jpg"><img src="images/photo14_thum.jpg" alt="해파리" /></a></li>
+                    <li><a href="images/photo15.jpg"><img src="images/photo15_thum.jpg" alt="풍선" /></a></li>
+                    <li><a href="images/photo16.jpg"><img src="images/photo16_thum.jpg" alt="꽃" /></a></li>
+                </ul>
+                <p><img src="images/btn_prev.jpg" alt="앞으로" class="prev" /> <img src="images/btn_next.jpg" alt="뒤로" class="next" /></p>
+            </div>
+            <div  class="page">
+                <ul>
+                    <li><a href="images/photo17.jpg"><img src="images/photo17_thum.jpg" alt="꽃" /></a></li>
+                    <li><a href="images/photo18.jpg"><img src="images/photo18_thum.jpg" alt="꽃" /></a></li>
+                    <li><a href="images/photo19.jpg"><img src="images/photo19_thum.jpg" alt="꽃" /></a></li>
+                </ul>
+                <p><img src="images/btn_prev.jpg" alt="앞으로" class="prev" /></p>
+            </div>
+        </div>
+    </div>
+    <div id="main">
+        <img src="images/photo1.jpg" alt="" />
+    </div>
+</div>
+</body>
+</html>
+
+
+

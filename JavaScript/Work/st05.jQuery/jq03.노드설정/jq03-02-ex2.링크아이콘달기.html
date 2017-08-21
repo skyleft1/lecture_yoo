@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Enhancing Links</title>
+    <style>
+        .icon-links a { background:0 50% no-repeat;padding-left:20px; }
+        a.presentation { background-image: url(images/presentation.png); }
+        a.video { background-image: url(images/video.png); }
+        a.pdf { background-image: url(images/pdf.png);	}
+        a.image { background-image: url(images/image.png); }
+    </style>
+
+<script src='../jquery-3.1.0.js'></script>
+
+<script>
+
+    $(document).ready(function(e){
+        $('a[href$=".ppt"]').click(function(e){
+            $(this).addClass('presentation');
+            return false;
+        });
+        $('a[href$=".mp4"]').click(function(e){
+            $(this).addClass('video');
+            return false;
+        });
+        $('a[href$=".pdf"]').click(function(e){
+            $(this).addClass('pdf');
+            return false;
+        });
+        $('a[href$=".gif"], a[href$=".png"]').click(function(e) {
+            $(this).addClass('image');
+            return false;
+        });
+        $('a[href$=".jpg"], a[href$=".hwp"]').click(function(e){
+            $(this).addClass('');
+            return false;
+        });
+    });
+</script>
+
+    
+</head>
+<body>
+<div id="content">
+    <h1>Adding Icons to Links</h1>
+    <p>Here's a list of downloadable files:</p>
+    <ul class="icon-links">
+        <li><a href="presentation.ppt" >Presentation slides</a></li>
+        <li><a href="video.mp4">Video of presentation</a></li>
+        <li><a href="notes.pdf">Notes for presentation</a></li>
+        <li><a href="icons.gif">GIF Icon sprite</a></li>
+        <li><a href="icons.png">PNG Icon sprite</a></li>
+        <li><a href="icons.jpg">PNG Icon sprite</a></li>
+        <li><a href="icons.hwp">PNG Icon sprite</a></li>
+    </ul>
+</div>
+</body>
+</html>

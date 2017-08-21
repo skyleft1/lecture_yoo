@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+    <script>
+        var MYAPP1 = {};
+
+        $(function(){
+            $('#win_open').click(function(){
+                MYAPP1.subwin = window.open('http://www.naver.com', '새창열기', 'location = yes');
+                $('#win_open').attr('disabled','disabled');
+                $('#win_close').removeAttr('disabled');
+
+            });
+            $('#win_close').click(function(){
+                MYAPP1.subwin.close();
+                $('#win_open').removeAttr('disabled');
+                $('#win_close').attr('disabled','disabled');
+            });
+
+        });
+    </script>
+</head>
+
+<body>
+    <p>
+        <input id="id_alert"   type="button" value="alert"/>
+        <input id="id_confirm" type="button" value="confirm"/>
+        <input id="id_prompt"  type="button" value="prompt"/>
+        <hr />
+        <input id="win_open"  type="button" value="윈도우 열기" />
+        <input id="win_close" type="button" value="윈도우 닫기"  disabled="disabled" />
+    </p>
+
+<!--<script>-->
+
+    <!--var MYAPP = {};-->
+
+    <!--window.onload = function () {-->
+        <!--MYAPP.alert = document.getElementById('id_alert');-->
+        <!--MYAPP.alert.onclick = function (event) {-->
+            <!--window.alert('alert 클릭됨');-->
+        <!--}-->
+        <!--MYAPP.confirm = document.getElementById('id_confirm');-->
+        <!--MYAPP.confirm.onclick = function (event) {-->
+            <!--var input = window.confirm('컨펌의 값을 인풋에 넣는중');-->
+            <!--window.alert('입력값' + input);-->
+        <!--}-->
+        <!--MYAPP.prompt = document.getElementById('id_prompt');-->
+        <!--MYAPP.prompt.onclick = function (event) {-->
+            <!--var input = window.prompt('문자열을 입력해주세요.', '문자여어어어어어어어어얼');-->
+            <!--window.alert('입력값' + input);-->
+        <!--}-->
+        <!--MYAPP.win_open = document.getElementById('win_open');-->
+        <!--MYAPP.win_open.onclick = function (event) {-->
+            <!--MYAPP.subwin = window.open('http://www.naver.com', '새창열기', 'location = yes');-->
+            <!--MYAPP.win_close.disabled = false;-->
+        <!--}-->
+        <!--MYAPP.win_close = document.getElementById('win_close');-->
+        <!--MYAPP.win_close.onclick = function (event) {-->
+            <!--MYAPP.subwin.close();-->
+            <!--MYAPP.win_close.disabled = true;-->
+        <!--}-->
+    <!--}-->
+
+<!--</script>-->
+
+
+
+</body>
+</html>

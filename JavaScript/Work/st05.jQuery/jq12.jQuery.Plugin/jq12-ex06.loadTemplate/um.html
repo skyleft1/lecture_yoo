@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		* {
+		margin:0;
+		padding:0;
+		word-break:keep-all;
+		box-sizing:border-box;
+		font-family: "나눔 고딕", 'Nanum Gothic', 'ng';
+		}
+		html,body{width:100%; height:100%;}
+		.wrap {width:100%; height:100%; position:relative;}
+		.bbsbox {width:400px; height:600px; border:1px #dad3d3 solid; margin:0 auto; position:absolute; top:50%; left:50%; margin-left:-200px; position:relative;}
+		.box_top {width:100%; height:85px; background-color:#efebdb; border-bottom:1px #231f20 solid;}
+		.box_top #userID{padding-top:20px; font-weight:bold; font-size:18px; content:"\e9a1";}
+		.box_top #date_time{color:#8e8e8e; font-size:12px; margin-top:5px;}
+		.box_top > div{padding-left:20px;}
+
+		#bbs_title{width:350px; height:50px; margin-left:25px; margin-top:25px;}
+		#bbs_content{width:90%; height:350px; overflow:hidden; outline:1px #dad3d3 solid; margin:0 auto;}
+		.liner {position:absolute; bottom:0; height:35px; background-color:#efebdb; width:100%; border-top:1px black solid;}
+
+		.aa{
+			background-color: red;
+			width: 100px;
+			height: 1000px;
+		}
+
+	</style>
+
+	<script src='../../jquery-3.1.0.js'></script>
+	<script src='../../jquery.loadTemplate-1.4.4.js'></script>
+	<script>
+        $(document).ready(function (e) {
+            $(document).scroll(function (e){
+                var maxHeight = $(document).height();
+                var currentScroll = $(window).scrollTop() + $(window).height();
+
+                var aa1 = $.ajax({
+                    url : 'http://localhost:3000/board?start=10&end=20',
+                    data: { data1:'test1', data2:'test2' }, // 사용하는 경우에는 { data1:'test1', data2:'test2' }
+                    type: 'get', // get, post
+                    timeout: 30000, // 30초
+                    dataType: 'json', // text, html, xml, json, jsonp, script
+                    beforeSend : function() {
+                    }
+                }).done( function(data, textStatus, xhr ){
+
+                    var info = [];
+                    for(var i=0; i< data.length; i=i+1) {
+                        var data1 =	{
+                            no: data[i].no,
+                            writer: data[i].writer,
+                            time: data[i].time,
+                            content: data[i].content
+                        }
+                        info.push(data1);
+                    }
+                    var a = $('#posts-container').loadTemplate($('#endless_scroll'), info)
+//                    var state = null;
+//                    var title = null;
+//                    var url = 'http://localhost:3000/board?start=20&end=30'
+//                    history.pushState(state, title, url);
+//                    $('body').append([a]);
+//                        $('body').append('<div>'+ [$('#posts-container')] +'</div>');
+
+                    if (maxHeight == currentScroll) {
+                        console.log(aa1);
+                        $('body').append('<div>'+ aa1 + '</div>');
+                    }
+
+                }).fail( function(xhr, textStatus, error ) {
+                    consol.log('error');
+// 통신이 실패했을 때 이 함수를 타게 된다.
+                }).always( function(data, textStatus, xhr ) {
+// 통신이 실패했어도 성공했어도 이 함수를 타게 된다.
+                });
+                return false;
+                // 3. 템플릿에 들어갈 자료 생성
+
+            });
+
+        });
+	</script>
+</head>
+<body>
+<!-- 템플릿 생성 -->
+<script type='text/html' id='endless_scroll'>
+
+	<div class="bbsbox">
+		<div class="box_top">
+			<div id="userID" data-content="no">이정석</div>
+			<div id="date_time" data-content="writer">2017-05-05</div>
+		</div>
+		<div class="box_btm">
+			<div id="bbs_title" data-content="title">jq04 02 DOM셀렉터</div>
+			<div id="bbs_content" data-content="content">asdfaasdfaasdfaasdfaasdfaasdfaa<br>sdfaasdfaasdfaasdfaas<br>dfaasdfaasdfaasdfaasdfaasdfaasd <br>faasd<br>faasdfaasdfaasdfaasdfaasdfaasdfaasdfaasdfaasdfaasdfaas<br>dfaasdfaasdfaasdfa<br>asdfaasdfaasdfaasdfaasdfaasdf<br>aasdfaasdfaasdfaasdfaasdfaasdfaasdfaasdfaasdfaasdfaasdfaasdfaasdfaasdfaasdfaasdfaasdfaasdfaasdfaasdfaasd<br>faasdfaasdfaasdfaas<br>dfaasdfaasdfaasdfaasdfa<br>asdfaasdfaasdfaasdfaasdfaasdfaasdfaasdfa</div>
+		</div>
+		<div class="liner"></div>
+	</div>
+
+</script>
+
+
+<!-- 템플릿이 들어갈 컨테이너 생성 -->
+<div id="posts-container">
+</div>
+
+<div class='aa'></div>
+
+</body>
+</html>

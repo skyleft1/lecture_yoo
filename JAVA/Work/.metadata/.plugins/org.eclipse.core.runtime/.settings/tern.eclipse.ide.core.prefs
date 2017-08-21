@@ -1,0 +1,9 @@
+contentScope=WHOLE_PROJECT
+defaultTernModules=browser-extension,ecma5,browser,jquery-extension,jquery
+eclipse.preferences.version=1
+loadingLocalPlugin=false
+qualityLevel=1
+repositories=
+requestTimeout=30
+traceOnConsole=false
+used-repository-name=default

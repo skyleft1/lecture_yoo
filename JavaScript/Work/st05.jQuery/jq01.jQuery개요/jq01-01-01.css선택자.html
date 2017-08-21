@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   <meta charset="UTF-8">
+    <title>CSS3 선택자</title>
+    <style>
+		/* 전체 선택자 */
+        *  { color: black;  }
+
+		/* 태그 선택자 */
+        h1 { color: red;  }
+        p  { color: blue; }
+
+		/* id 선택자 */
+        #wrap    { width: 800px; margin: 0; overflow: hidden; }
+        #aside   { width: 200px; float: left; background: #0ab4ff; }
+        #content { width: 600px; float: left; background: green; }
+		
+		/* 클래스 선택자 */
+        .select { color: red; }
+		
+		/* 속성 선택자 */
+		input[type="text"] { background: red; }
+        input[type="password"] { background: blue; }
+		
+		/* 반응 선택자 */
+        a { font-size: 30px;align-content: }
+        a:hover   { color: #74ff8a; }
+        a:active  { color: blue; }
+        a:visited { color: blue; text-decoration:line-through; }
+        a:link    { color: peru; }
+		
+		/* 자손 선택자 */
+		#header  > h1  { color: red; }
+        #section > h1 { color: orange; }
+		
+		/* 후손 선택자 */
+		#header  h1  { color: red; }
+        #section h1 { color: orange; }
+		
+		/* 상태 선택자 */
+        ul { overflow: hidden; margin:0; }
+        li { list-style: none; float:left; margin:0; padding: 15px; }
+        li:first-child     { border-radius: 10px 0 0 10px; }
+        li:last-child      { border-radius: 0 10px 10px 0; }
+        li:nth-child(2n)   { background-color: #FF0003; }
+        li:nth-child(2n+1) { background-color:#800000; }
+
+		/* 상태 선택자 */
+        input:disabled { background-color: gray; }
+        input:focus { background-color: orange; }
+    </style>
+</head>
+<body>
+    <h1>제목 글자</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+    <div id="wrap">
+        <div id="aside"> <h1>#aside 태그</h1> </div>
+        <div id="content"> <h1>#content 태그</h1> </div>
+    </div>
+
+    <ul>
+        <li class="select">사과</li>
+        <li>바나나</li>
+        <li class="select">오렌지</li>
+        <li>감</li>
+    </ul>
+
+    <input type="text" />
+    <input type="password" /><br>
+
+	<a href="http://www.naver.com">naver</a><br>
+    <a href="http://www.daum.net">daum</a><br>
+    <a href="http://www.nate.com">nate</a><br>
+
+    <div id="section">
+        <h1 class="title">Lorem ipsum</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+    </div>
+
+    <h2>상태 선택자</h2>
+	<ul>
+        <li>첫 번째</li>
+        <li>두 번째</li>
+        <li>세 번째</li>
+        <li>네 번째</li>
+        <li>다섯 번째</li>
+        <li>여섯 번째</li>
+        <li>일곱 번째</li>
+    </ul>
+
+    <h2>상태 선택자</h2>
+    <span>사용 가능</span>    <input />
+    <span>사용 불가능</span>  <input disabled="disabled"/>
+</body>
+</html>

@@ -1,0 +1,9 @@
+1484998141518	Move 'ddl' to 'spring11.mvc'
+1484998293233	Delete element
+1485000437626	Rename package 'com.spring11.controller'
+1485000444627	Rename package 'com.spring11.dao'
+1485000450201	Rename package 'com.spring11.model'
+1485000455819	Rename package 'com.spring11.repository'
+1485000461922	Rename package 'com.spring11.service'
+1485000479310	Delete element
+1485000486029	Rename package 'com.spring11.mvc'

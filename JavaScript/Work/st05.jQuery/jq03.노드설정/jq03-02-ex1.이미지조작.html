@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <style>
+        img { padding:5px; width:130px; height:130px; border:1px solid gray; }
+    </style>
+
+<script src='../jquery-3.1.0.js'></script>
+    <script>
+
+        $(document).ready(function(e){
+            $('#img2').click(function(e){
+                $(this).attr('src', 'images/im2.jpg' ).attr('title', 'im2.jpg');
+            });
+            $('#img3').click(function(e){
+                $(this).attr({'src':'images/im3.jpg', 'title':'im3.jpg'});
+            });
+            $('#img4').click(function(e){
+                $(this).attr({'src':'images/im4.jpg', 'title':'im4.jpg'});
+            });
+            $('#img5').click(function(e){
+                $(this).attr({'src':'images/im5.jpg', 'title':'im5.jpg'});
+            });
+            $('#img6').click(function(e){
+                $(this).attr('src', '');
+            });
+        });
+
+
+    </script>
+    
+</head>
+<body>
+    <h2>&lt;img id="" src="" title="" alt="" /&gt;</h2>
+
+    <h3>어트리뷰트 추가</h3>
+    <img id="img1" src="images/im1.jpg" title="im1.jpg" alt="im1.jpg" />
+    <img id="img2" />
+    <img id="img3" />
+    <img id="img4" />
+    <img id="img5" title="im5.jpg" />
+
+    <h3>어트리뷰트 제거</h3>
+    <img id="img6" src="images/im5.jpg" title="im5" alt="im5.jpg" />
+</body>
+</html>
+

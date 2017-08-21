@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>자식>자식>자식></title>
+<style>
+    /*common*/
+    *{margin:0;padding:0;}
+    ul,li{list-style:none;}
+    a{text-decoration:none;color:#666;}
+    div { float: left; }
+
+    /*menu1*/
+    #menu1 { margin:50px; }
+    #menu1>li                   { position:relative;margin-bottom:5px;border:1px solid red;width:100px;}
+    #menu1>li:nth-child(1)      { margin-right:-1px;}
+    #menu1>li      >a           { display:block;width:100px;height:30px;text-align:center;line-height:30px; border:1px solid gray;}
+    #menu1>li      >a:hover     { background:#333;color:#fff }
+    #menu1>li      >ul          { display:none; position:absolute;top:0;left:100px;}
+    #menu1>li:hover>ul          { display:block}
+    #menu1>li      >ul>li       { margin-left: 10px; display:block;margin-bottom:-1px; width:100px;height:30px;text-align:center;line-height:30px;border:1px solid gray;}
+    #menu1>li      >ul>li:hover { background:#999;color:#fff}
+
+
+    /*menu2*/
+    #menu2{ margin:50px 20px 50px 200px;  }
+    #menu2>li                   { position:relative;float:left;}
+    #menu2>li:nth-child(1)      { margin-right:-1px;}
+    #menu2>li      >a           { display:block; width:100px;height:30px;text-align:center;line-height:30px;border:1px solid gray;}
+    #menu2>li      >a:hover     { background:#333;color:#fff}
+    #menu2>li      >ul          { display:none;}
+    #menu2>li:hover>ul          { display:block;}
+    #menu2>li      >ul>li       { display:block;margin-bottom:-1px; width:100px;height:30px;text-align:center;line-height:30px;border:1px solid gray;}
+    #menu2>li      >ul>li:hover { background:#999;color:#fff}
+
+
+    /*menu3*/
+    #menu3{clear:both;margin: 50px 0 50px 200px;}
+    #menu3>li                   { float:left; position:relative;}
+    #menu3>li:nth-child(1)      { margin-right:-1px}
+    #menu3>li      >a           { display:block; width:100px;height:30px;text-align:center;line-height:30px;border:1px solid gray;}
+    #menu3>li      >a:hover     { background:#999;color:#fff}
+    #menu3>li      >ul          { display:none; position:absolute;top:30px;left:0;width:300px;border:1px solid gray; }
+    #menu3>li:hover>ul          { display:block; }
+    #menu3>li      >ul>li       { display:block;float:left; width:100px;height:30px;text-align:center;line-height:30px; }
+    #menu3>li      >ul>li:hover { background:#999; color:#fff;}
+</style>
+</head>
+<body>
+<div>
+    <ul id="menu1">
+        <li><a href="#">MENU1</a>
+            <ul>
+                <li><a href="#">MENU1-1</a></li>
+                <li><a href="#">MENU1-2</a></li>
+                <li><a href="#">MENU1-3</a></li>
+            </ul>
+        </li>
+
+        <li><a href="#">MENU2</a>
+            <ul>
+                <li><a href="#">MENU2-1</a></li>
+                <li><a href="#">MENU2-2</a></li>
+                <li><a href="#">MENU2-3</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<div>
+    <ul id="menu2">
+        <li><a href="#">MENU3</a>
+            <ul>
+                <li><a href="#">MENU3-1</a></li>
+                <li><a href="#">MENU3-2</a></li>
+                <li><a href="#">MENU3-3</a></li>
+            </ul>
+        </li>
+
+        <li><a href="#">MENU4</a>
+            <ul>
+                <li><a href="#">MENU4-1</a></li>
+                <li><a href="#">MENU4-2</a></li>
+                <li><a href="#">MENU4-3</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<div>
+    <ul id="menu3">
+        <li><a href="#">MENU5</a>
+            <ul>
+                <li><a href="#">MENU5-1</a></li>
+                <li><a href="#">MENU5-2</a></li>
+                <li><a href="#">MENU5-3</a></li>
+            </ul>
+        </li>
+
+        <li><a href="#">MENU6</a>
+            <ul>
+                <li><a href="#">MENU6-1</a></li>
+                <li><a href="#">MENU6-2</a></li>
+                <li><a href="#">MENU6-3</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+</body>
+</html>
+
+
+

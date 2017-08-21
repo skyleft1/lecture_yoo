@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>객체 생성</title>
+
+</head>
+<body>
+
+<Dog name='Fido' weigth='40' breed='Mixed' loves= 'walks, fetching balls' />
+
+<script>
+    var Dog = {
+        name: 'Fido',
+        weigth: 40,
+        breed: 'Mixed',
+        loves: ['walks', 'fetching balls'],
+    }
+    console.log(Dog);
+
+    for(var name in Dog){
+        console.log(name +' : '+ Dog[name]);
+    }
+
+
+</script>
+
+</body>
+</html>
+

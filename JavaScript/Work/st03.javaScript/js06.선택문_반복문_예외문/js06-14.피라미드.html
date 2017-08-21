@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>피라미드 출력</title>
+	
+</head>
+<body>
+<script>
+
+    var a = '         ';
+    var b = '*';
+    var ab = '';
+    var c = '';
+    for(var i=0; i<9; i++) {
+        c = a.substring(0,9-i);
+        ab += c+b+'\n'
+        b += '**';
+    }
+
+    console.log(ab);
+
+</script>
+
+</body>
+</html>

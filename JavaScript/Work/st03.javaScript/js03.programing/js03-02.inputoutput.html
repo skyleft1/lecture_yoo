@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+
+</head>
+<body>
+
+<script>
+  var value1, value2, sum=0, average= 0;
+
+  value1 = prompt('첫번째 과목 점수 입력', '0');
+  value2 = prompt('두번째 과목 점수 입력', '0');
+
+  value1 = eval('value1');
+  value2 = eval('value2');
+
+  sum = value1 + value2;
+  average = sum/2;
+
+  document.write('---------------------<br>')
+  if(average >= 95){
+    document.write('very good'+ '<br>')
+  }
+  else {
+    document.write('just good'+ '<br>')
+  }
+  document.write('---------------------<br>')
+
+</script>
+</body>
+</html>

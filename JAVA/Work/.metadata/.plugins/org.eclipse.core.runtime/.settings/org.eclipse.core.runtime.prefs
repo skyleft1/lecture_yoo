@@ -1,0 +1,5 @@
+content-types/org.eclipse.core.runtime.text/charset=UTF-8
+content-types/org.eclipse.jst.jsp.core.jspsource/charset=UTF-8
+content-types/org.eclipse.wst.xml.core.xmlsource/file-names=context.xm
+eclipse.preferences.version=1
+line.separator=\n

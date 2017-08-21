@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;HomeController.java&apos; to &apos;Lecture0701-SpringBoard/src/main/java/com.lecture.spring.controller&apos;&#x0D;&#x0A;- Original project: &apos;Lecture0506-SpringProjectWithEclipse&apos;&#x0D;&#x0A;- Destination element: &apos;Lecture0701-SpringBoard/src/main/java/com.lecture.spring.controller&apos;&#x0D;&#x0A;- Original element: &apos;com.lecture.spring.controller.HomeController.java&apos;" description="Copy compilation unit" destination="=Lecture0701-SpringBoard/src\/main\/java&lt;com.lecture.spring.controller" element1="/src\/main\/java&lt;com.lecture.spring.controller{HomeController.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1435792302359" units="1" version="1.0"/>
+</session>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+	    /*div   { background: #FFF; padding: 10px; margin: 10px; }*/
+	    table { border: 1px solid #AAA; width:100% }
+	    td    { border: 1px solid #AAA; width: 20px; height: 20px; }
+	</style>
+
+<script src='../jquery-3.1.0.js'></script>
+    <script>
+        var MYAPP = {};
+        MYAPP.init = function(e){
+            $('*').css('outline', '' );
+        };
+
+        $(document).ready(function(e) {
+            $('#checked').click(function (e) {
+                MYAPP.init();
+                $('input[type="checkbox"]:checked').css('outline', '1px red dotted');
+            });
+            $('#radio').click(function (e) {
+                MYAPP.init();
+                $('input[type="radio"]:checked').css('outline', '1px red dotted');
+            });
+            $('#selected').click(function (e) {
+                MYAPP.init();
+                $('option:selected').css('outline', '1px red dotted');
+            });
+            $('#hobby').click(function (e) {
+                MYAPP.init();
+                $('input[name="hobby"]:checked').css('outline', '1px red dotted');
+            });
+        });
+    </script>
+	
+</head>
+<body>
+    <h2>Filter Selector</h2>
+    <div>
+        <ul>
+            <li>아이디:<input type='text' class='cls' name='id' /></li>
+            <li>이름:  <input type='text' class='cls' name='name' /></li>
+            <li>주소:  <input type='text' class='cls' name='addr' /></li>
+        </ul>
+
+
+        <ul>
+            <li><input type='checkbox' class='cls' name='checkBox #1' checked />CheckBox #1</li>
+            <li><input type='checkbox' class='cls' name='checkBox #2' />CheckBox #2</li>
+            <li><input type='checkbox' class='cls' name='checkBox #3' checked />CheckBox #3</li>
+        </ul>
+
+        <hr>
+        <select multiple='multiple'>
+            <option>Option #1</option>
+            <option selected>Option #2</option>
+            <option>Option #3</option>
+        </select>
+
+        <hr>
+        radio의 name 이 다르면 다중선택 가능
+        <input name='aaaa' type='radio' value='aaaa1'  />
+        <input name='bbbb' type='radio' value='aaaa2' />
+        <input name='cccc' type='radio' value='aaaa3' />
+   		<hr>
+        radio의 name 이 같으면 단일선택 가능
+        <input name='dddd' type='radio' value='aaaa1' checked />
+        <input name='dddd' type='radio' value='bbbb2' />
+        <input name='dddd' type='radio' value='bbbb3' />
+
+        <hr>
+        <span class='item'> 음악감상 </span>
+        <input type='checkbox' name='hobby' value='music'>
+        <span class='item'> 요가 </span>
+        <input type='checkbox' name='hobby' value='yoga'>
+        <span class='item'> 독서 </span>
+        <input type='checkbox' name='hobby' value='reading'>
+    </div>
+    <hr>
+    <input id='checked'  type='button' value='checked'   />
+    <input id='radio'    type='button' value='radio'     />
+    <input id='selected' type='button' value='selected'  />
+    <input id='hobby'    type='button' value='취미 선택' />
+
+    <hr>
+    <div id='contents'> 결과</div>
+</body>
+</html>

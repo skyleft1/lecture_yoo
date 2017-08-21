@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .tab-menu { list-style: block; height: 80px; }
+        .tab-menu li {
+            width: 99px;
+            height: 40px;
+            background-position-y: 0;
+            text-indent: -1000px;
+            overflow: hidden;
+            display: inline-block;
+            float: left;
+        }
+        .tab-menu li:hover     { background-position-y: -40px; }
+        .tab-menu li.select    { background-position-y: -80px; height: 80px; }
+        .tab-menu li.menuitem1 { background-image: url(images/newbtn.bar.1.png); }
+        .tab-menu li.menuitem2 { background-image: url(images/newbtn.bar.2.png); }
+        .tab-menu li.menuitem3 { background-image: url(images/newbtn.bar.3.png); }
+        .tab-menu li.menuitem4 { background-image: url(images/newbtn.bar.4.png); }
+        .tab-menu li.menuitem5 { background-image: url(images/newbtn.bar.5.png); }
+        .tab-menu li.menuitem6 { background-image: url(images/newbtn.bar.6.png); }
+
+        input[type='button']:hover    { cursor: pointer; }
+        input[type='button']:disabled { background:none; border:none; color:darkgray; cursor: default;  }
+
+        span { font-size: 50px; font-family: "NanumGothic", arial;}
+ 
+    </style>
+
+    <script src='../jquery-3.1.0.js'></script>
+
+    <script>
+        var MYAPP = {};
+        MYAPP.init = function (e) {
+            $('*').css('border', '');
+        }
+
+        $(document).ready(function () {
+            $('#mission1').click(function () {
+                $('#mission1').attr('disabled',true);
+                $('#result').text($('.tab-menu li').last().index()+1);
+            });
+            $('#mission2').click(function () {
+                $('#mission2').attr('disabled',true);
+                $('.tab-menu li').click(function (e) {
+                    $('#result').text($(this).index()+1);
+                });
+            });
+            var i= 0;
+            $('#mission3').click(function () {
+                $('#mission3').attr('disabled',true);
+                    setInterval(function (e) {
+                        $('.tab-menu li ').eq(i++).addClass('select');
+                    }, 1000);
+            });
+            $('#mission4').click(function () {
+                $('#mission4').attr('disabled',true);
+                $('.tab-menu li').click(function (e) {
+                    $('.tab-menu li').removeClass('select');
+                    $(this).addClass('select');
+                    $('#result').text($(this).index()+1);
+                });
+            });
+        });
+
+
+    </script>
+
+</head>
+
+<body>
+    <ul class="tab-menu" id="tabMenu1">
+        <li class="menuitem1"> google </li>
+        <li class="menuitem2"> facebook </li>
+        <li class="menuitem3"> pinterest </li>
+        <li class="menuitem4"> twitter </li>
+        <li class="menuitem5"> airbnb </li>
+        <li class="menuitem6"> path </li>
+    </ul>
+
+    <span id="result"></span>
+
+    <div >
+        <p>미션 01: <br>탭 메뉴 아이템(#tabMenu1 li) 개수가 몇 개 인지 출력해 주세요.
+            <br>
+            <input id='mission1'   type='button' value='클릭'>
+        </p>
+        <p>미션 02: <br>클릭한 탭메뉴의 인덱스 값 출력하기
+         탭 메뉴가 클릭되면 클릭한 탭메뉴 아이템이 몇 번째인지 값을 출력해 주세요.
+            <br>
+            <input id='mission2'   type='button' value='클릭'>
+        </p>
+        <p>미션 03: <br>1초에 한 번씩 탭메뉴 아이템에 select 클래스 적용하기
+         탭메뉴 아이템 개수만큼 1초에 한 번씩 순차적으로 탭메뉴 아이템에 select 클래스를 적용해 주세요.
+            <br>
+            <input id='mission3'   type='button' value='클릭'>
+        </p>
+        <p>미션 04: <br>탭메뉴 구현하기
+            <br>
+            <input id='mission4'   type='button' value='클릭'>
+        </p>
+    </div>
+</body>
+
+</html>
+

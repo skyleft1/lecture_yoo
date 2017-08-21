@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        table { border:1px solid #AAA; }
+        td { border:1px solid #AAA; width:25px; height:25px; }
+        div { background : #FFF; margin:5px; width:100%; }
+    </style>
+    
+    
+</head>
+<body>
+    <div>
+        <ul>
+            <li>list item 1</li>
+            <li>list item 2
+                <ul>
+                    <li>list item 2-a</li>
+                    <li>list item 2-b</li>
+                </ul>
+            </li>
+            <li>list item 3</li>
+            <li>list item 4</li>
+            <li>list item 5</li>
+        </ul>
+    </div>
+    <hr>
+    <input id="selector" type="button" value="셀렉터를이용하는방법">
+    <input id="method"   type="button" value="재검색을이용하는방법">
+	<hr>
+    <input id="eq2"         type="button" value="eq(2)">
+    <input id="eq2method"   type="button" value="eq(2) 재검색">
+    <hr>
+    <input id="first"       type="button" value="first()">
+    <input id="firstmethod" type="button" value="first() 재검색">
+    <hr>
+    <input id="last"        type="button" value="last()">
+    <input id="lastmethod"  type="button" value="last() 재검색">
+    <hr>
+</body>
+</html>
+

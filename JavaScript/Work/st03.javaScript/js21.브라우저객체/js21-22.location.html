@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    
+</head>
+<body>
+
+<form name = 'fm'>
+    <input id="qmake" type="button" name='text' value="url query 만들기">
+    <input id="qexec" type="button" name='text' value="url query 분석">
+</form>
+
+    <script>
+        var q = function () {
+            var result = {};
+            var str = location.search.substring(1, location.search.length);
+            var params = str.split('&');
+
+            for(var i=0; i<params.length; i++){
+                var kv = params[i].split('=');
+                result[kv[0]] = decodeURIComponent(kv[1]);
+            }
+            return result;
+        };
+        var result = q();
+        for(var name in result ){
+            console.log(name +' : ' + result[name]);
+        }
+
+        window.onload = function(e){
+            var button = document.getElementById('qmake');
+            button.onclick = function(e){
+                var datetime = new Date();
+                var year = datetime.getFullYear();
+                var month = datetime.getMonth();
+
+                var url = '?year='+ year + '&month=' + month ;
+                location.href = url;
+            };
+        };
+
+    </script>
+
+</body>
+</html>
+

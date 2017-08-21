@@ -1,0 +1,21 @@
+<application>
+  <component name="UsageTrigger">
+    <counts>
+      <entry feature="CreateFile.CreateFileAction" count="1" />
+      <entry feature="execute.AndroidJUnit.Debug" count="96" />
+      <entry feature="execute.AndroidJUnit.Run" count="204" />
+      <entry feature="execute.Application.Debug" count="8" />
+      <entry feature="execute.Application.Run" count="28" />
+      <entry feature="ide.settings.Appearance" count="6" />
+      <entry feature="ide.settings.Colors_&amp;_Fonts" count="1" />
+      <entry feature="ide.settings.Font" count="1" />
+      <entry feature="ide.settings.Gradle" count="1" />
+      <entry feature="ide.settings.Project_Structure" count="1" />
+      <entry feature="ideaapp.started" count="12" />
+      <entry feature="terminal.win" count="1" />
+      <entry feature="welcome.screen.WelcomeScreen.Configure" count="2" />
+      <entry feature="welcome.screen.WelcomeScreen.OpenProject" count="1" />
+      <entry feature="welcome.screen.WelcomeScreen.Settings" count="1" />
+    </counts>
+  </component>
+</application>

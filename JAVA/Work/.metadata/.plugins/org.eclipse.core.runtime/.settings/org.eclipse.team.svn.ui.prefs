@@ -1,0 +1,12 @@
+eclipse.preferences.version=1
+firstStartup=false
+org.eclipse.team.svn.revision.graph.ShowRevisionGraphPanel.height=159
+org.eclipse.team.svn.revision.graph.ShowRevisionGraphPanel.width=715
+org.eclipse.team.svn.ui.compare.ComparePanel.height=500
+org.eclipse.team.svn.ui.compare.ComparePanel.width=1279
+org.eclipse.team.svn.ui.panel.local.CommitPanel.height=413
+org.eclipse.team.svn.ui.panel.local.CommitPanel.width=907
+org.eclipse.team.svn.ui.panel.local.RevertPanel.height=253
+org.eclipse.team.svn.ui.panel.local.RevertPanel.width=600
+org.eclipse.team.svn.ui.panel.reporting.ErrorCancelPanel.height=137
+org.eclipse.team.svn.ui.panel.reporting.ErrorCancelPanel.width=640

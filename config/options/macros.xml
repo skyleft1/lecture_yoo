@@ -1,0 +1,9 @@
+<application>
+  <component name="ActionMacroManager">
+    <macro name="convert tab to space">
+      <action id="$SelectAll" />
+      <action id="ConvertIndentsToSpaces" />
+      <action id="SaveAll" />
+    </macro>
+  </component>
+</application>

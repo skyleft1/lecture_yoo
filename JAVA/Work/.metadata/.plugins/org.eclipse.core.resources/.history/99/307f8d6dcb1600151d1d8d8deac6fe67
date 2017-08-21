@@ -1,0 +1,95 @@
+package com.lecture.database.model;
+
+import java.util.Date;
+
+public class ModelComment extends ModelBase {
+    private int commentNo;
+    private int articleNo;
+    private String email;
+    private String memo;
+    private Date regdate;
+    private String InsertUID;
+    private Date InsertDT;
+    private String UpdateUID;
+    private Date UpdateDT;
+
+    public int getCommentNo() {
+        return commentNo;
+    }
+
+    public void setCommentNo(int commentNo) {
+        this.commentNo = commentNo;
+    }
+
+    public int getArticleNo() {
+        return articleNo;
+    }
+
+    public void setArticleNo(int articleNo) {
+        this.articleNo = articleNo;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getMemo() {
+        return memo;
+    }
+
+    public String getHtmlMemo() {
+        if (memo != null) {
+            return memo.replace(ModelArticle.ENTER, "<br />");
+        }
+        return null;
+    }
+
+    public void setMemo(String memo) {
+        this.memo = memo;
+    }
+
+    public Date getRegdate() {
+        return regdate;
+    }
+
+    public void setRegdate(Date regdate) {
+        this.regdate = regdate;
+    }
+
+    public String getInsertUID() {
+        return InsertUID;
+    }
+
+    public void setInsertUID(String insertUID) {
+        InsertUID = insertUID;
+    }
+
+    public Date getInsertDT() {
+        return InsertDT;
+    }
+
+    public void setInsertDT(Date insertDT) {
+        InsertDT = insertDT;
+    }
+
+    public String getUpdateUID() {
+        return UpdateUID;
+    }
+
+    public void setUpdateUID(String updaterUID) {
+        UpdateUID = updaterUID;
+    }
+
+    public Date getUpdateDT() {
+        return UpdateDT;
+    }
+
+    public void setUpdateDT(Date updaterDT) {
+        UpdateDT = updaterDT;
+    }
+
+}

@@ -1,0 +1,29 @@
+http://webdir.tistory.com/224
+
+
+
+
+
+sudo adduser --disabled-login --gecos 'GitLab' git
+
+
+
+
+
+
+
+
+
+
+sudo -u git1 -H git1 clone https://gitlab.com/gitlab-org/gitlab-shell.git -b v1.9.4
+
+
+git clone https://github.com/gitlabhq/gitlab-shell.git 
+cd gitlab-shell 
+git checkout v1.7.0 
+cp config.yml.example config.yml
+
+
+
+
+http://gitlab.uzuro.com/

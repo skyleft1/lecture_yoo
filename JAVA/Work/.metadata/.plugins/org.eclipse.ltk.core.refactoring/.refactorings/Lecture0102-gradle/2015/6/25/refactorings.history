@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;build.gradle&apos; to &apos;Lecture0101-DynamicWeb&apos;&#x0D;&#x0A;- Original project: &apos;Lecture0102-gradle&apos;&#x0D;&#x0A;- Destination element: &apos;Lecture0101-DynamicWeb&apos;&#x0D;&#x0A;- Original element: &apos;build.gradle&apos;" description="Copy file" element1="build.gradle" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1434610080928" target="/Lecture0101-DynamicWeb" units="0" version="1.0"/>
+</session>

@@ -1,0 +1,173 @@
+@charset "utf-8";
+
+
+@font-face {
+    font-family:'Spoqa Han Sans';
+    font-style:normal;
+    font-weight:normal;
+    src:url('http://image.yes24.com/sysimage/font/spoqa/SpoqaHanSans-Regular.eot?iefix');/* ie6,7,8 */
+    src:url('http://image.yes24.com/sysimage/font/spoqa/SpoqaHanSans-Regular.woff') format('woff'), url('http://image.yes24.com/sysimage/font/spoqa/SpoqaHanSans-Regular.ttf') format('truetype');/* 그 외 모든 브라우져 */
+}
+
+@font-face {
+    font-family:'Spoqa Han Sans';
+    font-style:normal;
+    font-weight:200;
+    src:url('http://image.yes24.com/sysimage/font/spoqa/SpoqaHanSans-Thin.eot?iefix');/* ie6,7,8 */
+    src:url('http://image.yes24.com/sysimage/font/spoqa/SpoqaHanSans-Thin.woff') format('woff'), url('http://image.yes24.com/sysimage/font/spoqa/SpoqaHanSans-Thin.ttf') format('truetype');/* 그 외 모든 브라우져 */
+}
+
+@font-face {
+    font-family:'Spoqa Han Sans';
+    font-style:normal;
+    font-weight:700;
+    src:url('http://image.yes24.com/sysimage/font/spoqa/SpoqaHanSans-Bold.eot?iefix');/* ie6,7,8 */
+    src:url('http://image.yes24.com/sysimage/font/spoqa/SpoqaHanSans-Bold.woff') format('woff'), url('http://image.yes24.com/sysimage/font/spoqa/SpoqaHanSans-Bold.ttf') format('truetype');/* 그 외 모든 브라우져 */
+}
+
+@font-face {
+  font-family: 'Nanum Gothic Square';
+  font-style: normal;
+  font-weight: 400;
+  src: url('http://image.yes24.com/sysimage/font/square/NanumSquareR.eot');
+  src: url('http://image.yes24.com/sysimage/font/square/NanumSquareR.eot?#iefix') format('embedded-opentype'),
+       url('http://image.yes24.com/sysimage/font/square/NanumSquareR.woff') format('woff'),
+       url('http://image.yes24.com/sysimage/font/square/NanumSquareR.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Nanum Gothic Square';
+  font-style: normal;
+  font-weight: 700;
+  src: url('http://image.yes24.com/sysimage/font/square/NanumSquareB.eot');
+  src: url('http://image.yes24.com/sysimage/font/square/NanumSquareB.eot?#iefix') format('embedded-opentype'),
+       url('http://image.yes24.com/sysimage/font/square/NanumSquareB.woff') format('woff'),
+       url('http://image.yes24.com/sysimage/font/square/NanumSquareB.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 400;
+  src: url('http://image.yes24.com/sysimage/font/gothic/NanumGothic-Regular.eot');
+  src: url('http://image.yes24.com/sysimage/font/gothic/NanumGothic-Regular.eot?#iefix') format('embedded-opentype'),
+       url('http://image.yes24.com/sysimage/font/gothic/NanumGothic-Regular.woff2') format('woff2'),
+       url('http://image.yes24.com/sysimage/font/gothic/NanumGothic-Regular.woff') format('woff'),
+       url('http://image.yes24.com/sysimage/font/gothic/NanumGothic-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 600;
+  src: url('http://image.yes24.com/sysimage/font/gothic/NanumGothic-Bold.eot');
+  src: url('http://image.yes24.com/sysimage/font/gothic/NanumGothic-Bold.eot?#iefix') format('embedded-opentype'),
+       url('http://image.yes24.com/sysimage/font/gothic/NanumGothic-Bold.woff2') format('woff2'),
+       url('http://image.yes24.com/sysimage/font/gothic/NanumGothic-Bold.woff') format('woff'),
+       url('http://image.yes24.com/sysimage/font/gothic/NanumGothic-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 700;
+  src: url('http://image.yes24.com/sysimage/font/gothic/NanumGothic-ExtraBold.eot');
+  src: url('http://image.yes24.com/sysimage/font/gothic/NanumGothic-ExtraBold.eot?#iefix') format('embedded-opentype'),
+       url('http://image.yes24.com/sysimage/font/gothic/NanumGothic-ExtraBold.woff2') format('woff2'),
+       url('http://image.yes24.com/sysimage/font/gothic/NanumGothic-ExtraBold.woff') format('woff'),
+       url('http://image.yes24.com/sysimage/font/gothic/NanumGothic-ExtraBold.ttf') format('truetype');
+}
+
+@font-face {
+font-family: 'yesB';
+src:url('http://image.yes24.com/sysimage/font/Yes24B.eot');
+src:url('http://image.yes24.com/sysimage/font/Yes24B.eot?#iefix') format('embedded-opentype'),url('http://image.yes24.com/sysimage/font/Yes24B.woff') format('woff'),url('http://image.yes24.com/sysimage/font/Yes24B.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'yesM';
+src:url('http://image.yes24.com/sysimage/font/Yes24M.eot');
+src:url('http://image.yes24.com/sysimage/font/Yes24M.eot?#iefix') format('embedded-opentype'),url('http://image.yes24.com/sysimage/font/Yes24M.woff') format('woff'),url('http://image.yes24.com/sysimage/font/Yes24M.ttf') format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+
+/* CSS Document */
+html { overflow-y:scroll; }
+html, body { min-height:100%;height:100%;}
+body,div {margin:0;padding:0}
+body { font-family:'돋움',dotum,Helvetica,sans-serif;font-size:12px;color:#555; }
+body{background-color:#fff;text-align:center;*word-break:break-all;-ms-word-break:break-all}
+img {border:0 none}
+
+a{color:#555;text-decoration:none}
+a:hover{color:#6699cc;text-decoration:underline}
+
+/* clearfix */
+.clearfix:after { content:"."; display:block; height:0; clear:both; visibility:hidden; } 
+.clearfix { display:inline-block; clear:both; }/* Hides from IE-mac \*/ *html .clearfix {height: 1px;} .clearfix {display: block;}/* End hide from IE-mac */
+
+/* image repleace main */
+.bgCateM { display:-moz-inline-stack;display:inline-block;zoom:1;*display:inline;overflow:hidden;text-align:left;text-indent:-999em;vertical-align:top;background:url('./images/bgMain.png') no-repeat left top;} /* 기본 이미지 태체 태그 */
+* html .bgCateM {text-indent:0 !important; line-height:0 !important; font-size:0 !important; overflow:hidden !important;background:url('./images/bgMain.png') no-repeat left top;}/*ie6 hack */
+*:first-child+html .bgCateM { text-indent:0 !important; line-height:0 !important; font-size:0 !important; overflow:hidden !important;background:url('./images/bgMain.png') no-repeat left top;}/*ie7 hack */
+
+.tagAd { position:absolute;right:9px;top:9px;width:13px;height:9px;overflow:hidden;text-indent:-999em;background:url('./images/bgMain.png') no-repeat 0 -640px; }
+.btn_more .bgCateM { width:37px;height:13px;background-position:-380px -640px; }
+
+/* 카테고리 */
+.cateMTop { margin:0 auto;width:960px;text-align:left; }
+.cateMTop .mContRT { float:right;position:relative;width:770px; }
+.cateMTop .mContRT .mConLT { height:323px;border:solid 1px #d8d8d8;background-color:#fff;border-radius:3px;background-color:#fff;box-shadow:0 1px 0 #F0F0F0; width: 579px; }
+.cateMTop .mContRT .mConLT .mbnZone { display:table-cell;_float:left;position:relative;z-index:1;width:579px;height:323px;vertical-align:top; }
+.cateMTop .mContRT .mConLT .mbnZone .btnMbn { display:none;position:absolute;top:142px;z-index:10;width:34px;height:38px; }
+.cateMTop .mContRT .mConLT .mbnZone .btnMbn a { width:34px;height:38px; }
+.cateMTop .mContRT .mConLT .mbnZone .btnMbn.prev { left:0; }
+.cateMTop .mContRT .mConLT .mbnZone .btnMbn.prev a { background-position:-160px -640px; }
+.cateMTop .mContRT .mConLT .mbnZone .btnMbn.prev a:hover { background-position:-240px -640px; }
+.cateMTop .mContRT .mConLT .mbnZone .btnMbn.next { right:0; }
+.cateMTop .mContRT .mConLT .mbnZone .btnMbn.next a { background-position:-200px -640px; }
+.cateMTop .mContRT .mConLT .mbnZone .btnMbn.next a:hover { background-position:-280px -640px; }
+.cateMTop .mContRT .mConLT .mbnZone .mbnRollWrap { }
+.cateMTop .mContRT .mConLT .mbnZone .mbnRollWrap .yPagen { position:absolute;left:14px;top:286px;z-index:6;height:26px;background-color:#b0b0b0; }
+.cateMTop .mContRT .mConLT .mbnZone .mbnRollWrap .yPagen a { display:block;padding-top:2px;height:24px;_height:26px;overflow:hidden;line-height:24px;white-space:nowrap;text-overflow:ellipsis;text-align:center;color:#fff;font-size:11px; }
+.cateMTop .mContRT .mConLT .mbnZone .mbnRollWrap .yPagen a:hover { text-decoration:none; }
+.cateMTop .mContRT .mConLT .mbnZone .mbnRollWrap .yPagen.on a { background-color:#6699cc;text-shadow:1px 0 0 #fff; }
+.cateMTop .mContRT .mConLT .mbnZone .mbnRollWrap .mbnCont {}
+.cateMTop .mContRT .mConLT .mbnZone .mbnRollWrap.RollCount7 .yPagen { width:78px; }
+.cateMTop .mContRT .mConLT .mbnZone .mbnRollWrap.RollCount7 .yPagen.pagen_1 { left:14px; }
+.cateMTop .mContRT .mConLT .mbnZone .mbnRollWrap.RollCount7 .yPagen.pagen_2 { left:93px; }
+.cateMTop .mContRT .mConLT .mbnZone .mbnRollWrap.RollCount7 .yPagen.pagen_3 { left:172px; }
+.cateMTop .mContRT .mConLT .mbnZone .mbnRollWrap.RollCount7 .yPagen.pagen_4 { left:251px; }
+.cateMTop .mContRT .mConLT .mbnZone .mbnRollWrap.RollCount7 .yPagen.pagen_5 { left:330px; }
+.cateMTop .mContRT .mConLT .mbnZone .mbnRollWrap.RollCount7 .yPagen.pagen_6 { left:409px; }
+.cateMTop .mContRT .mConLT .mbnZone .mbnRollWrap.RollCount7 .yPagen.pagen_7 { left:488px; }
+.cateMTop .mContRT .mConLT .mbnZone .mbnRollWrap.RollCount6 .yPagen { width:91px; }
+.cateMTop .mContRT .mConLT .mbnZone .mbnRollWrap.RollCount6 .yPagen.pagen_1 { left:14px; }
+.cateMTop .mContRT .mConLT .mbnZone .mbnRollWrap.RollCount6 .yPagen.pagen_2 { left:106px; }
+.cateMTop .mContRT .mConLT .mbnZone .mbnRollWrap.RollCount6 .yPagen.pagen_3 { left:198px; }
+.cateMTop .mContRT .mConLT .mbnZone .mbnRollWrap.RollCount6 .yPagen.pagen_4 { left:290px; }
+.cateMTop .mContRT .mConLT .mbnZone .mbnRollWrap.RollCount6 .yPagen.pagen_5 { left:382px; }
+.cateMTop .mContRT .mConLT .mbnZone .mbnRollWrap.RollCount6 .yPagen.pagen_6 { left:474px; }
+.cateMTop .mContRT .mConLT .mbnZone .mbnRollWrap.RollCount5 .yPagen { width:108px; }
+.cateMTop .mContRT .mConLT .mbnZone .mbnRollWrap.RollCount5 .yPagen.pagen_1 { left:14px; }
+.cateMTop .mContRT .mConLT .mbnZone .mbnRollWrap.RollCount5 .yPagen.pagen_2 { left:123px; }
+.cateMTop .mContRT .mConLT .mbnZone .mbnRollWrap.RollCount5 .yPagen.pagen_3 { left:232px; }
+.cateMTop .mContRT .mConLT .mbnZone .mbnRollWrap.RollCount5 .yPagen.pagen_4 { left:341px; }
+.cateMTop .mContRT .mConLT .mbnZone .mbnRollWrap.RollCount5 .yPagen.pagen_5 { left:450px; }
+.cateMTop .mContRT .mConLT .mbnZone .mbnRollWrap.RollCount4 .yPagen { width:136px; }
+.cateMTop .mContRT .mConLT .mbnZone .mbnRollWrap.RollCount4 .yPagen.pagen_1 { left:12px; }
+.cateMTop .mContRT .mConLT .mbnZone .mbnRollWrap.RollCount4 .yPagen.pagen_2 { left:149px; }
+.cateMTop .mContRT .mConLT .mbnZone .mbnRollWrap.RollCount4 .yPagen.pagen_3 { left:286px; }
+.cateMTop .mContRT .mConLT .mbnZone .mbnRollWrap.RollCount4 .yPagen.pagen_4 { left:423px; }
+.cateMTop .mContRT .mConLT .mbnZone .mbnRollWrap.RollCount3 .yPagen { width:183px; }
+.cateMTop .mContRT .mConLT .mbnZone .mbnRollWrap.RollCount3 .yPagen.pagen_1 { left:14px; }
+.cateMTop .mContRT .mConLT .mbnZone .mbnRollWrap.RollCount3 .yPagen.pagen_2 { left:198px; }
+.cateMTop .mContRT .mConLT .mbnZone .mbnRollWrap.RollCount3 .yPagen.pagen_3 { left:382px; }
+.cateMTop .mContRT .mConLT .mbnZone .mbnRollWrap.RollCount2 .yPagen { width:274px; }
+.cateMTop .mContRT .mConLT .mbnZone .mbnRollWrap.RollCount2 .yPagen.pagen_1 { left:14px; }
+.cateMTop .mContRT .mConLT .mbnZone .mbnRollWrap.RollCount2 .yPagen.pagen_2 { left:289px; }
+
+

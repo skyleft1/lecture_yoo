@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;평가지10_제품소프트웨어패키징/제공되는소스&apos; to &apos;제공파일-소스&apos;" description="Rename resource &apos;제공되는소스&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="제공되는소스" name="제공파일-소스" stamp="1487022943009" updateReferences="true"/>
+</session>

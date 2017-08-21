@@ -1,0 +1,61 @@
+body {
+	margin: 0 auto;
+
+}
+
+
+
+
+#image_slide {
+	margin: 0 auto;
+	width: 100%; height: 330px;
+	background: url('../img/img_slide01.jpg') no-repeat;
+	background-size : cover;
+	margin-top: -4px;
+}
+
+/*#image_slide img {
+	width:100%;
+	height:100%;
+}*/
+
+
+/* banner */
+
+
+#banner {
+	
+}
+
+#banner div{
+	display: inline-block;
+	margin: 20 10 20 10;
+	width: 350px; height: 300px;
+	/*float: left;*/
+	list-style:none;
+
+	border: 1px solid;
+}
+
+#banner img{
+	width:100%;
+	height:100%;
+}
+
+/*
+#banner div:first-child {
+}*/
+
+
+#slide_banner1 {
+
+}
+
+#slide_banner2 {
+
+}
+
+#slide_banner3 {
+
+}
+

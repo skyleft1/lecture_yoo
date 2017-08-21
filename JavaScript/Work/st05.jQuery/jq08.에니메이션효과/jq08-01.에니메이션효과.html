@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>효과 메서드</title>
+    <style>
+        span { width: 120px; height: 30px; float:left; vertical-align: middle;
+            background-color: greenyellow; cursor: pointer; margin: 5px; }
+
+        div.fade { width:400px; height:65px; font-size:36px; text-align:center;
+            color:yellow; background:red; display:none; clear: both; }
+
+        div.slide { background: #3d9a44;   margin: 3px; width: 80px;   height: 40px; float: left; display:block; }
+
+        p { clear: both; display: none; }
+
+        br, hr { clear: both; }
+        #easing { display: block; position:absolute; top: 20px; left: 550px; z-index: 10; background: white; }
+
+        #region { position: relative; width: 200px; height:200px; overflow:hidden;  margin:auto; }
+        #images { width: 400px; height: 200px; }
+        #images a img { width:200px; height:200px; border:0; position: relative; }
+        #direction { width: 360px;  margin:auto; }
+
+        .leftbtn { margin-top:10px; }
+        .rightbtn { margin-left:290px;margin-top:10px; }
+    </style>
+
+    <script src='../jquery-3.1.0.js'></script>
+    <script src='../jquery.easing.1.3.js'></script>
+    <!--<script src='../jquery.easing.1.3.mis.js'></script>-->
+    <!--<script src='../jquery.easing.compatibility.js'></script>-->
+
+    <script>
+
+        $(document).ready(function() {
+            $('.showhide:eq(0)').click(function(e) {
+                $('p.showhide').show();
+            });
+            $('.showhide:eq(1)').click(function(e) {
+                $('p.showhide').hide();
+            });
+            $('.showhide:eq(2)').click(function(e) {
+                $('p.showhide').toggle();
+            });
+
+            $('.easing:eq(0)').click(function(e) {
+                $('p.easing').stop(true, true).show(1000, '', function (e) {
+                    $(this).css('background-color', 'yellow');
+                })
+            });
+            $('.easing:eq(1)').click(function(e) {
+                $('p.easing').hide(1000);
+            });
+            $('.easing:eq(2)').click(function(e) {
+                $('p.easing').toggle(1000, $(":selected").text(), function (e) {
+                    $(this).css('background-color', 'yellow');
+                })
+            });
+
+
+            $('span.slide:eq(0)').click(function(e) {
+                $('div.slide').slideUp(1000);
+            });
+            $('span.slide:eq(1)').click(function(e) {
+                $('div.slide').slideDown(1000);
+            });
+            $('span.slide:eq(2)').click(function(e) {
+                $('div.slide').slideToggle(1000);
+            });
+
+
+            $('span.fade:eq(0)').click(function(e) {
+                $('div.fade').fadeIn(1000, '', function (e) {
+                    $('body p:eq(2)').show();
+                });
+            });
+            $('span.fade:eq(1)').click(function(e) {
+                $('div.fade, body p:eq(2)').fadeOut(1000);
+            });
+            $('span.fade:eq(2)').click(function(e) {
+                $('div.fade').fadeToggle(1000, '', function (e) {
+                    $('body p:eq(2)').toggle();
+                });
+            });
+            $('span.fade:eq(3)').click(function(e) {
+                $('div.fade').fadeIn(1000, '', function (e) {
+                    $('div.fade').fadeTo(1000, 0.3);
+                });
+            });
+        });
+    </script>
+    
+    
+</head>
+<body>
+    <h2>show & hide 효과</h2>
+    <span class="showhide">show. </span>
+    <span class="showhide">hide. </span>
+    <span class="showhide">toggle. </span>
+    <br>
+
+    <p class="showhide">안녕하세요.반갑습니다.</p>
+    <hr>
+
+    <h2>easing 효과</h2>
+    <div  id="easing" >
+        easing 효과 미리보기:
+        <ul>
+            <li><a href="https://api.jqueryui.com/resources/easing-comparison.html" target="_blank">https://api.jqueryui.com/resources/easing-comparison.html</a></li>
+            <li><a href="https://api.jqueryui.com/easings/" target="_blank"> https://api.jqueryui.com/easings/</a><br></li>
+            <li><a href="https://plugins.jquery.com/jquery.easing/" target="_blank">https://plugins.jquery.com/jquery.easing/</a></li>
+        </ul>
+        <img src="./images/easing.png">
+    </div>
+    <span class="easing"> slow show. </span>
+    <span class="easing"> slow hide. </span>
+    <span class="easing"> slow toggle. </span>
+    <select>
+        <option>linear</option>
+        <option>swing</option>
+        <option>easeInQuad</option>
+        <option>easeOutQuad</option>
+        <option>easeInOutQuad</option>
+        <option>easeInCubic</option>
+        <option>easeOutCubic</option>
+        <option>easeInOutCubic</option>
+        <option>easeInQuart</option>
+        <option>easeOutQuart</option>
+        <option>easeInOutQuart</option>
+        <option>easeInQuint</option>
+        <option>easeOutQuint</option>
+        <option>easeInOutQuint</option>
+        <option>easeInExpo</option>
+        <option>easeOutExpo</option>
+        <option>easeInOutExpo</option>
+        <option>easeInSine</option>
+        <option>easeOutSine</option>
+        <option>easeInOutSine</option>
+        <option>easeInCirc</option>
+        <option>easeOutCirc</option>
+        <option>easeInOutCirc</option>
+        <option>easeInElastic</option>
+        <option>easeOutElastic</option>
+        <option>easeInOutElastic</option>
+        <option>easeInBack</option>
+        <option>easeOutBack</option>
+        <option>easeInOutBack</option>
+        <option>easeInBounce</option>
+        <option>easeOutBounce</option>
+        <option>easeInOutBounce</option>
+    </select>
+    <br>
+
+    <p class="easing">안녕하세요.반갑습니다.</p>
+    <hr>
+
+    <h2>slide 효과</h2>
+    <span class="slide">slide up</span>
+    <span class="slide">slide down</span>
+    <span class="slide">slide toggle</span>
+    <br>
+
+    <div class="slide"></div>
+    <div class="slide"></div>
+    <div class="slide"></div>
+    <div class="slide"></div>
+    <hr>
+
+    <h2>fade 효과</h2>
+    <span class="fade"> fadeIn()     </span>
+    <span class="fade"> fadeOut()    </span>
+    <span class="fade"> fadeToggle() </span>
+    <span class="fade"> fadeTo()     </span>
+    <br>
+
+    <p>
+        불투명도를 점점 높여서 보이도록 한다.
+        speed를 fast, normal, slow 또는 0이상의 숫자(밀리세컨드 단위)를 준다.
+        에니메이션이 끝난 후에 실행할 함수를 지정한다.
+    </p>
+    <div class="fade">
+        <p class="fade">S U C C E S S !!!</p>
+    </div>
+    <hr>
+<!--
+    <h2>사용자 효과</h2>
+    <div style="float:left;">
+        <div id="direction">
+            <button class="leftbtn">&laquo;</button>
+            <button class="rightbtn">&raquo;</button>
+        </div>
+        <div id="region">
+            <div id="images">
+                <a href="#"><img src="./images/image3.jpg" id="leftimage" /></a>
+                <a href="#"><img src="./images/image4.jpg" id="rightimage" /></a>
+            </div>
+        </div>
+    </div>
+    -->
+</body>
+</html>
+

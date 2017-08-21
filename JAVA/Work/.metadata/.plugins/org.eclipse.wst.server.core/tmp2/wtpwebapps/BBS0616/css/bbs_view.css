@@ -1,0 +1,80 @@
+.cover_bbsid_title_modify_delete{
+	display: inline-block;
+	background-color:#efefef;
+	width:950px;
+}
+	
+.bbs_view_bbsid{
+	display: inline-block;
+	width:8%; 
+	text-align: left;
+}
+.bbs_view_title{
+	display: inline-block;
+	width:70%;
+	text-align: left; 
+}
+
+.bbs_view_modify {
+	width:5%;
+	text-align: right;
+	display: inline-block;
+}
+.bbs_view_modify input{
+    height: 30px;
+    width: 100%;
+    background-color: #d0d0d0;
+    border: none;
+    border-radius: 3px;
+    font-size: 15px;
+    cursor : pointer;
+}
+
+.bbs_view_delete {
+	width:5%;
+	text-align: right;
+	display: inline-block;
+}
+.bbs_view_delete input{
+    height: 30px;
+    width: 100%;
+    background-color: #d0d0d0;
+    border: none;
+    border-radius: 3px;
+    font-size: 15px;
+    cursor : pointer;
+}
+
+.cover_userid_date{
+	display: inline-block;
+	background-color:#efefef;
+	width:950px;
+	
+}
+
+.bbs_view_userid{
+	display: inline-block;
+	width:40%;
+	text-align: left;
+}
+
+.bbs_view_date{
+	display: inline-block;
+	width:50%;
+	text-align: right;
+}
+.bbs_div{
+	margin-bottom: 20px;
+}
+.cover_content{
+	display: inline-block;
+	background-color: #efefef;
+	width:950px;
+}
+
+.bbs_view_content{
+	display: inline-block;
+	width:90%; 
+	text-align: left;
+
+}

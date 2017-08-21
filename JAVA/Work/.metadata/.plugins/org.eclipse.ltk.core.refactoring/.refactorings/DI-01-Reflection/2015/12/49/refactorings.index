@@ -1,0 +1,19 @@
+1449239094452	Rename package 'com.lecture.di'
+1449239110192	Rename package 'com.lecture.di.email'
+1449239122766	Rename package 'com.lecture.di.model'
+1449239131127	Rename package 'com.lecture.di.service'
+1449239180002	Rename type 'MainType'
+1449239267458	Copy compilation unit
+1449239316239	Delete element
+1449241484982	Rename package 'com.lecture.reflection'
+1449241647347	Rename package 'com.lecture.reflection.model'
+1449241652589	Delete element
+1449241668064	Rename type 'ModelDocument'
+1449241723538	Rename type 'ModelType'
+1449242030110	Rename package 'com.lecture.di'
+1449242209479	Copy compilation unit
+1449242216484	Copy compilation unit
+1449242250275	Rename compilation unit 'Board.java'
+1449242262880	Rename type 'CopyOfBoard'
+1449243086826	Rename package 'com.lecture.reflection.employee'
+1449243125826	Rename package 'com.lecture.reflection.board'

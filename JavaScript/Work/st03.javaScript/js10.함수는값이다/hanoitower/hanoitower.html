@@ -1,0 +1,80 @@
+<html>
+<head>
+    <link rel="stylesheet" href="hanoitower.css">
+</head>    
+<body>
+    <h1>The Tower of Hanoi</h1>
+    <canvas id="hanoi-canvas" width="750" height="500">
+        Sorry, your browser does not support the HTML5 canvas element.
+    </canvas>
+    <form id="control">
+        <fieldset>
+            <legend>Control</legend>
+            <div id="start-control">
+                <label for="numberDiscs">Number of discs</label>
+                <select id="numberDiscs" name="numberDiscs">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8" selected>8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                </select>
+                <button id="init" name="init" type="button">Initialize</button>
+            </div>
+            <hr>
+            <div id="step-control">
+                <button class="auto" id="auto-previous" name="auto-previous" title="" type="button">Auto-previous</button>
+                <button id="previous" name="previous" type="button">Previous</button>
+                <button id="next" name="next" type="button">Next</button>
+                <button class="auto" id="auto-next" name="auto-next" title="" type="button">Auto-next</button>
+            </div>
+            <hr>
+            <div id="other-control">
+                <label for="timeout">Timeout</label>
+                <select id="timeout" name="timeout" title="Timeout between steps.">
+                    <option value="1">1ms</option>
+                    <option value="2">2ms</option>
+                    <option value="5">5ms</option>
+                    <option value="10">10ms</option>
+                    <option value="20">20ms</option>
+                    <option value="50">50ms</option>
+                    <option value="100" selected>100ms</option>
+                    <option value="200">200ms</option>
+                    <option value="500">500ms</option>
+                    <option value="1000">1s</option>
+                    <option value="2000">2s</option>
+                    <option value="5000">5s</option>
+                </select>
+                <br>
+                <label for="disc-color">Disc color</label>
+                <select id="disc-color" name="disc-color">
+                    <option value="0">Red</option>
+                    <option value="1" selected>Green</option>
+                    <option value="2">Blue</option>
+                    <option value="3">Yellow</option>
+                    <option value="4">Cyan</option>
+                    <option value="5">Magenta</option>
+                    <option value="6">White</option>
+                </select>
+                <br>
+                <label for="show-intermediate">Show intermediate steps</label>
+                <input checked="true" id="show-intermediate" name="show-intermediate" type="checkbox"  value="Show intermediate steps">
+            </div>
+        </fieldset>
+    </form>
+
+    
+    
+</body>
+</html>
+

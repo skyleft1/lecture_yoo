@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="jquery-3.2.1.min.js"></script>
+
+</head>
+
+<body>
+<p>
+    <input id='start' type="button" value="타이머 시작" />
+    <input id='stop'  type="button" value="타이머 정지" />
+    <div id="result">
+	</div>
+</p>
+
+<script>
+    var MYAPP = {timer : null};
+
+//    window.onload = function () {
+//
+//    timer_start = document.getElementById('start');
+//    window.timer_start.onclick = function (event) {
+//        timer_start.disabled = true;
+//        timer_stop.disabled = false
+//
+//        MYAPP.timer = window.setInterval(
+//            function () {
+//                var dat = new Date();
+//                var result = document.getElementById('result');
+//                result.innerHTML = dat.toLocaleTimeString();
+//            } ,
+//            1000
+//        );
+//    };
+//}
+//    timer_stop = document.getElementById('stop');
+//    window.timer_stop.onclick = function (event) {
+//        timer_stop.disabled = true;
+//        timer_start.disabled = false;
+//
+//        window.clearInterval(MYAPP.timer);  // 어떤 타이머를 멈출지 지정하는 것
+//    }
+
+    $(function(){
+        $('#start').click(function(){
+            $('#start').attr('disabled','disabled');
+            $('#stop').removeAttr('disabled');
+
+            MYAPP.timer = window.setInterval(
+                function () {
+                    var dat = new Date();
+                    var result = document.getElementById('result');
+                    result.innerHTML = dat.toLocaleTimeString();
+                } ,
+                1000
+            );
+
+        });
+        $('#stop').click(function(){
+            $('#stop').attr('disabled','disabled');
+            $('#start').removeAttr('disabled');
+
+            window.clearInterval(MYAPP.timer);  // 어떤 타이머를 멈출지 지정하는 것
+        });
+    });
+
+</script>
+
+</body>
+</html>
+

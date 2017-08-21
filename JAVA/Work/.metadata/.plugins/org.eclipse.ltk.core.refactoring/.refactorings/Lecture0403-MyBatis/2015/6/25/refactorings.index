@@ -1,0 +1,40 @@
+1434610239897	Delete element
+1434610241695	Delete element
+1434610320914	Delete elements
+1434610333793	Delete elements
+1434610346016	Delete elements
+1434610751618	Delete element
+1434610827376	Delete element
+1434610833032	Delete element
+1434610836326	Delete element
+1434610934282	Move compilation unit
+1434610937035	Delete element
+1434610953997	Rename package 'kr.co.companymake.database.test'
+1434611020217	Delete element
+1434611031195	Delete element
+1434611134854	Delete elements
+1434611231408	Delete element
+1434611264834	Delete elements
+1434611270027	Move 'S0000.USP_Sample_List.sql' to '40.USP'
+1434611271698	Delete element
+1434611278621	Delete element
+1434611284527	Delete element
+1434612558525	Move 'schema-board.sql' to 'mysql'
+1434612565831	Delete element
+1434612567445	Delete element
+1434612568862	Delete element
+1434612570433	Delete element
+1434612571484	Delete element
+1434612575345	Move 'schema-board.sql' to 'sql'
+1434612577045	Delete element
+1434612598722	Rename package 'kr.co.companymake.database.dao'
+1434612604838	Rename package 'kr.co.companymake.database.model'
+1434612613316	Rename package 'kr.co.companymake.mapper'
+1434612658810	Rename package 'kr.co.companymake.database'
+1434612747357	Rename package 'kr.co.companymake.database.service'
+1434614934859	Rename package 'com.lecture.mapper'
+1434615554835	Extract interface 'IBoard'
+1434749838191	Delete element
+1434749937147	Delete element
+1434750155011	Delete elements
+1434758837499	Copy file

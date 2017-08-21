@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./css/master.css">
+
+    <!-- 헤더 -->
+    <style>
+
+        img,fieldset {border:0 none;}
+        dl,ul,ol,li {list-style: none;}
+        h1,h2,h3,h4,h5,dl,dt,dd,ul,li,ol,th,td,p,blockquote,form,fieldset,legend {margin:0;padding:0;}
+        /* image repleace text 기본형 */
+        .imgAlt { display:-moz-inline-stack;display:inline-block;zoom:1;*display:inline;overflow:hidden;text-align:left;text-indent:-999em;vertical-align:top;} /* 기본 이미지 태체 태그 */
+        * html .imgAlt {text-indent:0 !important; line-height:0 !important; font-size:0 !important; overflow:hidden !important;}/*ie6 hack */
+        *:first-child+html .imgAlt { text-indent:0 !important; line-height:0 !important; font-size:0 !important; overflow:hidden !important;}/*ie7 hack */
+
+        .imgBg { display:-moz-inline-stack;display:inline-block;zoom:1;*display:inline;overflow:hidden;text-align:left;vertical-align:top;} /* 기본 이미지 태체 태그 */
+
+        .inlnblock { display:-moz-inline-stack;display:inline-block;zoom:1;*display:inline;overflow:hidden;text-align:left;vertical-align:top;} /* 기본 이미지 태체 태그 */
+
+        * html .imgAltHack {text-indent:0 !important; line-height:0 !important; font-size:0 !important; overflow:hidden !important;}/*ie6 hack */
+        *:first-child+html .imgAltHack { text-indent:0 !important; line-height:0 !important; font-size:0 !important; overflow:hidden !important;}/*ie7 hack */
+
+        /* clearfix */
+        .clearfix:after { content:"."; display:block; height:0; clear:both; visibility:hidden; } .clearfix { display:inline-block; clear:both; }/* Hides from IE-mac \*/ *html .clearfix {height: 1px;} .clearfix {display: block;}/* End hide from IE-mac */
+
+        .mgt13 { margin-top:13px; }
+        .plyr {position:relative;text-align:left;}
+        .plyr .plyr_w .plyr_c {margin:15px;}
+        .plyr .plyr_w .plyr_cImg {margin:0;padding:0;}
+        .plyr .plyr_w .plyr_cImg .graph_pw { width:215px;height:40px;overflow:hidden;text-indent:-999em;background:url('http://secimage.yes24.com/sysimage/common/graph/img_safty.gif') no-repeat; }
+        .plyr .plyr_w .plyr_cImg .step1 { background-position:0 top; }
+        .plyr .plyr_w .plyr_cImg .step2 { background-position:0 -40px; }
+        .plyr .plyr_w .plyr_cImg .step3 { background-position:0 -80px; }
+        .plyr .plyr_w .plyr_cImg .step4 { background-position:0 -120px; }
+        .plyr .plyr_w .plyr_cImg .step5 { background-position:0 -160px; }
+        .plyr .plyr_w .plyr_c .cmt_liGrayRnd {  }
+        .plyr .plyr_w .plyr_c .cmt_liGrayRnd li { display:block;float:left;margin-top:6px;width:100%; }
+        .plyr .plyr_w .plyr_c .cmt_liGrayRnd li p { padding-left:10px;font-size:12px;color:#3c3c3c;background:url('http://secimage.yes24.com/sysimage/common/bl/bl_rnd_gray.gif') no-repeat left 5px; }
+        /*
+        .plyr .plyr_w .plyr_t {margin:0;padding:15px 0 10px 25px;font-size:14px;font-weight:bold;letter-spacing:-1px;white-space:nowrap;background:#eaf3f8 url('http://secimage.yes24.com/sysimage/orderN/icon.gif') 15px -305px no-repeat;color:#3781c0;}
+        */
+
+        .mail {width:497px;margin:10px 10px 0px 20px;}
+        .mail th, .mail td {padding:10px 5px;vertical-align:top;border-bottom:1px dotted #ddd;}
+        .marriage th, .marriage td {padding:0px 5px 5px 5px;border:none;}
+        .marriage th {padding-top:5px;}
+        .mail .t_mail {width:40px;background:#737373;padding:5px;color:#fff;text-align:center;vertical-align:middle;}
+        .mail .d_mail {padding:10px 10px 7px 10px;letter-spacing:-1px;}
+        .mail ul.total li {width:180px;}
+        .mail li {float:left;margin:0 0 5px 0;margin-right:30px;white-space:nowrap;}
+        .noline {border:none !important;}
+    </style>
+
+    <script src='../../jquery-3.1.0.js'></script>
+    <script>
+        $(document).ready(function(e){
+
+        })
+    </script>
+    
+
+</head>
+<body>
+
+<div id="wrapper">
+    <!-- Container -->
+    <div id="container">
+
+        <!-- content -->
+        <div id="content">
+
+            <ul class="loginstep">
+                <li>step 1 <br>약관동의</li>
+                <li class="arrimg"></li>
+                <li>step 2 <br>가입인증</li>
+                <li class="arrimg"></li>
+                <li class="stepon">step 3 <br>정보입력</li>
+                <li class="arrimg"></li>
+                <li>step 4 <br>가입완료</li>
+            </ul>
+
+            <!-- step3 정보입력-->
+            <div id="yesWrap">
+
+                <!--03.정보입력 테이블시작//-->
+                <form METHOD="post" NAME="FTMemReg" action="FTMemReg01.aspx?ActionType=INS">
+                    <input type="hidden" name="MemberIDChkFlag" value="">
+                    <input type="hidden" id="ZipSeqNo" name="ZipSeqNo" value="" />
+                    <table>
+                        <tr>
+                            <td>
+                                <div id="wrapperContent">
+                                    <br/>
+                                    <br/>
+                                    <table width="750" cellpadding="0" cellspacing="0"  align="center" bgcolor="#FFFFFF">
+                                        <tr>
+                                            <td><img src="http://secimage.yes24.com/sysimage/member/t_InputInform.gif" width="540" height="25" alt="-" hspace="0"  vspace="5"></td>
+                                        </tr>
+                                        <tr>
+                                            <td background="http://secimage.yes24.com/sysimage/member/Line_BlueH5.gif" width="100%" height="5"></td>
+                                        </tr>
+                                        <tr>
+                                            <td height="1"></td>
+                                        </tr>
+                                        <tr>
+                                            <td bgcolor="#F8F8F8" style="padding:15px 0 5px 69px;text-indent:-19px;font-size:11px;color:#969696;">
+                                                <img src="images/Indent_squareOrange.gif" hspace="7" vspace="3">표시는 필수 입력 사항입니다.<br/>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td bgcolor="#F8F8F8" valign="top">
+                                                <div align="center">
+
+                                                    <!--회원아이디정보 입력 테이블 시작//-->
+                                                    <Table cellpadding="0" cellspacing=1" border="0" width="650" bgcolor="#EAEAEA" />
+                                                    <input name="HMemberName" type="hidden" id="HMemberName" value="용세중" />
+                                                    <input name="HMemberSex" type="hidden" id="HMemberSex" value="M" />
+                                                    <input name="HRegistrationNumber" type="hidden" id="HRegistrationNumber" />
+                                                    <input name="HMemberDI" type="hidden" id="HMemberDI" />
+                                                    <input name="HMemberCI" type="hidden" id="HMemberCI" />
+                                                    <input name="HMemberISIPIN" type="hidden" id="HMemberISIPIN" value="E" />
+                                                    <input name="HPrivacyYN" type="hidden" id="HPrivacyYN" value="Y" />
+                                                    <input name="HPID" type="hidden" id="HPID" value="-1" />
+                                                    <input name="HFamilySiteYN" type="hidden" id="HFamilySiteYN" value="Y" />
+                                        <tr>
+                                            <td bgcolor="#EBE4DF" height="35" colspan=2">
+                                                <img src="http://secimage.yes24.com/sysimage/member/st_idInform.gif" hspace="10" width="90" height="20" align="absmiddle">
+                                            </td>
+                                        </tr>
+                                        <!--아이디 입력-->
+                                        <tr>
+                                            <td bgcolor="#FFFFFF" height="35" width="120" valign="middle">
+                                                <img src="images/Indent_squareOrange.gif" hspace="7" vspace="3">아이디
+                                            </td>
+                                            <td bgcolor="#FFFFFF" height="35">
+                                                &nbsp;&nbsp;<input type="text" id="MemberID" name="MemberID" size="12" MAXLENGTH="15" onBlur="ReplaceChar(this.value);">
+                                                <img src="http://secimage.yes24.com/sysimage/member/i_idCheck.gif" width="60" height="19" hspace="5" align="absmiddle" alt="아이디 중복확인" OnClick="IDCheckWindow()" style="cursor:hand">
+                                                <span class="infoGray">4~15자리의 영문대소문자와 숫자만 가능합니다.</span>
+                                            </td>
+                                        </tr>
+                                        <!--비밀번호 입력-->
+                                        <tr>
+                                            <td bgcolor="#FFFFFF" height="35" width="120">
+                                                <img src="images/Indent_squareOrange.gif" hspace="7" vspace="3">비밀번호
+                                            </td>
+                                            <td bgcolor="#FFFFFF" height="35">
+                                                &nbsp;&nbsp;<input type="password" id="MemberPassword" name="MemberPassword" size="12" MAXLENGTH="20" style="font-family:sans-serif;font-size:12px;"  onkeyup="passwordStrength(this.value)">
+                                                &nbsp;&nbsp;<span class="msg">8~20자리의 영문 대/소문자,숫자,특수문자 조합.</span>
+                                                &nbsp;<span><img onMouseover="showDiv('divAttenPw');" onMouseOut="hideDiv('divAttenPw');" src="http://secimage.yes24.com/sysimage/common/icon/ico_attention.gif" height="15" border="0" alt="유의사항" title="유의사항"/></span>
+                                                <!-- ########## 비밀번호 안내 및 유의사항 레이어 영역 시작 ########## -->
+                                                
+                                                <div style="position:relative;text-align:left;">
+                                                    <!-- ##### 비밀번호 복잡로 레이어 시작 ##### -->
+                                                    <div class="plyr" id="plyr" style="display:none;position:absolute;left:9px;top:5px;z-index:999;width:220px;bgcolor:red'">
+                                                        <div class="plyr_w">
+                                                            <div class="cock" style="left:32px;"></div>
+                                                            <div class="plyr_cImg">
+                                                                <div class="graph_pw step1 imgAlt" id="step1imgAlt" style="display:none;">경고</div>
+                                                                <div class="graph_pw step2 imgAlt" id="step2imgAlt" style="display:none;">위험</div>
+                                                                <div class="graph_pw step3 imgAlt" id="step3imgAlt" style="display:none;">낮음</div>
+                                                                <div class="graph_pw step4 imgAlt" id="step4imgAlt" style="display:none;">보통</div>
+                                                                <div class="graph_pw step5 imgAlt" id="step5imgAlt" style="display:none;">높음</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- ##### 비밀번호 복잡로 레이어 끝 ##### -->
+
+                                                    <!-- ##### 유의 사항 안내 레이어 시작 ##### -->
+                                                    <div id="divAttenPw" class="plyr" style="display:none;position:absolute;left:127px;top:1px;z-index:999;width:520px;">
+                                                        <div class="plyr_w">
+                                                            <div class="cock"></div>
+                                                            <div class="plyr_c">
+                                                                <ul class="clearfix cmt_liGrayRnd">
+                                                                    <li><p>반드시 8~20자의 영문 대/소문자,숫자,특수문자 중 2가지 이상으로 조합.</p></li>
+                                                                    <li><p>아이디 및 아이디를 포함한 문자/숫자는 비밀번호로 사용 불가.</p></li>
+                                                                    <li><p>특수문자는 !@#$%^&*()-_ 사용가능.</p></li>
+                                                                    <li><p>동일한 문자(숫자), 연속적인 숫자 4자 이상 사용 불가. 예)1234,1111,aaaa</p></li>
+                                                                    <li><p>생년월일, 전화번호와 동일한 번호는 사용 자제.</p></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- ##### 유의 사항 안내 레이어 끝 ##### -->
+                                                </div>
+                                                <!-- ########## 비밀번호 안내 및 유의사항 레이어 영역 끝 ########## -->
+                                            </td>
+                                        </tr>
+                                        <!--비밀번호 확인-->
+                                        <tr>
+                                            <td bgcolor="#FFFFFF" height="35" width="120">
+                                                <img src="images/Indent_squareOrange.gif" hspace="7" vspace="3">비밀번호 확인
+                                            </td>
+                                            <td bgcolor="#FFFFFF" height="35">
+                                                &nbsp;&nbsp;<input type="password" name="MemberPasswordConfirm" size="12" MAXLENGTH="20" style="font-family:sans-serif;font-size:12px;">
+                                                &nbsp;<span class="infoGray">확인을 위해서 재입력 해주세요</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td height="10" colspan="2" bgcolor="#F8F8F8"></td>
+                                        </tr>
+
+                                    </table>
+                                    <!--회원아이디정보 입력 테이블 끝//-->
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td height="20" bgcolor="#F8F8F8"></td>
+                        </tr>
+                        <tr>
+                            <td bgcolor="#F8F8F8" valign="top">
+                                <div align="center">
+
+                                    <!--기본입력 테이블 시작//-->
+                                    <Table cellpadding="0" cellspacing=1" border="0" width="650" bgcolor="#EAEAEA">
+                                        <tr>
+                                            <td bgcolor="#EBE4DF" height="35" colspan="2">
+                                                <img src="http://secimage.yes24.com/sysimage/member/st_GeneralInform.gif" hspace="10" width="90" height="20" align="absmiddle">
+                                            </td>
+                                        </tr>
+                                        <!--이름-->
+                                        <tr>
+                                            <td bgcolor="#FFFFFF" height="35" width="120" valign="middle">
+                                                <img src="images/Indent_squareOrange.gif" hspace="7" vspace="3">이 름
+                                            </td>
+                                            <td bgcolor="#FFFFFF" height="35">
+                                                &nbsp;&nbsp;<span class="info"><input type="text" id="MemberName" /></span>
+                                            </td>
+                                        </tr>
+                                        <!--생년월일-->
+                                        <tr>
+                                            <td bgcolor="#FFFFFF" height="35" width="120">
+                                                <img src="images/Indent_squareOrange.gif" hspace="7" vspace="3">생년월일
+                                            </td>
+                                            <td bgcolor="#FFFFFF" height="35">
+                                                <div>
+                                                    <span id="BirthDay">&nbsp;
+                                                        <input type='text' name='BirthDay_year' id='BirthDay_year' size='4' maxlength='4' /> 년&nbsp;
+                                                        <select name='BirthDay_month' id='BirthDay_month'>
+                                                            <option value='01'>1</option>
+                                                            <option value='02'>2</option>
+                                                            <option value='03'>3</option>
+                                                            <option value='04'>4</option>
+                                                            <option value='05'>5</option>
+                                                            <option value='06'>6</option>
+                                                            <option value='07'>7</option>
+                                                            <option value='08'>8</option>
+                                                            <option value='09'>9</option>
+                                                            <option value='10'>10</option>
+                                                            <option value='11'>11</option>
+                                                            <option value='12'>12</option>
+                                                        </select>월&nbsp;
+                                                        <select name='BirthDay_day' id='BirthDay_day'>
+                                                            <option value='01'>1</option>
+                                                            <option value='02'>2</option>
+                                                            <option value='03'>3</option>
+                                                            <option value='04'>4</option>
+                                                            <option value='05'>5</option>
+                                                            <option value='06'>6</option>
+                                                            <option value='07'>7</option>
+                                                            <option value='08'>8</option>
+                                                            <option value='09'>9</option>
+                                                            <option value='10'>10</option>
+                                                            <option value='11'>11</option>
+                                                            <option value='12'>12</option>
+                                                            <option value='13'>13</option>
+                                                            <option value='14'>14</option>
+                                                            <option value='15'>15</option>
+                                                            <option value='16'>16</option>
+                                                            <option value='17'>17</option>
+                                                            <option value='18'>18</option>
+                                                            <option value='19'>19</option>
+                                                            <option value='20'>20</option>
+                                                            <option value='21'>21</option>
+                                                            <option value='22'>22</option>
+                                                            <option value='23'>23</option>
+                                                            <option value='24'>24</option>
+                                                            <option value='25'>25</option>
+                                                            <option value='26'>26</option>
+                                                            <option value='27'>27</option>
+                                                            <option value='28'>28</option>
+                                                            <option value='29'>29</option>
+                                                            <option value='30'>30</option>
+                                                            <option value='31'>31</option>
+                                                        </select>일
+                                                    </span>
+                                                    &nbsp;&nbsp;
+                                                    <input type="radio" name="BirthClass" value="Y" checked>양력
+                                                    <input type="radio" name="BirthClass" value="N">음력
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <!--성별-->
+                                        <tr>
+                                            <td bgcolor="#FFFFFF" height="35" width="120">
+                                                <img src="images/Indent_squareOrange.gif" hspace="7" vspace="3">성 별
+                                            </td>
+                                            <td bgcolor="#FFFFFF" height="35">
+                                                &nbsp;&nbsp;
+                                                <input type="radio" name="MemberSex" value="Y" checked>남
+                                                <input type="radio" name="MemberSex" value="N">여
+                                            </td>
+                                        </tr>
+                                        <!--이메일 -->
+                                        <tr>
+                                            <td bgcolor="#FFFFFF" height="35" width="120"><br>
+                                                <img src="images/Indent_squareOrange.gif" hspace="7" vspace="3">이메일
+                                            </td>
+                                            <td bgcolor="#FFFFFF" height="35">
+                                                <table>
+                                                    <!-- sms 인증 일 경우 이메일 입력 시작 -->
+                                                    <tr id="tdEmailArea">
+                                                        <td>
+                                                            &nbsp;
+                                                            <input type=hidden name="EMail" size="20" maxlength="50" id="EMail" >
+                                                            <input type="text" name="emailid" id="emailid" size="12" MAXLENGTH="50" onBlur="ReplaceChar(this.value);"> @
+                                                        </td>
+                                                        <td>
+                                                            <input type="text" name="emailaddr" id="emailaddr" size="12" MAXLENGTH="50" style="display:none;" >
+                                                        </td>
+                                                        <td>
+                                                            <SELECT name="_emailaddr" id="_emailaddr" onChange="mailSum(this.form)">
+                                                                <option value="" selected>이메일 선택 </option>
+                                                                <option value="hanmail.net">hanmail.net </option>
+                                                                <option value="naver.com">naver.com </option>
+                                                                <option value="nate.com">nate.com </option>
+                                                                <option value="gmail.com">gmail.com</option>
+                                                                <option value="hotmail.com">hotmail.com </option>
+                                                                <option value="paran.com">paran.com </option>
+                                                                <option value="empal.com">empal.com </option>
+                                                                <option value="korea.com">korea.com </option>
+                                                                <option value="freechal.com">freechal.com </option>
+                                                                <option value="etc">직접등록 </option>
+                                                            </SELECT>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- sms 인증 일 경우 이메일 입력 끝-->
+                                                    <!-- 이메일 인증 일 경우 시작 -->
+                                                    <tr>
+                                                        <td>
+                                                            &nbsp;&nbsp&nbsp;&nbsp<span class="info" id="divEmail"></span>
+                                                        </td>
+                                                    </tr>
+                                                    <!-- 이메일 인증 일 경우 끝 -->
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <!--이메일 -->
+                                        <!--이메일 수신여부-->
+                                        <tr>
+                                            <td bgcolor="#FFFFFF" height="200" width="120"><br>
+                                                <img src="images/Indent_squareOrange.gif" hspace="7" vspace="3">이메일 수신여부
+                                            </td>
+                                            <td  bgcolor="#FFFFFF">
+                                                <p style="padding:10px;">
+                                                    이메일 수신동의 시, 각종 할인혜택과 이벤트/기획전등의 정보를 받아보실 수 있습니다.<br>수신동의 거부 시에도 기본서비스(회원가입/주문배송 메일)는 발송됩니다.
+                                                </p>
+                                                <p style="padding:0 10px;">
+                                                    <label><input type="radio" id="emailAgreeY" name="emailAgree" onclick="checkEmail('Y');">수신동의</label>
+                                                    &nbsp;&nbsp;
+                                                    <label><input type="radio"  id="emailAgreeN" name="emailAgree" onclick="checkEmail('N');">수신동의 거부</label>
+                                                    <input name="EmlRecYn" type="hidden" id="EmlRecYn" />
+                                                    <!--<input type="checkbox" id="EmlRecYn" name="EmlRecYn"  onClick="mailSelect('MAIN')" style="display:none;">-->
+                                                </p>
+                                                <table cellspacing="0" cellpadding="0" class="mail">
+                                                    <tr>
+                                                        <td class="t_mail" style="border-top:1px dotted #ddd;">종합<br>소식지</td>
+                                                        <td class="d_mail" style="border-top:1px dotted #ddd;">
+                                                            <ul class="total">
+                                                                <li><input type="checkbox" id="MAIL01" name="MAIL01" value="Y" onClick="mailSelect()">多樂편지 : 도서</li>
+                                                                <li><input type="checkbox" id="MAIL04" name="MAIL04" value="Y" onClick="mailSelect()">문화산책 : 채널예스,블로그</li>
+                                                                <li><input type="checkbox" id="MAIL08" name="MAIL08" value="Y" onClick="mailSelect()">쉼 편지 : 음반, DVD</li>
+                                                                <li><input type="checkbox" id="MAIL02" name="MAIL02" value="Y" onClick="mailSelect()">콩편지(기프트)</li>
+                                                                <li><input type="checkbox" id="MAIL05" name="MAIL05" value="Y" onClick="mailSelect()">영화 매거진 : 영화</li>
+                                                                <li><input type="checkbox" id="MAIL09" name="MAIL09" value="Y" onClick="mailSelect()">공연 매거진 : 공연</li>
+                                                                <li><input type="checkbox" id="MAIL07" name="MAIL07" value="Y" onClick="mailSelect()">e편지 : eBook, e연재</li>
+                                                                <li><input type="checkbox" id="MAIL17" name="MAIL17" value="Y" onClick="mailSelect()">알뜰 편지 : 중고샵</li>
+                                                                <li><input type="checkbox" id="MAIL18" name="MAIL18" value="Y" onClick="mailSelect()">콩편지(패션전문관)</li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="t_mail">분야별<br>소식지</td>
+                                                        <td class="d_mail">
+                                                            <ul>
+                                                                <li><input type="checkbox" id="MAIL10" name="MAIL10" value="Y" onClick="mailSelect()">문학</li>
+                                                                <li><input type="checkbox" id="MAIL11" name="MAIL11" value="Y" onClick="mailSelect()">유아/어린이/가정과생활/건강취미실용</li>
+                                                                <li><input type="checkbox" id="MAIL12" name="MAIL12" value="Y" onClick="mailSelect()">역사/인문/사회/과학/종교</li>
+                                                                <li><input type="checkbox" id="MAIL13" name="MAIL13" value="Y" onClick="mailSelect()">청소년/초중고학습서</li>
+                                                                <li><input type="checkbox" id="MAIL14" name="MAIL14" value="Y" onClick="mailSelect()">비즈니스/자기관리/국어와외국어</li>
+                                                                <li><input type="checkbox" id="MAIL15" name="MAIL15" value="Y" onClick="mailSelect()">만화</li>
+                                                                <li><input type="checkbox" id="MAIL16" name="MAIL16" value="Y" onClick="mailSelect()">외서</li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="t_mail">기타<br>소식지</td>
+                                                        <td class="d_mail">
+                                                            <ul>
+                                                                <li><input type="checkbox" id="MAIL03" name="MAIL03" value="Y" onClick="mailSelect()">주요 이벤트 안내</li>
+                                                                <li><input type="checkbox" id="MAIL19" name="MAIL19" value="Y" onClick="mailSelect()">카트 상품 안내</li>
+                                                            </ul>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                        <!-- 추천인 아이디 -->
+                                        <tr>
+                                            <td bgcolor="#FFFFFF" height="35" width="120">
+                                                <img src="http://secimage.yes24.com/sysimage/member/Indent_squareGray.gif" hspace="7" vspace="3">추천인 아이디
+                                            </td>
+                                            <td bgcolor="#FFFFFF" height="35">
+                                                &nbsp;&nbsp;
+                                                <input type="text" name="NominateID" id="NominateID" size="12" maxlength="15">&nbsp;&nbsp;
+
+                                            </td>
+                                        </tr>
+                                        <!--변경주소-->
+                                        <tr id="addrRow">
+                                            <td bgcolor="#FFFFFF" height="110" width="120">
+                                                <img src="images/Indent_squareOrange.gif" hspace="7" vspace="3">주 소
+                                            </td>
+                                            <td bgcolor="#FFFFFF" height="110">
+                                                &nbsp;&nbsp;
+                                                <input type="text" id="Zip1" name="Zip1" size="3" readonly="">-<input type="text" id="Zip2" name="Zip2" size="3" readonly="">&nbsp;
+                                                <a href="javascript:void(0)">
+                                                    <img src="http://secimage.yes24.com/sysimage/member/btn_putAddr2.gif" onclick="LoadPostalCode(this); return false" width="62" height="19" alt="주소 찾기" align="absmiddle">
+                                                </a>
+                                                <br>
+                                                <img src="http://secimage.yes24.com/sysimage/member/1px_blank.gif" width="1" height="8"><br>
+                                                &nbsp;&nbsp;<em style="color: #555555">도로명 주소</em>
+                                                <input id="ST_ADDR_TEXT" name="ST_ADDR_TEXT" type="text" readonly="true" size="70" style="margin: 0 0 5px 0; height: 20px; vertical-align: middle;"><br>
+                                                &nbsp;&nbsp;<em style="color: #555555">지번 주소</em>&nbsp;&nbsp;&nbsp;
+                                                <input id="OLD_ADDR_TEXT" name="OLD_ADDR_TEXT" type="text" readonly="true" maxlength="100" size="70" style="height: 20px;">
+                                                <br>
+                                                <img src="http://secimage.yes24.com/sysimage/member/1px_blank.gif" width="1" height="8"><br>
+                                                <input type="hidden" id="ADDR1" name="ADDR1" />
+                                                <input type="hidden" id="ADDR2" name="ADDR2" />
+                                                <input type="hidden" id="ADDR3" name="ADDR3" />
+                                                <input type="hidden" id="ADDR4" name="ADDR4" />
+                                                <input type="hidden" id="BU_MNG_NO" name="BU_MNG_NO" />
+                                            </td>
+                                        </tr>
+                                        <!--전화번호-->
+                                        <tr>
+                                            <td bgcolor="#FFFFFF" height="35" width="120" >
+                                                <img src="images/Indent_squareOrange.gif" hspace="7" vspace="3">필수 전화번호
+                                            </td>
+                                            <td bgcolor="#FFFFFF" height="35">
+
+                                                <div style="float:left;">&nbsp;&nbsp;
+                                                    <SELECT name="Telephone1" id="Telephone1" onChange="javascript:changeTelephone1(this.form);">
+                                                        <option selected value=02>02 </option>
+                                                        <option value="031">031</option>
+                                                        <option value="032">032</option>
+                                                        <option value="033">033</option>
+                                                        <option value="041">041</option>
+                                                        <option value="042">042</option>
+                                                        <option value="043">043</option>
+                                                        <option value="044">044</option>
+                                                        <option value="051">051</option>
+                                                        <option value="052">052</option>
+                                                        <option value="053">053</option>
+                                                        <option value="054">054</option>
+                                                        <option value="055">055</option>
+                                                        <option value="061">061</option>
+                                                        <option value="062">062</option>
+                                                        <option value="063">063</option>
+                                                        <option value="064">064</option>
+                                                        <option value="070">070</option>
+                                                        <option value="0502">0502</option>
+                                                        <option value="0505">0505</option>
+                                                        <option value="0506">0506</option>
+                                                        <option value="---">---</option>
+                                                        <option value="010">010</option>
+                                                        <option value="011">011</option>
+                                                        <option value="016">016</option>
+                                                        <option value="017">017</option>
+                                                        <option value="018">018</option>
+                                                        <option value="019">019</option>
+                                                    </SELECT> -
+                                                    <input type="text" name="Telephone2" id="Telephone2" size="4" MAXLENGTH="4" onKeyDown="isCkNumber()" onKeyUp="moveFocus(4,this,this.form.Telephone3)"> -
+                                                    <input type="text" name="Telephone3" id="Telephone3"  size="4" MAXLENGTH="4" onKeyDown="isCkNumber()"   >
+                                                    <input type="hidden" name="Telephone" id="Telephone"  >
+
+                                                </div>
+                                                &nbsp;&nbsp;<span  id="sSmsJoinTelNo" style="display:none;float:left;padding-left:10px;padding-bottom:10px;"></span>
+                                                <div style="float:left;padding-top:-10px"><span class="infoGray">&nbsp;(휴대폰 번호도 입력 가능합니다.)  </span></div>
+                                            </td>
+                                        </tr>
+                                        <!--휴대폰번호-->
+                                        <tr>
+                                            <td bgcolor="#FFFFFF" height="35" width="120"  valign="middle">
+                                                <img src="http://secimage.yes24.com/sysimage/member/Indent_squareGray.gif" hspace="7" vspace="3">휴대폰번호
+                                            </td>
+                                            <td bgcolor="#FFFFFF" height="35">
+
+                                                <div style="float:left;">&nbsp;&nbsp;
+                                                    <SELECT name="Handphone1" id="Handphone1" onChange="javascript:this.form.Handphone2.focus();">
+                                                        <option selected value= "010">010</option>
+                                                        <option value= "011">011</option>
+                                                        <option value= "016">016</option>
+                                                        <option value= "017">017</option>
+                                                        <option value= "018">018</option>
+                                                        <option value= "019">019</option>
+                                                    </SELECT> -
+                                                    <input type="text" name="Handphone2" id="Handphone2" size="4" MAXLENGTH="4" onKeyDown="isCkNumber()" onKeyUp="moveFocus(4,this,this.form.Handphone3)" > -
+                                                    <input type="text" name="Handphone3" id="Handphone3" size="4" MAXLENGTH="4" onKeyDown="isCkNumber()" >
+                                                    <input type="hidden" name="Handphone" id="Handphone"  >
+
+                                                </div>
+                                                &nbsp;&nbsp;<span id="sSmsJoinPhoneNo" style="display:none;float:left;padding-left:10px;padding-bottom:10px;"></span>
+                                            </td>
+                                        </tr>
+                                        <!-- SMS 이용동의-->
+                                        <tr>
+                                            <td bgcolor="#FFFFFF" width="120">
+                                                <img src="images/Indent_squareOrange.gif" hspace="7" vspace="3">SMS 소식 <br>&nbsp;&nbsp;&nbsp;&nbsp;수신여부
+                                            </td>
+                                            <td bgcolor="#FFFFFF">
+                                                <p style="padding:10px;">
+                                                    할인혜택과 이벤트 등의 소식 안내를 SMS로 받으실 수 있습니다.<br>
+                                                    수신동의 거부 시에도 기본서비스는 발송됩니다.
+                                                </p>
+                                                <p style="padding:0 10px 10px;">
+                                                    <label><input type="radio" id="rdoSMSY" name="smsAgree" onclick="checkSMS('Y');">수신동의</label>
+                                                    &nbsp;&nbsp;
+                                                    <label><input type="radio" id="rdoSMSN" name="smsAgree" onclick="checkSMS('N');">수신동의 거부</label>
+                                                    <input type="checkbox" id="ckSMS" name="ckSMS" style="display:none;">
+                                                </p>
+                                            </td>
+                                        </tr>
+                                        <!--닉네임-->
+                                        <tr>
+                                            <td bgcolor="#FFFFFF" height="35" width="120">
+                                                <img src="images/Indent_squareOrange.gif" hspace="7" vspace="3">닉네임
+                                            </td>
+                                            <td bgcolor="#FFFFFF" height="35">
+                                                &nbsp;&nbsp;
+                                                <input type="text" name="NickNm" size="12" onBlur="ReplaceChar(this.value);" MAXLENGTH="20">
+                                                &nbsp;<span class="infoGray">20자 이내</span>
+                                            </td>
+                                        </tr>
+                                        <!--직업선택-->
+                                        <tr>
+                                            <td bgcolor="#FFFFFF" height="35" width="120">
+                                                <img src="http://secimage.yes24.com/sysimage/member/Indent_squareGray.gif" hspace="7" vspace="3">직업
+                                            </td>
+                                            <td bgcolor="#FFFFFF" height="35">
+                                                &nbsp;&nbsp;
+                                                <select name="MemberJob" id="MemberJob">
+                                                    <option selected="selected" value="05">직업선택 </option>
+                                                    <option value="01">회사원</option>
+                                                    <option value="07">-건설/교통</option>
+                                                    <option value="08">-광고/마켓팅/홍보</option>
+                                                    <option value="09">-금융/증권/보험/회계</option>
+                                                    <option value="10">-농/수/축산/광업</option>
+                                                    <option value="11">-언론/출판</option>
+                                                    <option value="12">-연예/스포츠</option>
+                                                    <option value="13">-전기/전자/통신</option>
+                                                    <option value="14">-컴퓨터/인터넷</option>
+                                                    <option value="04">공무원</option>
+                                                    <option value="15">교직자/학원강사</option>
+                                                    <option value="16">군인/경찰</option>
+                                                    <option value="17">예술인</option>
+                                                    <option value="18">의료인</option>
+                                                    <option value="19">자영업</option>
+                                                    <option value="20">정치/법조인</option>
+                                                    <option value="21">제조/생산</option>
+                                                    <option value="22">종교인</option>
+                                                    <option value="03">주부</option>
+                                                    <option value="23">프리랜서</option>
+                                                    <option value="02">학생</option>
+                                                    <option value="24">-초/중/고생</option>
+                                                    <option value="25">-대학/대학원생</option>
+                                                    <option value="06">무직</option>
+                                                    <option value="05">기타</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <!--결혼여부-->
+                                        <tr>
+                                            <td bgcolor="#FFFFFF" height="35" width="120">
+                                                <img src="http://secimage.yes24.com/sysimage/member/Indent_squareGray.gif" hspace="7" vspace="3">결혼여부
+                                            </td>
+                                            <td bgcolor="#FFFFFF" height="35">
+                                                &nbsp;&nbsp;
+                                                <input type="radio" name="Marry" value="N" onClick="searchKind(this.form)" checked>미혼
+                                                <input type="radio" name="Marry" value="Y" onClick="searchKind(this.form)">기혼
+                                            </td>
+                                        </tr>
+                                        <!--결혼기념일-->
+                                        <tr>
+                                            <td bgcolor="#FFFFFF" height="35" width="120">
+                                                <img src="http://secimage.yes24.com/sysimage/member/Indent_squareGray.gif" hspace="7" vspace="3">결혼기념일
+                                            </td>
+                                            <td bgcolor="#FFFFFF" height="35">
+                                                &nbsp;&nbsp;
+                                                <input type="text" name="MarryDay_year" size="4" MAXLENGTH="4" onKeyDown="isCkNumber()"> 년
+                                                &nbsp;
+                                                <SELECT name="MarryDay_month">
+                                                    <option value=01>1 </option>
+                                                    <option value=02>2 </option>
+                                                    <option value=03>3 </option>
+                                                    <option value=04>4 </option>
+                                                    <option value=05>5 </option>
+                                                    <option value=06>6 </option>
+                                                    <option value=07>7 </option>
+                                                    <option value=08>8 </option>
+                                                    <option value=09>9 </option>
+                                                    <option value=10>10 </option>
+                                                    <option value=11>11 </option>
+                                                    <option selected value=12>12 </option>
+                                                </SELECT>월
+                                                &nbsp;
+                                                <SELECT name="MarryDay_day">
+                                                    <option value=01>1 </option>
+                                                    <option value=02>2 </option>
+                                                    <option value=03>3 </option>
+                                                    <option value=04>4 </option>
+                                                    <option value=05>5 </option>
+                                                    <option value=06>6 </option>
+                                                    <option value=07>7 </option>
+                                                    <option value=08>8 </option>
+                                                    <option value=09>9 </option>
+                                                    <option value=10>10 </option>
+                                                    <option value=11>11 </option>
+                                                    <option value=12>12 </option>
+                                                    <option value=13>13 </option>
+                                                    <option value=14>14 </option>
+                                                    <option value=15>15 </option>
+                                                    <option value=16>16 </option>
+                                                    <option value=17>17 </option>
+                                                    <option value=18>18 </option>
+                                                    <option value=19>19 </option>
+                                                    <option value=20>20 </option>
+                                                    <option value=21>21 </option>
+                                                    <option value=22>22 </option>
+                                                    <option value=23>23 </option>
+                                                    <option value=24>24 </option>
+                                                    <option value=25>25 </option>
+                                                    <option value=26>26 </option>
+                                                    <option value=27>27 </option>
+                                                    <option value=28>28 </option>
+                                                    <option value=29>29 </option>
+                                                    <option value=30>30 </option>
+                                                    <option selected value=31>31 </option>
+                                                </SELECT>일
+
+                                            </td>
+                                        </tr>
+                                        <!-- 자녀유무 -->
+                                        <tr>
+                                            <td bgcolor="#FFFFFF" height="35" width="120">
+                                                <img src="http://secimage.yes24.com/sysimage/member/Indent_squareGray.gif" hspace="7" vspace="3">자녀유무
+                                            </td>
+                                            <td bgcolor="#FFFFFF" height="35">
+                                                &nbsp;&nbsp;
+                                                <select name="childExist" id="childExist">
+                                                    <option value="Y">유 </option>
+                                                    <option value="N" selected>무 </option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <!-- 개인 정보 유효기간-->
+                                        <tr>
+                                            <td bgcolor="#FFFFFF" height="50" width="120">
+                                                <img src="images/Indent_squareOrange.gif" hspace="7" vspace="3">개인정보 유효기간
+                                            </td>
+                                            <td bgcolor="#FFFFFF" height="35">
+                                                &nbsp;&nbsp;
+                                                <label><input value="1" name="pInfoTerm" type="radio" id="rDormancyYear1" checked="checked" /> 1년</label>&nbsp;&nbsp;
+                                                <label><input value="3" name="pInfoTerm" type="radio" id="rDormancyYear3" /> 3년</label>&nbsp;&nbsp;
+                                                <label><input value="5" name="pInfoTerm" type="radio" id="rDormancyYear5" /> 5년</label>&nbsp;&nbsp;
+                                                <label><input value="10" name="pInfoTerm" type="radio" id="rDormancyYear10" /> 10년</label>&nbsp;&nbsp;
+                                                <label><input value="99" name="pInfoTerm" type="radio" id="rDormancyYear99" /> 탈퇴시까지</label>&nbsp;&nbsp;
+                                            </td>
+                                        </tr>
+                                    </table>
+                                    <!--기본입력 테이블 끝//-->
+                                    <br><br>
+
+                </form>
+            </div>
+            <!--03.정보입력 테이블끝//-->
+
+        </div>
+        <!-- //step3 정보입력-->
+
+    </div>
+        <!-- //content -->
+    </div>
+    <!-- //Container -->
+</div>
+
+
+</body>
+</html>

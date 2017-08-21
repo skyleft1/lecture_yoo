@@ -1,0 +1,49 @@
+/* jQuery for Designers CSS */
+
+/* Layout */
+body {
+    background-color: #002b36;
+    background-image: -webkit-gradient(linear, 0 0, 100% 0, color-stop(.5, rgba(7, 55, 68, .2)), color-stop(.5, transparent), to(transparent));
+    background-image: -webkit-linear-gradient(0deg, rgba(7, 55, 68, .2) 50%, transparent 50%, transparent);
+    background-image: -moz-linear-gradient(0deg, rgba(7, 55, 68, .2) 50%, transparent 50%, transparent);
+    background-image: -ms-linear-gradient(0deg, rgba(7, 55, 68, .2) 50%, transparent 50%, transparent);
+    background-image: -o-linear-gradient(0deg, rgba(7, 55, 68, .2) 50%, transparent 50%, transparent);
+    background-image: linear-gradient(0deg, rgba(7, 55, 68, .2) 50%, transparent 50%, transparent);
+    -webkit-background-size: 50px 50px;
+    -moz-background-size: 50px 50px;
+    background-size: 50px 50px; /* Controls the size of the stripes */
+    font-family: tahoma, verdana, sans-serif;
+    font-size: 16px;
+    line-height:1.5;
+    margin: 0;
+    padding: 0;
+}
+
+#header       { background:#002b36;color:#93a1a1;padding:10px;-moz-box-shadow:0 0 5px 5px rgba(0,0,0,0.8);-webkit-box-shadow:0 0 5px 5px rgba(0,0,0,0.8);box-shadow: 0 0 5px 5px rgba(0,0,0,0.8); }
+  #header h1  { font-size:16px;display:inline; }
+  #header p   { display:inline;font-size:14px; }
+  #header a   { display:block;float:right; }
+
+#container  { background:#fdf6e3;color:#586e75;-moz-border-radius:15px;-webkit-border-radius:15px;border-radius:15px;margin:40px auto;width:960px;-moz-box-shadow:0 0 5px 5px rgba(0,0,0,0.8);-webkit-box-shadow:0 0 5px 5px rgba(0,0,0,0.8);box-shadow: 0 0 5px 5px rgba(0,0,0,0.8); }
+#title      { background:#b58900;color:#fff;padding:10px;-webkit-border-top-left-radius: 15px;-webkit-border-top-right-radius: 15px;-moz-border-radius-topleft: 15px;-moz-border-radius-topright: 15px;border-top-left-radius: 15px;border-top-right-radius: 15px; }
+  #title h2 { margin:0;padding:0;font-weight:normal;font-size:24px; }
+  #title p  { margin:0;padding:0;color:#eee8d5; }
+  #title.chapter1,#title.chapter8{ background:#268bd2; }
+  #title.chapter2,#title.chapter9{ background:#cb4b16; }
+  #title.chapter3,#title.chapter10{ background:#dc522f; }
+  #title.chapter4,#title.chapter11{ background:#d33682; }
+  #title.chapter5,#title.chapter12{ background:#6c71c4; }
+  #title.chapter6,#title.appendix{ background:#2aa198; }
+  #title.chapter7{ background:#859900; }
+#content    { min-height:400px;padding:10px;}
+#nav        { background:#eee8d5;padding:10px;-webkit-border-bottom-right-radius: 15px;-webkit-border-bottom-left-radius: 15px;-moz-border-radius-bottomright: 15px;-moz-border-radius-bottomleft: 15px;border-bottom-right-radius: 15px;border-bottom-left-radius: 15px; }
+  #nav .toc { margin-right:20px; }
+
+/* Elements */
+a,
+a:link,
+a:visited     { color:#859900;text-decoration:none; }
+a:hover,
+a:active      { color:#d33682; }
+
+

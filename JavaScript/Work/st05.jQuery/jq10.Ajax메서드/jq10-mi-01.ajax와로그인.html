@@ -1,0 +1,191 @@
+<!--
+http://stackoverflow.com/questions/5603117/jquery-create-object-from-form-fields
+-->
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>폼 데이터를 JSON 형태로 변환</title>
+    <style>
+        div { font-weight: bold; color:red; }
+
+        .profile { position: relative; z-index: 10; zoom: 1; border: 1px solid #dcdcdc; border-bottom: 0; height: 99px; _width: 298px } 
+        .profile .user_area { background-color: #f3f4f3; border-bottom: 1px solid #dcdcdc; height: 54px; position: relative; z-index: 10 } 
+        .profile .user_info { position: relative; padding: 8px 0 4px 58px; zoom: 1 } 
+        .profile .user_thumbnail { position: absolute; left: 11px; top: 5px; width: 42px; height: 42px; overflow: hidden } 
+        .profile .user_thumbnail img { width: auto; height: auto; max-width: 100%; max-height: 100% } 
+        .profile .user_thumbnail .mask { width: 100%; height: 100%; position: absolute; left: 0; top: 0 } 
+
+        .profile .private { margin-bottom: 5px; line-height: 19px; white-space: nowrap; position: relative } 
+        .profile .private .user_name { max-width: 90px; *width: 90px; vertical-align: middle; position: relative; overflow: hidden; box-sizing: content-box; margin-right: 6px } 
+        .profile .private .user_name a { color: #2f3743; font-weight: bold } 
+        .profile .private .user_name a:hover { text-decoration: none } 
+        .profile .private .user_name a strong { max-width: 79px; *width: 79px; vertical-align: top; *vertical-align: middle } 
+        .profile .private .user_name a:hover strong { text-decoration: underline } 
+        .profile .private .login_on { width: 17px; height: 11px; margin: 4px 2px 0 0; overflow: hidden; background-position: -20px -340px; vertical-align: top } 
+        .profile .private .link_myinfo { color: #848688; text-decoration: underline } 
+        .profile .private .set_login_protect { width: 12px; height: 18px; background-position: -58px 4px; vertical-align: top; margin-left: -1px } 
+        .profile .private .btn_logout { position: absolute; right: 12px; border: 1px solid #d1d1d1; color: #848688; height: 16px; overflow: hidden; vertical-align: top } 
+        .profile .private .btn_logout .btn_inr { border: 1px solid #fff; border-right: 0; border-bottom: 0; background-color: #f6f7f8; padding: 0 4px 0; height: 15px; line-height: 15px; vertical-align: top; *line-height: 17px } 
+
+        .bar { width: 1px; height: 16px; background-position: 100% -18px; vertical-align: top; overflow: hidden }
+
+    </style>
+
+    <script src='../jquery-3.1.0.js'></script>
+    <script>
+        $(document).ready(function() {
+            $('#submit').click(function(e) {
+
+                var serializeJSON = function (arr) {
+// var arr = $(form).serializeArray();
+                    var obj = {};
+                    for(var i = 0; i < arr.length; i++) {
+                        if(obj[arr[i].name] === undefined) {
+                            obj[arr[i].name] = arr[i].value;
+                        } else {
+                            if(!(obj[arr[i].name] instanceof Array)) {
+                                obj[arr[i].name] = [obj[arr[i].name]];
+                            }
+                            obj[arr[i].name].push(arr[i].value);
+                        }
+                    }
+                    return obj;
+                };
+
+                var array = $('form').serializeArray();  //serializeArray() 는 배열로 정리한다.
+                var form_data = serializeJSON( array );
+                var str = JSON.stringify(form_data);
+
+                $('#result').html( str );
+
+                $.ajax({
+                    url : 'http://localhost:3000/login'
+                    , data : form_data
+                    , type : 'post'
+                    , timeout : 30000
+                    , datatype : 'json'
+                    , beforeSend : function () {
+                        $('#result').next().after('<img src = ".loading.gif">');
+                    }
+                }).done( function(data, textStatus, xhr ){
+                    $('#result').next().remove();
+// 통신이 성공적으로 이루어졌을 때 이 함수를 타게 된다.
+                    var str1 = '';
+                    $('.login, #result').hide();
+                    $('.profile').show();
+                    $('#user_name').text(data.username);
+
+                }).fail( function(xhr, textStatus, error ) {
+                    console.log('error');
+// 통신이 실패했을 때 이 함수를 타게 된다.
+                }).always( function(data, textStatus, xhr ) {
+// 통신이 실패했어도 성공했어도 이 함수를 타게 된다.
+                    $('#result').next().remove();
+                });
+                return false;
+            });
+        });
+    </script>
+    
+</head>
+<body>
+
+    <div class="login">
+        <form>
+            <input type="hidden" name="seq" value="1">
+            <label> 이름을 입력하세요 : </label>
+            <input type="text" name="username"/>  <br/>
+            <label> 패스워드를 입력하세요 :</label>
+            <input type="password"  name="password"/>  <br/>
+            <input type="checkbox" name="hobby" value="music"> music
+            <input type="checkbox" name="hobby" value="yoga"> yoga
+            <input type="checkbox" name="hobby" value="reading"> reading <br/>
+            <input type="button" id="submit" value="전송"/>
+        </form>
+    </div>
+
+    <div class="profile" style="display: none;">
+        <div class="user_area">
+            <div class="user_info">
+                <a href="#" class="user_thumbnail">
+                    <span class="mask"></span>
+                    <img id="profile_image" src="myInfo.gif">
+                </a>
+                <div class="private">
+                    <span class="user_name"><a href="#"><strong id="user_name">???</strong>님</a></span>
+                    <a href="#" target="_parent" class="link_myinfo">내정보</a>
+                    <a href="http://nid.naver.com/nidlogin.logout?returl=http://www.naver.com" target="_parent" class="btn_logout">
+                        <span class="btn_inr">로그아웃</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+    <div id="result"></div>
+</body>
+</html>
+
+
+
+<!--<div class="login" queryid="C148036705567757338">-->
+    <!--<form id="frmNIDLogin" name="frmNIDLogin" target="_top" action="https://nid.naver.com/nidlogin.login" method="post">-->
+        <!--<input type="hidden" name="enctp" id="enctp" value="1">-->
+        <!--<input type="hidden" name="encpw" id="encpw" value="">-->
+        <!--<input type="hidden" name="encnm" id="encnm" value="">-->
+        <!--<input type="hidden" name="svctype" id="svctype" value="0">-->
+        <!--<input type="hidden" name="url" id="url" value="http://www.naver.com/">-->
+        <!--<input type="hidden" name="enc_url" id="enc_url" value="http%3A%2F%2Fwww.naver.com%2F">-->
+        <!--<input type="hidden" name="postDataKey" id="postDataKey" value="">-->
+        <!--<input type="hidden" name="nvlong" id="nvlong" value="">-->
+        <!--<input type="hidden" name="saveID" id="saveID" value="">-->
+        <!--<input type="hidden" name="smart_level" id="smart_level" value="1">-->
+        <!--<fieldset>-->
+            <!--<legend class="blind">로그인</legend>-->
+            <!--<div class="htmlarea" id="flasharea" style="visibility: hidden;"><div style="width:105px;height:49px;">&nbsp;</div></div>-->
+            <!--<div class="htmlarea" id="htmlarea" style="display: block;">-->
+                <!--<div class="input_box"><label for="id" id="label_id" class="lbl_in">아이디</label><input type="text" id="id" name="id" maxlength="41" title="아이디" accesskey="L" placeholder="아이디" class="int"></div>-->
+                <!--<div class="input_box"><label for="pw" id="label_pw" class="lbl_in">비밀번호</label><input type="password" id="pw" name="pw" maxlength="16" title="비밀번호" placeholder="비밀번호" class="int">-->
+                    <!--<div class="error_box_v2" style="display: none" id="div_capslock">-->
+                        <!--<p><strong>Caps Lock</strong>이 켜져 있습니다.</p>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="chk_id_login">-->
+                <!--<input type="checkbox" id="chk_log" title="로그인 상태유지" class="chk_login"> <label for="chk_log" class="lbl_long" id="lbl_long">로그인 상태 유지</label>-->
+            <!--</div>-->
+            <!--<div class="login_help">-->
+                <!--<div class="chk_ip"><a href="http://static.nid.naver.com/loginv3/help_ip.html" id="ip_guide" target="_blank" title="">IP보안</a> <span class="ip_box"><input type="checkbox" id="ckb_type" title="IP 보안이 켜져 있습니다. IP보안을 사용하지 않으시려면 선택을 해제해주세요." class="chb_b"><label for="ckb_type" id="lbl_type" class="lbl_type on">IP보안 체크</label></span></div>-->
+            <!--</div>-->
+            <!--<span class="btn_login"><input type="submit" title="로그인" value="로그인"></span>-->
+            <!--<a href="https://nid.naver.com/nidlogin.login?mode=number&amp;svctype=&amp;logintp=&amp;viewtype=&amp;url=http://www.naver.com" target="_top" class="btn_dis">일회용 로그인</a>-->
+            <!--<p class="btn_lnk">-->
+                <!--<a href="https://nid.naver.com/nidregister.form?url=http://www.naver.com" target="_blank" class="btn_join">회원가입</a>-->
+                <!--<a href="https://nid.naver.com/user/help.nhn?todo=idinquiry" target="_blank" class="btn_id">아이디<span class="blind">찾기</span></a>/<a href="https://nid.naver.com/nidreminder.form" target="_blank">비밀번호 찾기</a>-->
+            <!--</p>-->
+        <!--</fieldset>-->
+    <!--</form>-->
+<!--</div>-->
+
+<!--<div class="profile">-->
+    <!--<div class="user_area">-->
+        <!--<div class="user_info">-->
+            <!--<a href="https://nid.naver.com/user2/api/naverProfile.nhn?m=checkIdType" target="_parent" class="user_thumbnail" onclick="clickcr(this, 'nmy.profile', '', '', event);My.movePage('https://nid.naver.com/user2/api/naverProfile.nhn?m=checkIdType');return false;">-->
+                <!--<span class="mask"></span>-->
+                <!--<img id="profile_image" src="http://static.naver.net/common/myarea/myInfo.gif" width="49" height="49" alt="sjydevil 님">-->
+            <!--</a>-->
+            <!--<div class="private">-->
+                <!--<span class="user_name"><a href="https://nid.naver.com/user2/api/naverProfile.nhn?m=checkIdType" target="_parent" onclick="clickcr(this, 'nmy.idname', '', '', event);My.movePage('https://nid.naver.com/user2/api/naverProfile.nhn?m=checkIdType');return false;"><strong id="user_name">sjydevil</strong>님</a></span>-->
+                <!--<a href="https://nid.naver.com/user2/help/myInfo.nhn?menu=home" target="_parent" class="link_myinfo">내정보</a>-->
+                <!--<a href="https://nid.naver.com/user2/help/myInfo.nhn?m=viewSecurity&amp;menu=security" target="_parent" class="set_login_protect"><i class="blind">로그인 보호 설정</i></a>-->
+                <!--<span class="login_on" style="display:none"><i class="blind">로그인상태 유지</i></span>-->
+                <!--<a href="http://nid.naver.com/nidlogin.logout?returl=http://www.naver.com" target="_parent" class="btn_logout" onclick="clickcr(this, 'nmy.logout', '', '', event);My.movePage('http://nid.naver.com/nidlogin.logout?returl=http://www.naver.com');return false;"><span class="btn_inr">로그아웃</span></a>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+
+

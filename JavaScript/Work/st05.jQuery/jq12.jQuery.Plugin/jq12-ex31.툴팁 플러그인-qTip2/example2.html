@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<h2>Custom Tooltips ::: qTip2</h2>
+<link rel="stylesheet" href="styles/j4d.css"/>
+<link rel="stylesheet" href="qtip2/jquery.qtip.min.css"/>
+<style>
+    #navigation {
+        background: rgb(132,136,206); /* Old browsers */
+        background: -moz-linear-gradient(top, rgba(132,136,206,1) 0%, rgba(72,79,181,1) 50%, rgba(132,136,206,1) 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(132,136,206,1)), color-stop(50%,rgba(72,79,181,1)), color-stop(100%,rgba(132,136,206,1))); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top, rgba(132,136,206,1) 0%,rgba(72,79,181,1) 50%,rgba(132,136,206,1) 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top, rgba(132,136,206,1) 0%,rgba(72,79,181,1) 50%,rgba(132,136,206,1) 100%); /* Opera11.10+ */
+        background: -ms-linear-gradient(top, rgba(132,136,206,1) 0%,rgba(72,79,181,1) 50%,rgba(132,136,206,1) 100%); /* IE10+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8488ce', endColorstr='#8488ce',GradientType=0 ); /* IE6-9 */
+        background: linear-gradient(top, rgba(132,136,206,1) 0%,rgba(72,79,181,1) 50%,rgba(132,136,206,1) 100%); /* W3C */
+        list-style-type: none;
+        margin: 100px 20px 20px 20px;
+        padding: 0;
+        overflow: hidden;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+    }
+    #navigation li { margin: 0; padding: 0; display: block; float: left; border-right: 1px solid #4449a8; }
+    #navigation a { color: #fff; border-right: 1px solid #8488ce; display: block; padding: 10px; }
+    #navigation a:hover { background: #859900; border-right-color: #a3bb00; }
+
+    /* Conversation style */
+    .ui-tooltip-conversation{ }
+    .ui-tooltip-conversation .ui-tooltip-titlebar,
+    .ui-tooltip-conversation .ui-tooltip-content{ border: 3px solid #555; filter: none; -ms-filter: none; }
+    .ui-tooltip-conversation .ui-tooltip-titlebar{ background: #859900; color: white; font-weight: normal; font-family: serif; border-bottom-width: 0; }
+    .ui-tooltip-conversation .ui-tooltip-content{ background-color: #F9F9F9; color: #859900; -moz-border-radius: 9px; -webkit-border-radius: 9px; border-radius: 9px; padding: 10px; }
+    .ui-tooltip-conversation .ui-tooltip-icon{ border: 2px solid #555; background: #859900; }
+    .ui-tooltip-conversation .ui-tooltip-icon .ui-icon{ background-color: #859900; color: #555; }
+</style>
+
+
+
+
+</head>
+<body>
+
+<div id="container">
+    <div id="title" class="chapter5">
+        <h2>Creating Custom Tooltips</h2>
+    </div>
+    <div id="content">
+        <ul id="navigation">
+            <li><a href="home.html" title="An introduction to who we are and what we do">Home</a>
+            </li>
+            <li><a href="about.html" title="Learn more about our company">About</a></li>
+            <li><a href="contact.html" title="Send us a message. We'd love to hear from you!">Contact</a>
+            </li>
+            <li><a href="work.html" title="View a portfolio of the work we've done for our clients">Our
+                Work</a></li>
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>
+

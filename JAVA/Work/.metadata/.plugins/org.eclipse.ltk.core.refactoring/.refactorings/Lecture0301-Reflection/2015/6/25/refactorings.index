@@ -1,0 +1,31 @@
+1434585786680	Rename type 'Document'
+1434585798864	Rename type 'Type'
+1434586211186	Rename type 'TestDocumentsWithNewInstance'
+1434586224711	Rename type 'TestDocumentsWithSpring'
+1434586248528	Copy compilation unit
+1434586352198	Rename type 'TestMakeInstanceWithReflection'
+1434586933477	Delete element
+1434587298313	Rename type 'MySearchEngine'
+1434587305863	Rename type 'SearchEngine'
+1434592112643	Rename local variable 'type1'
+1434592123767	Rename local variable 'type2'
+1434593134289	Rename local variable 'retobj2'
+1434593145340	Rename local variable 'retType2'
+1434593157944	Rename local variable 'method2'
+1434594139683	Rename compilation unit 'aa.java'
+1434594165376	Rename compilation unit 'aa.java'
+1434594247193	Delete element
+1434594494068	Rename compilation unit 'qq.java'
+1434594615933	Move compilation unit
+1434595690324	Rename package 'com.lecture.di.test'
+1434598464240	Move compilation unit
+1434598492309	Move compilation units
+1434598505864	Rename type 'RestoreAliases'
+1434599570434	Rename type 'MainType'
+1434602865035	Delete element
+1434602878258	Delete element
+1434602880806	Delete element
+1434602931722	Rename type 'TypeMain'
+1434617569501	Rename resource 'mydocuments-context.xml'
+1434617671464	Copy compilation units
+1434759144165	Delete element

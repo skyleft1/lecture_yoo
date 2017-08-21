@@ -1,0 +1,228 @@
+body{
+	padding:0px;
+	margin:0px;
+	background:#FFF;
+	color:#000000;
+	font:10px/14px Tahoma, sans-serif;
+}
+
+div, p, ul, h2, h3, h4, img, form{padding:0px; margin:0px;}
+ul{list-style-type:none;}
+
+.clear{
+clear:both;
+}
+
+.frame {
+	border: 1px solid #EAEEEF;
+}
+
+.text1 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #898a8b;
+	font-weight: normal;
+	line-height: 14px;
+}
+.text2 {
+	font-family: Tahoma, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color: #000;
+}
+.text3 {
+	font-family: Tahoma, sans-serif;
+	font-size: 10px;
+	font-weight: normal;
+	color: #353739;
+}
+.text4 {
+	font-family: Tahoma, sans-serif;
+	font-size: 10px;
+	font-weight: normal;
+	color: #ec2828;
+}
+.text5 {
+	font-family: Tahoma, sans-serif;
+	font-size: 10px;
+	font-weight: normal;
+	color: #741907;
+}
+
+
+a:link {
+	color: #000000;
+	font-family: Tahoma, sans-serif;
+	font-size: 10px;
+	font-weight: normal;
+	text-decoration: none;
+}
+a:visited {
+	color: #000000;
+	font-family: Tahoma, sans-serif;
+	font-size: 10px;
+	font-weight: normal;
+	font-style: normal;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #000000;
+	font-family: Tahoma, sans-serif;
+	font-size: 10px;
+	font-weight: normal;
+	font-style: normal;
+	line-height: normal;
+	font-variant: normal;
+	text-transform: none;
+	text-decoration: underline;
+}
+
+a.a:link {
+	font-family: Tahoma, sans-serif;
+	font-size: 10px;
+	font-weight: normal;
+	color: #84bf01;
+	text-decoration: underline;
+}
+a.a:visited {
+	font-family: Tahoma, sans-serif;
+	font-size: 10px;
+	font-weight: normal;
+	color: #84bf01;
+	text-decoration: underline;
+}
+a.a:hover {
+	font-family: Tahoma, sans-serif;
+	font-size: 10px;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: none;
+	line-height: 14px;
+}
+
+a.b:link {
+	font-family: Tahoma, sans-serif;
+	font-size: 10px;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: underline;
+}
+a.b:visited {
+	font-family: Tahoma, sans-serif;
+	font-size: 10px;
+	font-weight: normal;
+	color: #000000;
+	text-decoration: underline;
+}
+a.b:hover {
+	font-family: Tahoma, sans-serif;
+	font-size: 10px;
+	font-weight: normal;
+	color: #84bf01;
+	text-decoration: none;
+	line-height: 14px;
+}
+
+a.c:link {
+	font-family: Tahoma, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color: #382a1a;
+	text-decoration: none;
+}
+a.c:visited {
+	font-family: Tahoma, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color: #382a1a;
+	text-decoration: none;
+}
+a.c:hover {
+	font-family: Tahoma, sans-serif;
+	font-size: 10px;
+	font-weight: bold;
+	color: #989560;
+	text-decoration: none;
+}
+
+a.d:link {
+	font-family: Tahoma, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #19333b;
+	text-decoration: underline;
+}
+a.d:visited {
+	font-family: Tahoma, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #19333b;
+	text-decoration: underline;
+}
+a.d:hover {
+	font-family: Tahoma, sans-serif;
+	font-size: 11px;
+	font-weight: normal;
+	color: #FF6C00;
+	text-decoration: none;
+}
+
+#header{
+position:relative; 
+}
+
+#logo{
+position:absolute; top:15px; left:22px;
+}
+
+#gift{
+position:absolute; top:0; left:538px;
+}
+
+#slogan{
+position:absolute; top:114px; left:15px;
+}
+
+#buttons{
+	position:absolute;
+	top:24px;
+	left:557px;
+	width: 205px;
+
+}
+
+#container{
+position:relative;
+width:775px;
+}
+
+#indent1{
+width:500px;
+float:left;
+margin-left:10px;
+}
+
+#indent2{
+width:237px;
+margin-left:28px;
+float:left;
+}
+
+ul.arrow li{background:url(../images/arrow.gif) 0 3px no-repeat; padding-left:18px; margin-bottom:6px;}
+ul.arrow li a{font:10px/14px Tahoma, sans-serif; color:#687a7f; font-weight:normal; text-decoration:underline;}
+ul.arrow li a:hover{color:#687a7f; font-weight:normal; text-decoration:none;}
+
+ul.bullet li{background:url(../images/bullet.gif) 0 5px no-repeat; padding-left:11px; margin-bottom:6px;}
+
+#links{
+	margin:5px 0 0 0;
+	line-height:18px;
+}
+
+input, textarea, select{
+border:#e3e3e3 1px solid;
+background-color:#fbfbfb;
+margin-top:5px;
+font:10px/12px Tahoma, sans-serif; color:#000; 
+}

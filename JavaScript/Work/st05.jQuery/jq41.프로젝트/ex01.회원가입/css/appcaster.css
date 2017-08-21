@@ -1,0 +1,343 @@
+@charset "utf-8";
+
+/* 앱캐스터*/
+.appsection_list{position:relative;font-size:13px;line-height:normal;width:368px;float:left;}
+.appsection_list a{color:#666;text-decoration:none}
+.appsection_list a:hover,
+.appsection_list a:active,
+.appsection_list a:focus{text-decoration:underline}
+.appsection_list h3{margin:0;padding:12px 0 6px 17px;border-bottom:2px solid #b5762c;font-size:12px;color:#b5762c;background: url('../../images/homepage/common/app_section_titlebg.gif') no-repeat;}
+.appsection_list .lalist{margin:0;padding:10px 0 8px 13px;border:1px solid #ddd;font-size:12px;color:#333;background-color:#eee;}
+.appsection_list ul{margin:13px;padding:0;list-style:none;}
+.appsection_list li{background: url('../../images/homepage/bu/bu_list_app.gif') no-repeat 0px 3px ; padding-left:9px; margin:0 0 10px 0}
+.appsection_list li:after{display:block;clear:both;content:""}
+
+.section_mg {margin-right:24px;}
+.app_more{position:absolute;font-size:11px; color:#b5762c; font-family:NanumGothic, '나눔고딕'; text-decoration:none; top:10px; right:10px; padding-right:8px; background:url(../../images/homepage/bu/more.gif) no-repeat right;}
+
+/* 인기상용화앱 */
+.pop_app{position:relative; font-size:12px;line-height:normal;width:368px;float:left;}
+.pop_app h3{margin:0;padding:12px 0 6px 17px;border-bottom:2px solid #b5762c;font-size:12px;color:#b5762c;background: url('../../images/homepage/common/app_section_titlebg.gif') no-repeat;}
+
+.app_img_list2{margin:5px;}
+.app_img_list2 dl{position:relative;clear:both;overflow:hidden; width: 100%;min-height:60px;padding:0 0 5px 0;margin:0 0 10px 0;}
+.app_img_list2 dl.first{margin-top: 15px;}
+.app_img_list2 dt{float: left; margin: 12px 0 0 90px; font-weight:bold;}
+.app_img_list2 dd{float: left;}
+.app_img_list2 dd.img_box{position: absolute; top: 0; left: 0;}
+.app_img_list2 dd.img_box img{width:64px;height:64px;}
+.app_img_list2 dd.right{position: absolute; top: 38px; left: 90px; font-size:11px; color:#757575;}
+
+/* right 링크사이트*/
+.applink_site {margin-bottom:20px; background:url('../../images/homepage/common/linksite_bg.gif') repeat-y ; }
+.applink_site h3{margin:0;font-size:12px;color:#fff; }
+.applist_link{width:100%; text-align:right; text-decoration:underline; font-family:NanumGothic, '나눔고딕'; font-size:11px;}
+
+.search_list2 {padding-top:8px;}
+.search_list2 li {padding:10px 30px 7px 30px; text-align:center; background: url('../../images/homepage/common/bannerLine.gif') no-repeat center bottom;}
+.search_list2 li a{display:inline-block;}
+.search_list2 li img {width:120px; height:90px; text-align:center; padding-bottom:5px;}
+.search_list2 span{font-family:NanumGothic, '나눔고딕';line-height:16px;font-size:12px; padding-top:10px;}
+.list_link{width:100%; text-align:right; text-decoration:underline; font-family:NanumGothic, '나눔고딕'; font-size:11px;}
+
+.search_list2_top {width: 200px; height: 19px; background: url('../../images/homepage/common/linksite_title_top_bg.gif') no-repeat left top;}
+.search_list2_bottom {width: 200px; height: 17px; background: url('../../images/homepage/common/linksite_bottom.gif') no-repeat left bottom;}
+
+/* 앱알리미 */
+.appmenu{clear:both; margin-bottom:20px;}
+.appmenu h3 {font-family:NanumGothic, '나눔고딕', NanumGothicBold, '나눔고딕(굵게)' !important; font-weight:normal; font-size:16px; color:#fff; background: url('../../images/homepage/common/app_rmenu_top.gif') no-repeat;padding:15px 0 20px 35px;}/*상단 타이틀 배경 깔기*/
+.appmenu .snb2_top{background: url('../../images/homepage/common/app_rmenu_top.gif') no-repeat 0 0; height:2px;}
+.appmenu .snb2_center{background: url('../../images/homepage/common/app_rmenu_bg.gif') repeat-y;}
+.appmenu .snb2_bottom{background: url('../../images/homepage/common/app_rmenu_bot.gif') no-repeat 0 0; height:16px;}
+
+.app_snb2 {padding:10px 0 30px 20px; width:160px;}
+.app_snb2 .snb2_2depth {background: url('../../images/homepage/bu/bu_appr_snb2_bg.gif') no-repeat 0 14px; padding:10px 0 7px 8px; border-bottom:1px solid #e7e3ef;}
+.app_snb2 .snb2_2depth_on{background: url('../../images/homepage/bu/bu_appr_snb2_bg.gif') no-repeat 0 14px; padding:10px 0 5px 8px; border-bottom:1px solid #e7e3ef; font-weight:bold; color:#b95a1a; text-decoration:none;}
+.app_snb2 .snb2_2depth a:link,.snb1 .snb_2depth a:visited,.snb1 .snb_2depth a:active{text-decoration:none;}
+.app_snb2 .snb2_2depth a:hover{text-decoration:none;font-weight:bold;color:#b95a1a;}
+.app_snb2 .snb2_2depth_on a:link,.snb1 .snb_2depth_on a:visited,.snb1 .snb_2depth_on a:active{text-decoration:none;color:#b95a1a;}
+.app_snb2 .snb2_2depth_on a:hover{text-decoration:none;font-weight:bold;color:#b95a1a;}
+.app_snb2 .snb2_3depth {margin-top:10px;padding-bottom:5px; width:160px; border-bottom:1px solid #e7e3ef;}
+.app_snb2 .snb2_3depth li{display:block; background: url('../../images/homepage/bu/bu_snb2_3dep1.gif') no-repeat 0 0px; padding:5px 0 2px 12px; text-decoration:none;  height:17px;}
+.app_snb2 .snb2_3depth .snb2_3depth_on{color:#cd7420; font-weight:bold; background: url('../../images/homepage/bu/bu_app_3depon1.gif') no-repeat 0px 0px ;padding:5px 0 2px 12px; text-decoration:none;}
+.app_snb2 .snb2_3depth a:link {color:#000;text-decoration:none;font-weight:normal;}
+.app_snb2 .snb2_3depth a:active{color:#cd7420; text-decoration:none;}
+.app_snb2 .snb2_3depth a:hover{color:#cd7420; text-decoration:none;font-weight:bold; width:160px;}
+
+/* 앱캐스터 CMS영역 */
+.appcaster_list {width:100%; background-color:#fff;}
+.appcaster_list h3 {margin:0;padding:5px 0 10px 18px;font-size:16px; font-family:NanumGothic, '나눔고딕';letter-spacing:-1px;font-weight:bold;background: url('../../images/homepage/bu/bu_app.gif') no-repeat; height:18px;}
+.appcaster_list p{padding-bottom:10px; line-height:17px; color:#555;}
+
+.appcaster_list2 {width:100%; background-color:#fff;}
+.appcaster_list2 h3 {margin:0;padding:0px 0 50px 0px;font-size:16px; font-family:NanumGothic, '나눔고딕';letter-spacing:-1px; height:18px;}
+.appcaster_list2 p{padding-bottom:10px; line-height:17px; color:#555;}
+
+/* 앱소개 영역 */
+.app_list{padding-top:10px;width:100%;}
+.app_list .photo_box {float:left; width:100%; border-top:1px solid #ddd;}
+.app_list .photo_txt {float:left;  border-bottom:1px solid #dddddd; width:100%;}
+.app_list .photo_txt li{float:left; display:inline-block; width:210px; padding-top:15px; text-align:center;}
+.app_list .photo_txt p{font-family:NanumGothic, '나눔고딕';font-size:12px;padding-top:10px;line-height:18px; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;}
+.photo_img img {width:80px; height:80px; }
+.txt_app_title {overflow: hidden; white-space: nowrap; text-overflow: ellipsis;margin: 0 15px 0 15px;display: block;}
+.txt_app_s {font-size:11px; color:#939393; overflow: hidden; white-space: nowrap; text-overflow: ellipsis;margin: 0 15px 0 15px;display: block;}
+
+/* 앱소개 목록보기 */
+.app_me_list{clear:both; padding-top:10px;width:100%;}
+.app_me_list .photo_txt {float:left;  border-bottom:1px solid #dddddd; width:100%;}
+.app_me_list .photo_txt li{float:left; display:inline-block; width:253px; padding-top:15px; text-align:center;}
+.app_me_list .photo_txt img {width:228px; height:158px; }
+.app_me_list .photo_txt p{font-family:NanumGothic, '나눔고딕';font-size:12px;padding-top:10px;line-height:18px;}
+
+.appint_btn {float: left; width: 100%; padding-bottom: 5px; text-align: right; border-bottom: 2px solid #d7d7d7;}
+.appint_btn span.btnWrite {padding-left: 30px;}
+.appint_btn span img {vertical-align: middle;}
+
+.app_more a:link     {color:#b5762c; text-decoration:none;}
+.app_more a:active   {color:#b5762c; text-decoration:underline}
+.app_more a:visited  {color:#b5762c; text-decoration:none;}
+.app_more a:hover    {color:#b5762c; text-decoration:underline}
+
+.best_app {float:left; width:368px; height:98px; padding:14px 0 0 0;}
+.best_thum {float:left; width:124px; height:98px;}
+.best_exp {float:left; width:368px; color:#666666; font-size:12px; padding:15px 0; line-height:1.5em; height: 95px; overflow: hidden;}
+.bestapp_list {float:left;width:230px; padding:15px 0 0 0;}
+.bestapp_list ul{margin:5px;padding:0;list-style:none;}
+.bestapp_list li{background: url('../../images/homepage/bu/bu_list_app.gif') no-repeat 0px 3px ; padding-left:9px; margin:0 0 10px 0}
+.txt_applist {color:#88ab15; font-weight:bold;}
+
+/* right 인기상용화앱*/
+.rpop_app {margin-bottom:20px; background:url('../../images/homepage/common/linksite_bg.gif') repeat-y ; }
+.rpop_app h3{margin:0;font-size:12px;color:#fff; }
+.rpop_app .search_list {padding-top:8px;}
+.rpop_app .search_list li {padding:10px 30px 7px 30px; text-align:center; background: url(../../images/homepage/common/bannerLine.gif) no-repeat center bottom;}
+.rpop_app .search_list li a{display:inline-block;}
+.rpop_app .search_list li img {width:64px; height:64px; text-align:center; padding-bottom:5px;}
+.rpop_app .search_list span{font-family:NanumGothic, '나눔고딕';line-height:16px;font-size:12px; padding-top:10px;}
+.list_link{width:100%; text-align:right; text-decoration:underline; font-family:NanumGothic, '나눔고딕'; font-size:11px;}
+
+/* right 인기상용화앱2*/
+.rpop_app2 {margin-bottom:20px;}
+.rpop_app2 h3{margin:0;padding:8px 0 8px 50px;font-size:12px;color:#fff; background:url('../../images/homepage/common/popapp_title_bg.gif') no-repeat 0 0;}
+.rpop_app2 .search_list {padding-top:8px; background:url('../../images/homepage/common/linksite_bg.gif') repeat-y;}
+.rpop_app2 .search_list li {padding:10px 30px 7px 30px; text-align:center; background: url(../../images/homepage/common/bannerLine.gif) no-repeat center bottom;}
+.rpop_app2 .search_list li a{display:inline-block;}
+.rpop_app2 .search_list li img {width:64px; height:64px; text-align:center; padding-bottom:5px;}
+.rpop_app2 .search_list span{font-family:NanumGothic, '나눔고딕';line-height:16px;font-size:12px; padding-top:10px;}
+.list_link{width:100%; text-align:right; text-decoration:underline; font-family:NanumGothic, '나눔고딕'; font-size:11px;}
+
+/** 링크링크 리스트  **/
+.linklink_list {width:100%; background-color:#fff; border-top:2px solid #ddd;}
+.linklink_list h3 {margin:0;padding:0px 0 20px 20px;font-size:17px;letter-spacing:-1px;font-weight:bold;background: url('../../images/homepage/bu/bu01.gif') no-repeat 2px 3px ;}
+.linklink_list .search {background:url('../../images/homepage/common/search_bg1.gif') no-repeat 0 0; border:#ddd 0px solid; height:77px; background-color:#efefef; margin:10px 0 30px 0; padding-top:22px;}
+.linklink_list .search_list li{display:inline-block; padding:5px 0 5px 120px; font-weight:bold; }
+.linklink_list .search_list span{padding-left:15px;}
+.linklink_list .line {float:left;border-bottom:#ddd 1px solid; width:100%}
+
+.linklink_list .product_summary dl{display:inline-block;}
+.linklink_list .product_summary dt{width:600px; font-family:NanumGothic, '나눔고딕'; font-size:12px; font-weight:bold; color:#000;}
+.linklink_list .product_summary dt a:hover {text-decoration:underline; color:#3c5e8c;}
+.linklink_list .product_summary .date{float:right; font-size:11px; color:#777; font-weight:normal;} 
+.linklink_list .product_summary dd {float:left; width:620px; overflow:hidden; color:#bdbdbd; font-size:11px; font-family:NanumGothic, '나눔고딕';  padding-top:10px; padding-bottom:10px;}
+.linklink_list .product_summary dd a {color:#555; line-height:18px;}
+.linklink_list .product_summary dd a:hover{text-decoration:underline;}
+.linklink_list .product_summary dd.part {font-size:11px; color:#777; padding-bottom:10px; padding-top:5px;} 
+.linklink_list .product_summary dd.name {width:450px; font-size:11px; color:#828282;  padding-top:10px; padding-bottom:20px;}
+.linklink_list .product_summary dd.name span{padding:0px 10px 0 0px;}
+.linklink_list .product_summary dd.name span.first{background:none; padding-left:0px;}
+
+.il_text {font-size: 11px; color:#9d9d9d;font-family:NanumGothic, '나눔고딕'; }
+.top_exp {position: relative; width:760px; height:70px;}
+
+.product li{float:left; position: relative; display:inline; background-color:#fff; width:100%; border-bottom:#ddd 1px solid; padding-top:20px;}
+.product_img {float:left; display: inline-block; width:116px; height:53px; margin-right:20px;}
+.product_img img {width:116px; height:53px;}
+.product_more {position: absolute; top: 20px; right: 13px;}
+
+/* 앱톡톡 - 검색 */
+.app_top_search_zone {position: absolute; top: 30px; right: 0;}
+.app_top_search_box {width:300px; text-align:right;}
+
+/* 덧글남기기 */
+.wReply {clear: both; padding: 20px 0 15px;}
+
+.bodyLinkFunc {float: left; color: #e97112; font-weight: bold; display: inline-block; padding-top: 5px;}
+
+.starZone li {float: left; padding-left: 3px;}
+
+.social{float: right;}
+.social li {float:left; padding: 0 0 5px 3px;}
+.social li img {vertical-align: middle;}
+.area {width: 760px; height: 60px;}
+.complete {width: 100%; text-align: right; margin-top:10px;}
+
+.Reply_list {width: 100%; background: #fcf6d4; border-top: 2px solid #dbdbdb; border-bottom: 2px solid #dbdbdb;}
+.Reply_list li {position:relative; border-bottom: 1px dotted #cbcbaa; padding:10px; min-height: 80px;}
+.Reply_list li.none {border-bottom:none; padding:10px;}
+.Reply_img {float: left; width:80px; height: 80px;}
+.Reply_img img {width:80px; height: 80px;}
+.Reply_txt {margin-left:90px; padding: 5px;}
+.userid {font-weight: bold; display: inline-block;}
+.Reply_date {position: absolute; top: 15px; right: 15px; display: inline-block;}
+.conTxt {padding-top: 10px;}
+
+/* 앱소개 */
+.todayApp {border-top:2px solid #dddddd; border-bottom: 2px solid #dddddd;}
+.todayApp .busname{float:left;padding:10px 0;line-height:18px; color:#dd6544;}
+.todayApp .app_data{float:right;}
+.todayApp .app_data li{float:left;padding:10px 10px;line-height:18px;color:#777;}
+
+.todayData01 {width: 100%; padding: 10px 0; height: 9px; border-bottom: 1px solid #dddddd;}
+.todayData01 dt, 
+.todayData01 dd {float: left;}
+.todayData01 .exchange {color: #dd6544; padding-left: 25px; font-weight: bold;}
+.todayData01 .name {color: #9e5546; border-left: 1px #5858c6 dotted; margin-left: 5px; padding-left:5px;}
+.todayData01 .sear { font-size: 11px; font-weight: bold; color: #505050; background: url(../../images/homepage/bu/bu_free.gif) no-repeat 0 1px; margin-left: 10px; padding-left: 9px;}
+.todayData01 .lm265 { margin-left: 265px;}
+.todayData01 .date { font-size: 11px; color: #505050; padding-left: 9px;}
+
+.todayData02 {clear: both; padding: 15px 20px; height: 160px;}
+.todayData02 .img {float: left; display: inline-block; width: 210px; height: 150px; margin-right: 20px; border: 1px solid #dddddd; padding: 5px;}
+.todayData02 .img img{width: 210px; height: 150px;}
+
+.dataElement {width: 475px; float: right; line-height:1.6em;}
+.dataElement dt {float: left; font-weight: bold; background: url(../../images/homepage/bu/bu_link.gif) no-repeat 0 10px; padding: 5px 5px 5px 10px;}
+.dataElement dd, .dataElement03 dd {padding: 5px;}
+
+.dataElement02 {width: 475px; float: right; margin-top: 20px;}
+.dataElement02 dt {float: left; font-weight: bold; background: url(../../images/homepage/bu/bu_link.gif) no-repeat 0 8px; padding: 5px 5px 5px 10px;}
+.dataElement02 dd {padding: 5px; height: 30px;}
+
+.dataElement03 {border-bottom: 1px solid #dddddd; padding: 0 0 10px 20px;}
+.dataElement03 dt{font-weight: bold; background: url(../../images/homepage/bu/bu_link.gif) no-repeat 0 22px; padding: 20px 5px 5px 10px;}
+
+.lm130 {margin-left: 130px;}
+.con {float: right; width: 410px;}
+.height {line-height: 160%;}
+.add_file {padding: 10px;}
+.moreR {display: inline-block; vertical-align: middle;}
+
+.todayData03 {clear: both; padding: 20px; height: 120px;}
+.todayData03 li {float: left; width: 160px; height: 120px; border: 1px solid #d5d5d5; margin-right: 20px;}
+.todayData03 img {width: 160px; height: 120px;}
+.todayData03 li.last {margin-right: 0;}
+
+/* 앱소개 - 글작성 */
+.tbl_type_appcaster {border-top:#dddddd solid 2px;border-collapse:collapse;}
+	.tbl_type_appcaster th {
+		background-color:#f6f6f6;
+		color:#505050;
+		border-right:#dddddd solid 0;
+		border-bottom:#dddddd solid 1px;
+		padding:5px 0px 3px 0px;
+		text-align:center;
+		font-size:13px; 		
+		font-weight:bold;
+		height:25px;
+		line-height:18px
+	}
+	.tbl_type_appcaster th.row {border-top:0;}
+	.tbl_type_appcaster td {
+		border-right:#dddddd solid 0;
+		border-bottom:#dddddd solid 1px;
+		color:#333;
+		padding:5px 7px 3px 7px;
+		font-size:13px; 		
+		text-align:left;
+		height:25px;
+		line-height:18px
+	}
+
+	.tbl_type_appcaster th.al, .tbl_type_appcaster td.al {text-align:left;} .tbl_type_appcaster td.ac {text-align:center} .tbl_type_ap td.ar {text-align:right}
+	.tbl_type_appcaster th.al, .tbl_type_appcaster td.al2 {text-align:left;background-color:#eae9b5;} .tbl_type_appcaster td.ac2 {text-align:center;background-color:#eae9b5;} .tbl_type_ap td.ar2 {text-align:right;background-color:#eae9b5;}
+	.tbl_type_appcaster th.ll, .tbl_type_appcaster td.ll {border-right:0}
+	.tbl_type_appcaster .ellipsisStyle{table-layout:fixed;}
+
+/* 상용화앱 - 글작성 */
+.tbl_type_ap {border-top:#dddddd solid 2px;border-collapse:collapse;}
+	.tbl_type_ap th {
+		background-color:#f6f6f6;
+		color:#505050;
+		border-right:#dddddd solid 0;
+		border-bottom:#dddddd solid 1px;
+		padding:5px 0px 3px 0px;
+		text-align:center;
+		font-size:13px; 		
+		font-weight:bold;
+		height:25px;
+		line-height:18px
+	}
+	.tbl_type_ap th.row {border-top:0;}
+	.tbl_type_ap td {
+		border-right:#dddddd solid 0;
+		border-bottom:#dddddd solid 1px;
+		color:#333;
+		padding:5px 7px 3px 7px;
+		font-size:13px; 		
+		text-align:left;
+		height:25px;
+		line-height:18px
+	}
+
+	.tbl_type_ap th.al, .tbl_type_ap td.al {text-align:left} .tbl_type_ap td.ac {text-align:center} .tbl_type_ap td.ar {text-align:right}
+	.tbl_type_ap th.ll, .tbl_type_ap td.ll {border-right:0}
+
+	.tbl_type_ap.ellipsisStyle{table-layout:fixed;}
+	.tbl_type_ap.ellipsisStyle .ellipsis a{display:block;width:99%;white-space:nowrap;overflow: hidden; text-overflow:ellipsis; -o-text-overflow:ellipsis;}
+	.tbl_type_ap.ellipsisStyle .ellipsis.lock a{width:95%;padding:0 0 0 20px;background:url(../../images/homepage/common/ico_lock.gif) no-repeat 0 0;}
+	.tbl_type_ap.ellipsisStyle a.file{display:inline-block;width:15px;height:17px; background:url(../../images/homepage/ap/bt_file.gif) no-repeat}
+	.tbl_type_ap.ellipsisStyle a.file span{position:absolute;top:-10000em;left:-10000em;visibility:visible;text-indent:-9999em;}
+	.tbl_type_ap.ellipsisStyle a.email{display:inline-block;width:15px;height:17px; background:url(../../images/homepage/ap/icon_email.gif) no-repeat; }
+	.tbl_type_ap.ellipsisStyle a.email span{position:absolute;top:-10000em;left:-10000em;visibility:visible;text-indent:-9999em;}
+	.tbl_type_ap.ellipsisStyle a.gosite{display:inline-block;width:53px;height:16px; background:url(../../images/homepage/ap/icon_gosite.gif) no-repeat; }
+	.tbl_type_ap.ellipsisStyle a.gosite span{position:absolute;top:-10000em;left:-10000em;visibility:visible;text-indent:-9999em;}
+
+/* 게시글 뷰 */
+.tbl_type_free2 {border-top:#dddddd solid 2px;border-collapse:collapse;}
+	.tbl_type_free2 th {
+		color:#dd6544;
+		border-bottom:#dddddd solid 1px;
+		padding:5px 0 3px 25px;
+		text-align:left;
+		font-size:13px; 		
+		font-weight:bold;
+		height:25px;
+		line-height:18px
+	}
+	.tbl_type_free2 th span.name	{ font-size:12px; font-weight:normal; color:#9e5546; border-left:1px #5858c6 dotted; padding-left:5px; }
+	.tbl_type_free2 th span.date	{ font-size:11px; font-weight:bold; color:#505050; background:url(../../images/homepage/bu/bu_free.gif) no-repeat 0 1px; padding-left:9px;}
+	.tbl_type_free2 th span.sear	{ font-size:11px; font-weight:bold; color:#505050; background:url(../../images/homepage/bu/bu_free.gif) no-repeat 0 1px; padding-left:9px; margin-left:8px;}
+	.tbl_type_free2 th.none {color:#505050; font-weight:normal; font-size:11px; padding:0; margin:0; text-align:right; padding:5px 25px 3px 0;}
+	.tbl_type_free2 th.row {border-top:0;}
+	.tbl_type_free2 td {
+		border-bottom:#dddddd solid 1px;
+		color:#333;
+		background:#fafafa;
+		padding:25px;
+		font-size:13px; 		
+		text-align:left;
+		height:25px;
+		line-height:18px
+	}
+	.tbl_type_free2 td.none {
+		border-bottom:#dddddd solid 1px;
+		color:#333;
+		background:#fff;
+		padding:5px 25px 5px 25px;
+		font-size:13px; 		
+		text-align:left;
+		height:25px;
+		line-height:18px
+	}
+	
+	.tbl_type_free2 th.al, .tbl_type_free td.al {text-align:left} .tbl_type_free td.ac {text-align:center} .tbl_type_free td.ar {text-align:right}
+	.tbl_type_free2 th.ll, .tbl_type_free td.ll {border-right:0}
+
+/* 이전글 다음글 */
+.tbl_type_belist {border-collapse:collapse;}
+	.tbl_type_belist th { border-bottom:#dddddd solid 1px; }
+	.tbl_type_belist td { border-bottom:#dddddd solid 1px; padding-left:12px; }
+	.tbl_type_belist th.tLine { border-top:#dddddd solid 1px; }
+	.tbl_type_belist td.tLine { border-top:#dddddd solid 1px; padding-left:12px; }
+

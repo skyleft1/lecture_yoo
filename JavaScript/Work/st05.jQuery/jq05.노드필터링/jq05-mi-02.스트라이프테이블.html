@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>스트라이프 테이블 만들기</title>
+	<style>
+	    table{ margin: 5px; }
+	    th{ background: #222222; color: white; }
+	    th,td{ padding: 5px; font-size: small; }
+	    .odd{ background: rgba(51, 69, 205, 0.27); }
+	    .even{ background:#F2F2F2; }
+	    .hover{ background:#B2D8FF; }
+	</style>
+
+    <script src='../jquery-3.1.0.js'></script>
+    <script>
+
+        var dd = 0;
+
+        $(document).ready(function() {
+            $('table td').hover(
+                function (e){
+                $(this).addClass('hover');
+                $(this).siblings().addClass('hover');
+                    dd = $('tr td').index(this);
+
+                var cc = dd % 10;
+                $('td').filter(function (aa) {
+                    if(cc > 4){
+                        cc = cc -5;
+                    }
+                    return aa % 5 == cc  ;
+                    }).addClass('hover');
+            },
+                function (e){
+                $('*').removeClass('hover');
+            });
+        });
+
+    </script>
+    
+</head>
+<body>
+
+<table>
+    <thead>
+        <tr>
+            <th>no</th><th>DepCode</th><th>DepName</th><th>Tel</th><th>Bigo</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td><td>T0001</td><td>Management</td><td>1234-5678</td><td>15</td>
+        </tr>
+        <tr>
+            <td>2</td><td>T0002</td><td>Service</td><td>9999-9999</td><td>5</td>
+        </tr>
+        <tr>
+            <td>3</td><td>T0003</td><td>Design</td><td>9876-5432</td><td>11</td>
+        </tr>
+        <tr>
+            <td>4</td><td>T0004</td><td>App</td><td>0234-5678</td><td>7</td>
+        </tr>
+        <tr>
+            <td>5</td><td>T0005</td><td>Platform</td><td>9999-7777</td><td>22</td>
+        </tr>
+        <tr>
+            <td>6</td><td>T0006</td><td>WebDev</td><td>0904-5678</td><td>10</td>
+        </tr>
+        <tr>
+            <td>7</td><td>T0007</td><td>Cloud</td><td>9876-5432</td><td>30</td>
+        </tr>
+        <tr>
+            <td>8</td><td>T0008</td><td>Market</td><td>0999-7777</td><td>8</td>
+        </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
+

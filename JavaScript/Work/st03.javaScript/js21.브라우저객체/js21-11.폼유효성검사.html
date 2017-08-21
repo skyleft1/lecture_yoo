@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    
+</head>
+<body>
+    <h1> 태그는 자바스크립트 객체로 바뀐다 </h1>
+    <form name='fm'
+          action="http://www.naver.com"
+          enctype="multipart/form-data"
+          method="get">
+        <label>나이: <input type="text" name="age" value=""  size="3"  />세 </label>
+        <label>이름: <input type="text" name="name" value="" size="20" placeholder="이름을 입력하세요" /> </label>
+        <input type="submit" value="전송" />
+    </form>
+</body>
+<script>
+    var MYAPP = {};
+
+    window.onload = function (e) {
+        MYAPP.fm = document.getElementsByName('fm');
+        MYAPP.fm[0].onsubmit = function (e) {
+            if( this.age.value ===''){
+                alert('나이를 입력해라')
+                this.age.focus();
+                return false;
+            }
+            if( this.name.value ===''){
+                alert('이름을 입력해라')
+                this.name.focus();
+                return false;
+            }
+        };
+    }
+
+</script>
+
+
+
+</html>
+

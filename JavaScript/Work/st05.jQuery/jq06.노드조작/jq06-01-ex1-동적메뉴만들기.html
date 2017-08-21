@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+            font-size: 15pt;
+            font-family: "굴림";
+        }
+
+        div {
+            width: 350px;
+        }
+
+        ul.menu {
+            padding: 10px;
+            list-style: none;
+            border: 1px #000 solid;
+            width: 350px;
+        }
+
+        ul.menu li {
+            border: 1px #eeeeee solid;
+            padding-left: 10px;
+            padding-right: 10px;
+            display: block;
+        }
+
+        li.select {
+            background-color: #ccc;
+        }
+    </style>
+
+    <script src='../jquery-3.1.0.js'></script>
+    <script>
+        $(document).ready(function () {
+            $(document).on('click', '.menu li', function (e) {
+                $(this).addClass('select').siblings().removeClass('select');
+            });
+            $('#add').click(function (e) {
+                $('.menu').append('<li>' + $("#menuName").val() + '</li>');
+            });
+//            $(document).on('click', '#update', function (e) {
+//                $('.select').replaceWith('<li>' + $("#menuName").val() + '</li>');
+            $('#update').click(function (e) {
+                $('.select').replaceWith('<li>' + $("#menuName").val() + '</li>');
+            });
+            $('#remove').click(function (e) {
+                $('.select').remove();
+            });
+            $('#up').click(function (e) {
+                $(".select").after($('.select').prev());
+            });
+            $('#down').click(function (e) {
+                $(".select").before($('.select').next());
+            });
+        });
+
+    </script>
+
+</head>
+
+<body>
+<div>
+    <input type="text" id="menuName"/>
+    <br>
+    <button id="add"> 추가</button>
+    <button id="update"> 수정</button>
+    <button id="remove"> 삭제</button>
+    <button id="up"> UP</button>
+    <button id="down"> DOWN</button>
+</div>
+
+<ul class="menu">
+
+</ul>
+
+<div>
+    <ol>
+        <li>마지막 위치에 메뉴 아이템 추가 또는 선택된 메뉴가 있는 경우에는 선택 메뉴 아래에 아이템 추가
+            <ul>
+                <li>input 박스의 값 읽기</li>
+                <li>선택된 메뉴 노드 찾기</li>
+                <li>추가된 엘리먼트에 동적 이벤트 추가하기</li>
+                <li>ul.menu에 추가되면 inputbox 초기화</li>
+                <ul>
+                    <li>단, input 박스의 값이 빈 경우는 추가되어서는 안된다.</li>
+                </ul>
+            </ul>
+        </li>
+        <li>선택 메뉴 아이템 수정
+            <ul>
+                <li>input 박스의 값 읽기</li>
+                <li>선택 노드 찾기</li>
+                <li>찾은 노드의 텍스트 바꾸기</li>
+                <li>수정 후 inputbox 초기화</li>
+                <ul>
+                    <li>단, input 박스의 값이 빈 경우는 수정 금지</li>
+                </ul>
+            </ul>
+        </li>
+        <li>선택한 메뉴 아이템 삭제
+            <ul>
+                <li>선택 노드 찾기</li>
+                <li>선택 노드 삭제</li>
+            </ul>
+        </li>
+        <li>선택한 메뉴 아이템 위치를 위로 이동
+            <ul>
+                <li>선택 노드 찾기</li>
+                <li>선택 노드 이동</li>
+            </ul>
+        </li>
+        <li>선택한 메뉴 아이템 위치를 아래로 이동
+            <ul>
+                <li>선택 노드 찾기</li>
+                <li>선택 노드 이동</li>
+            </ul>
+        </li>
+    </ol>
+</div>
+</body>
+
+</html>
+

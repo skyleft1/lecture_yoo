@@ -1,0 +1,19 @@
+DB 연동 테스트 만들기 0517
+
+과정
+1 DBConnect 클래스작성
+ 1) java.jdbc.test.DBConnectTestJUnit 클래스 만들기
+
+1 Book 테이블 관련 클래스
+ 1) java.jdbc.model.ModelBook 클래스 만들기
+	
+
+ 2) java.jdbc.dao.DaoBook 클래스 만들기
+
+ 3) java.jdbc.interface.IBook 인터페이스 만들기
+
+ 4) java.jdbc.servcie.ServiceBook 클래스 만들기
+
+ 5) java.jdbc.test.BookTestMain 클래스만들기 <-- 선택
+
+ 6) java.jdbc.test.BookTestJUnit 클래스 만들기

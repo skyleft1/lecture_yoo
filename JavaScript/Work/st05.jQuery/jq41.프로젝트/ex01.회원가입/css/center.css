@@ -1,0 +1,401 @@
+@charset "utf-8";
+
+.sta2 {float:right;padding-top:3px;}
+.sta2 .otherct_search {margin:8px 0 0 0;}
+.sta2 .search_quick li{display:inline-block;color:#777; font-size:11px; font-family:NanumGothic, '나눔고딕';}
+
+/* 1인창조기업 홈*/
+.incubator_center {float:left;width:760px; background-color:#fff;}
+.incubator_txt {font-size:14px; color:#333; line-height:23px; padding-bottom:20px;}
+.section_list{position:relative;font-size:12px;line-height:normal;width:368px;float:left;}
+.section_mg {margin-right:24px;margin-bottom:24px;}
+.section_list a{color:#666;text-decoration:none}
+.section_list a:hover,
+.section_list a:active,
+.section_list a:focus{text-decoration:underline}
+
+.section_list h3{margin:0; font-size:12px; background:url('../../images/homepage/common/bar_bg2.gif') no-repeat 0 0; height:33px; font-weight:bold; padding:10px 0 5px 20px;}
+.section_list .lalist{margin:0;background:url('../../images/homepage/common/bar_bg2.gif') no-repeat 0 0; height:33px; font-weight:bold; padding:10px 0 5px 20px;}
+.section_list ul{margin:13px;padding:0;list-style:none;}
+.section_list li{background: url('../../images/homepage/bu/bu_list.gif') no-repeat 0px 3px ; padding-left:9px; margin:0 0 10px 0}
+.section_list li:after{display:block;clear:both;content:""}
+.section_list .more{position:absolute; text-decoration:none; top:10px; right:10px; padding-right:8px;}
+.section_list .r_more{clear:both; font:normal 11px Dotum;text-decoration:underline; text-align:right; margin:0 19px 0 0; padding-top:10px;}
+.section_list .t_more{position:absolute;clear:both; font:normal 11px Dotum;text-decoration:underline; text-align:right; top:10px; right:10px;}
+
+.center_search{position:relative; font-size:12px;line-height:normal;width:368px;float:left;}
+.center_search h3{margin:0; font-size:12px; background:url('../../images/homepage/common/bar_bg2.gif') no-repeat 0 0; height:33px; font-weight:bold; padding:10px 0 5px 20px;}
+.center_search .center_search_box { margin:16px 0 0 4px;  height:164px; background: url('../../images/homepage/common/map_bg.gif') no-repeat right bottom;padding:0 0 8px 10px; }
+.center_search .center_search_box h4 {font-size:14px; font-weight:bold;font-family:'NanumGothic'; padding-top:20px;}
+.center_search .center_search_box p {width:190px; margin-top:10px;line-height:17px;font-family:'NanumGothic';}
+.center_search .center_search_bt {position:absolute; font-size:12px; font-family:"돋움",Dotum; text-decoration:none; top:10px; right:20px; }
+
+.section_list .more a:hover,
+.section_list .more a:active,
+.section_list .more a:focus{text-decoration:underline}
+.section_list .more span{margin:0 2px 0 0;font-size:16px;font-weight:bold;color:#d76ea9; vertical-align:middle} /* 추후 변화 없을시 삭게 */
+.section_list .date_type {display:block; font-size: 11px; line-height:17px; }
+.section_list .date_type span {color:#4195de; padding-right:3px;}
+.section_list .cate_text {font-size: 11px; color:#4195de;}
+
+/* 센터 홈 right 시설 리스트*/
+.preview {clear:both; margin-bottom:20px; border:1px solid #ddd; padding-bottom:10px;}
+.preview h3{margin:0;padding:12px 0 8px 13px;border-bottom:1px solid #ddd;font-size:12px;color:#333; background-color:#f6f6f6;}
+.preview .room_list {padding-top:10px;}
+.preview .room_list li {padding:10px 20px 7px 20px; text-align:center;}
+.preview .room_list li a{display:inline-block;}
+.preview .room_list li img {width:120px; height:90px; text-align:center; padding-bottom:5px;}
+.preview .room_list span{font-family:NanumGothic, '나눔고딕';line-height:16px;font-size:12px; padding-top:10px;padding-left:5px;}
+
+
+/* 센터예약 게시판 리스트 */
+.center_list {width:100%; background-color:#fff;}
+.center_list h3 {margin:0;padding:0px 0 20px 20px;font-size:17px;letter-spacing:-1px;font-weight:bold;background: url('../../images/homepage/bu/bu03.gif') no-repeat 2px 3px ;}
+.center_list p{padding-bottom:20px;}
+.center_list .center_box{overflow:hidden; margin-bottom:20px; height:290px; padding:20px 22px 20px 22px ;border:1px solid #ddd;}
+.center_box .pci_left{float:left; width:401px;}
+.center_box .cont_right{float:right; width:290px; height:290px;}
+.center_box .cont_right .centername {font-size:15px; font-family:NanumGothic, '나눔고딕', NanumGothicBold, '나눔고딕(굵게)' !important; font-weight:normal;}
+.center_box .cont_right .centerInfo{overflow:hidden; height:152px; margin-bottom:10px;}
+.center_list .btcomplet{padding-top:20px; padding-left:320px;}
+
+/* .center_list {width:100%; background-color:#fff;}
+.center_list h3 {margin:0;padding:1px 0 20px 22px;font-size:16px; font-family:NanumGothic, '나눔고딕';letter-spacing:-1px;font-weight:bold;background: url('../../images/homepage/bu/bu_ideabiz.gif') no-repeat; height:18px;}
+.center_list .centernm {margin:0;padding:1px 0 20px 22px;font-size:16px; font-family:NanumGothic, '나눔고딕';letter-spacing:-1px;font-weight:bold;background: url('../../images/homepage/bu/bu_center.gif') no-repeat; height:18px;}
+.center_list h4 {padding:0 0 10px 20px; font-size:12px; font-family:NanumGothic, '나눔고딕';letter-spacing:-1px;font-weight:bold;background: url('../../images/homepage/bu/bu08.gif') no-repeat 3px 0;}
+.center_list p{padding-bottom:10px; line-height:17px; color:#555;}
+.center_list .center_box{overflow:hidden; margin-bottom:20px; height:290px; padding:20px 22px 20px 22px ;border:1px solid #ddd;}
+.center_box .pci_left{float:left; width:401px;}
+.center_box .cont_right{float:right; width:290px; height:290px;}
+.center_box .cont_right .centername {font-size:15px; font-family:NanumGothic, '나눔고딕', NanumGothicBold, '나눔고딕(굵게)' !important; font-weight:normal;}
+.center_box .cont_right .centerInfo{overflow:hidden; height:152px; margin-bottom:10px;}
+.center_list .btcomplet{padding-top:20px; text-align: center;}
+ */
+
+
+
+
+
+/* 센터검색단 */ 
+.search_center {background:url('../../images/homepage/common/search_box01.gif') no-repeat; height:99px; width:840px;}
+.centerbox {padding:30px 0 0 130px;}
+.centerbox .seline2{float:none; clear:both; }
+.centerbox .sc_title{font-size:12px;padding:0px 10px 10px 0; font-weight:bold;color:#314e8a;float:left;}
+.centerbox .total {font-size:12px;font-weight:bold;color:#314e8a;margin-left:10px;}
+.center_text01 {font-size:12px; color:#666;}
+.center_text02 {background:url('../../images/homepage/bu/bu6.gif') no-repeat 0 11px;padding:10px 5px 20px 12px;line-height:17px;}
+.tbl_search{ margin-bottom:10px; border:1px solid #ddd; background:#f8f8f8; padding:10px 0 10px 410px; }
+.tbl_search2{float:right; margin-bottom:20px;}
+.tbl_search .skip{position:absolute; overflow:hidden; height:0; width:0; font-size:0; visibility: hidden;}
+
+/* 서브단 컨텐츠 메인메뉴타입2 */
+.gnb {margin:0px; width:990px;}
+.gnb .gnb_bg2 {overflow:hidden; background: url('../../images/homepage/common/nav_bg2.gif') no-repeat 0 0 ; height:43px; width:990px;}
+.gnb .gnb_bg2 .gnbNav {}
+.gnb .gnb_bg2 .gnbNav li {float:left; display:inline; background: url('../../images/homepage/common/nav_line2.gif') no-repeat 0 15px; height:43px; font-size:15px;font-family:NanumGothic, '나눔고딕', NanumGothicBold, '나눔고딕(굵게)' !important; font-weight:normal; padding:1px 0px 1px 1px; color:#fff;} 
+.gnb .gnb_bg2 .gnbNav .first{margin:0;padding-left:0;background:none;}
+.gnb .gnb_bg2 .gnbNav li a:link,
+.gnb .gnb_bg2 .gnbNav li a:visited,
+.gnb .gnb_bg2 .gnbNav li a:active {display:block;color:#fff;padding:12px 12px;text-decoration:none;}
+.gnb .gnb_bg2 .gnbNav li a:hover {background:url('../../images/homepage/common/menu_over2.gif') repeat-x; height:43px; text-decoration:none; }
+
+.gnb .gnb_bg2  .inbNav {float:right;padding-top:16px;padding-right:5px;}
+.gnb .gnb_bg2  .inbNav li {display:inline;padding:12px 10px; font-size:12px; font-weight:bold; color:#fff;}
+.gnb .gnb_bg2  .inbNav .centernotice{margin:0;padding-left:0; background:url('../../images/homepage/common/ico_centernotice.gif') no-repeat 3px 8px; padding-left:27px;}
+.gnb .gnb_bg2  .inbNav .centerdata{margin:0;padding-left:0; background:url('../../images/homepage/common/ico_centerdata.gif') no-repeat 3px 8px; padding-left:27px;}
+.gnb .gnb_bg2  .inbNav .centercounsel{margin:0;padding-left:0; background:url('../../images/homepage/common/ico_centercounsel.gif') no-repeat 3px 8px; padding-left:27px;}
+
+.gnb .gnb_bg2  .inbNav li a:link,
+.gnb .gnb_bg2  .inbNav li a:visited,
+.gnb .gnb_bg2  .inbNav li a:active {color:#fff;}
+.gnb .gnb_bg2  .inbNav li a:hover {color:#fff;}
+
+.gnb .gnb_bg2 .mypage {background-color:#389400;}
+.gnb .gnb_bg2 .mypage li {float:left; display:inline; background: url('../../images/homepage/common/nav_line.gif') no-repeat 0 0 ; height:43px; font-size:14px; font-weight:bold; padding:1px 0px 1px 1px; color:#fff;} 
+.gnb .gnb_bg2 .mypage span {display:inline-block; padding-top:13px; padding-left:10px;}
+
+/* cms영역 */
+.center_cms{width:100%; background-color:#fff;}
+.center_cms h3 {font-size:17px;padding:0px 0 10px 0; font-weight:bold;}
+.cms_area{width:758px; border:1px solid #ddd; background-color:#f7f7f7; color:#555; font-size:14px; height:200px; text-align:center; padding-top:150px;}
+.cms_img{width:758px; border:1px solid #ddd; background: url('../../images/homepage/common/cmsimg_sample.jpg') no-repeat 0 0 ; height:350px;}
+
+/* 로그인 */
+.loginbox{position:relative; float:right;background:url('../../images/homepage/common/loginbox_bg.gif') no-repeat; width:200px; margin-bottom:20px;}
+.loginbox .logtitle{padding:12px 0 10px 15px;}
+.loginbox .id{margin-left:15px; padding-bottom:3px;}
+.loginbox .pw{margin-left:15px; padding-bottom:3px;}
+.loginbox #logid{width:121px; height:17px; border:1px solid #abadb3;}
+.loginbox #logpw{width:121px; height:17px; border:1px solid #abadb3;}
+.loginbox .btnLogin{position:absolute; top:34px;right:13px;}
+.loginbox .memberinfo{margin:15px 0 8px 14px;}
+
+/* 로그인정보 */
+.logoutbox{background:url('../../images/homepage/common/logoutbox_bg.gif') no-repeat; width:200px; height:85px; padding-bottom:20px;}
+.logoutbox .myinfo{padding:15px 10px 18px 10px;color:#57648e;background:url('../../images/homepage/common/logoutbox_line.gif') no-repeat 8px 38px;}
+.logoutbt{padding:3px 0 10px 10px;}
+
+
+/* 센터 시설보기 */
+/* .faci_box{position:relative;width:100%;}
+.faci_box .faci_photo {float:left;padding-bottom:20px;}
+.faci_box .faci_photo img{float:left;}
+.faci_box .faci_photo .imageShow img{float:left; height: 290px;width:399px;}
+.faci_box .faci_photo .apply_box{position:relative;float:left;background:#3e3e3e;width:225px;height:290px;}
+
+.faci_photo2{float:left;padding-left:57px; height: 307px; overflow: hidden;}
+.faci_photo2 ul{}
+.faci_photo2 ul li { height:74px; padding:0 0 15px 0; }
+.faci_photo2 ul li a img { vertical-align:top;border:1px solid #ddd; width: 104px; height: 74px;}
+.faci_photo2 ul li a.on img { vertical-align:top;border:3px solid #3e3e3e;}
+
+.centertxt {height:330px;padding:0 30px 10px 30px;font-family:NanumGothic, '나눔고딕' !important; font-weight:normal;font-size:13px;line-height:22px;color:#fff;}
+.centertxt strong{display:block;margin:0 0 10px 0;padding:25px 0 10px 0;font-size:22px;font-family:NanumGothicBold, '나눔고딕(굵게)' !important;font-weight:normal;line-height:32px;color:#fff;}
+.bt_center{position:absolute;left:20px;bottom:30px;}
+
+.facility_list{clear:both; padding-top:20px;width:100%;}
+.facility_list .photo_box {float:left; width:100%;}
+.facility_list .photo_txt {float:left; width:100%;}
+.facility_list .photo_txt li{float:left; display:inline-block; padding-top:20px; padding-right:20px;text-align:center;}
+.facility_list .photo_txt li.Lst{padding-right:0;}
+.facility_list .photo_txt img {width:193px; height:144px; border:1px solid #ddd;}
+.facility_list .photo_txt p{font-size:13px;padding-top:10px;line-height:18px;}
+.facility_list .photo_txt p strong{display:block;font-size:14px;line-height:18px;color:#004cc2;} */
+
+.faci_box{width:100%;background:url('../../images/homepage/common/faci_bg01.gif') no-repeat;height:384px;margin-bottom:20px;}
+.faci_box .faci_photo {float:left;padding:29px 0 0 34px;}
+.faci_box .faci_photo img{float:left;width:399px;padding:19px 0 0 26px;}
+.faci_box .faci_photo .apply_box{float:left; width:265px; padding:0 0 0 96px;}
+
+.apply_box {float:right; width:169px; margin:0px;}
+.apply_box .apply_top{background: url('../../images/homepage/common/applybox_repeat_top.gif') repeat-x 0 0; height:3px;}
+.apply_box .apply_center{background: url('../../images/homepage/common/applybox_repeat_center.gif') repeat-y; }
+.apply_box .apply_center .apply {overflow:scroll; overflow-X:hidden; height:309px; width:262px;}
+.apply_box .apply_center .apply li{text-align:left; padding-left:20px;}
+.apply_box .apply_center .apply li img{width:55px;height:23px;border:1px solid #ddd;}
+.apply_box .apply_center .apply .roomnum{font-family:NanumGothic, '나눔고딕';font-size:12px;font-weight:bold;color:#404955;}
+.apply_box .apply_bottom{background: url('../../images/homepage/common/applybox_repeat_bottom.gif') repeat-x 0 0; height:3px;}
+.apply_box li {height:20px;background: url('../../images/homepage/common/applybox_line.gif') repeat-x 3px 0; padding:8px 0 0 0; text-align:center; margin-left: 3px;}
+
+.facility_list{clear:both; padding-top:10px;width:100%;}
+.facility_list .photo_box {float:left; width:100%; border-top:1px solid #ddd;}
+.facility_list .photo_txt {float:left;  border-bottom:1px solid #ddd; width:100%;}
+.facility_list .photo_txt li{float:left; display:inline-block; width:280px; padding-top:20px; text-align:center;}
+.facility_list .photo_txt img {width:275px; height:197px; border:1px solid #ddd;}
+.facility_list .photo_txt p{font-family:NanumGothic, '나눔고딕';font-size:12px;padding-top:10px;line-height:18px;}
+
+/* 센터 시설예약 */
+/* .center_info1{background: url('../../images/homepage/bu/bu_list2.gif') no-repeat 0px 8px; padding:5px 0 10px 7px; margin:0px;}
+.center_info2{width:840px; border:1px solid #c3d9ea; background:#f4f6fa; font-size:13px;padding-bottom:5px;}
+.center_info2 li{background: url('../../images/homepage/bu/bu_list2.gif') no-repeat 0px 12px; padding:8px 0 0 8px; margin:0 0 0 7px;} */
+
+.center_info1{background: url('../../images/homepage/new/bg_infolist02.gif') no-repeat 26px 20px; min-height:30px; border:1px solid #ccdff0; border-radius:3px;font-size:14px;padding:20px 30px 10px 60px;line-height:20px;}
+.center_info2{background: url('../../images/homepage/new/bg_infolist.gif') no-repeat 36px 30px;min-height:70px; border:1px solid #ccdff0; border-radius:3px;font-size:14px;padding:20px 0 10px 100px; }
+.center_info2 li{padding:7px 30px 0 0;line-height:20px;}
+
+/* 센터 예약 달력 */
+.calender_list{position:relative;width:100%;background-color:#fbfcfd; border:1px solid #d8d8d8;min-height:300px;margin-bottom:20px;}
+.calender_box{position:absolute;top:5px;right:10px;width:242px; height:196px; margin:18px 0 17px 15px;}
+.cal_month{position:relative;  width:100%; height:30px; text-align:center}
+.cal_month .mon_txt{font-size:1.7em; font-family:NanumGothic, '나눔고딕' !important;}
+.cal_month .mon_txt img{vertical-align:middle; padding:0 15px 0 15px;}
+
+
+.cal_date{float:left;width:100%;padding-top:3px;}
+.calender_txt{float:left; width:600px; height:250px; padding:25px 0 0 15px;background:url('../../images/homepage/new/bg_center01.png') no-repeat 430px 170px; important!}
+.calender_txt p{float:left;font-size:23px;line-height:32px;letter-spacing:-1px;}
+.calender_txt li{display:inline-block;color:#353a46; font-size:14px;background: url('../../images/homepage/bu/bu_list.gif') no-repeat 0px 9px; padding-left:9px;line-height:24px;width:600px;}
+
+/* 
+.calender_list{width:100%;background:url('../../images/homepage/common/calenderlist_bg.gif') no-repeat; height:231px; margin-bottom:20px;}
+.calender_box{float:left; background:url('../../images/homepage/common/calenderbox_bg.gif') no-repeat; width:242px; height:196px; margin:18px 0 17px 15px;}
+.cal_month{float:left; width:232px; padding:8px 5px 5px 5px; font-family:NanumGothic, '나눔고딕'; font-size:15px; font-weight:bold;}
+.cal_month .mon_txt{float:left; padding-left:60px;}
+.cal_month .cal_prev{float:left; padding-top:3px;}
+.cal_month .cal_next{float:right; padding-top:3px;}
+.cal_date{float:left;width:100%;padding-top:3px;}
+.calender_txt{float:left; padding:25px 0 0 15px;}
+.calender_txt li{background: url('../../images/homepage/bu/bu_list.gif') no-repeat 0px 3px; padding-left:9px; margin:0 0 10px 0;}
+ */
+/* 달력 테이블 */
+/* .tbl_calendar  {border-collapse:collapse;}
+.tbl_calendar th {color:#fff; padding:10px 0px 5px 0px; font-size:12px; font-weight:bold;}
+.tbl_calendar td {color:#444; padding:5px 7px 5px 7px; font-size:12px; text-align:left; text-align:center; font-weight:bold;}
+.tbl_calendar .today{background:url('../../images/homepage/common/today.gif') no-repeat center top;}
+.tbl_calendar .today a:link,
+.tbl_calendar .today a:visited,
+.tbl_calendar .today a:active {color:#333;}
+.tbl_calendar .today a:hover {text-decoration:none;}
+.tbl_calendar .sun{color:#e64852; font-weight:bold;} */
+.tbl_calendar  {border-collapse:collapse;}
+.tbl_calendar th {
+		background-color:#fff;
+		color:#767676;
+		border-top:#d7d7d7 solid 2px;
+		border-bottom:#d7d7d7 solid 1px;
+		padding:5px 5px;
+		text-align:center;
+		font-size:13px; 		
+		font-weight:normal;
+		line-height:18px;
+		height:21px;
+	}
+.tbl_calendar td {
+		background-color:#fff;
+		color:#767676;
+		border-right:#d7d7d7 solid 1px;
+		border-bottom:#d7d7d7 solid 1px;
+		padding:5px 5px;
+		text-align:center;
+		font-size:13px; 		
+		font-weight:normal;
+		line-height:18px;
+		height:21px;
+	}
+.tbl_calendar .today{background-color:#0058aa}
+.tbl_calendar .today a:link,
+.tbl_calendar .today a:visited,
+.tbl_calendar .today a:active {color:#fff;}
+.tbl_calendar .today a:hover {text-decoration:none;}
+.tbl_calendar .sun{color:#e64852;}
+.tbl_calendar .rlnone{border-right:none;}
+.tbl_calendar .weekend a{color:#005699;}
+
+/* 예약현황 */
+/* 예약현황 */
+.reservation_tbl{width:840px; margin-bottom:10px;}
+.reservation_tbl .reserv_top{height:25px;}
+.reservation_tbl .reserv_date{float:left; background:url('../../images/homepage/bu/bu_reservdate.gif') no-repeat 0 2px; padding:0 0 0 25px; height:27px; font-family:NanumGothicBold, '나눔고딕(굵게)'; font-size:16px; font-weight:normal;}
+.reservation_tbl .reserv_time{background:url('../../images/homepage/bu/bu_reservtime.gif') no-repeat 0 0; padding:0 0 0 25px; height:27px; font-family:NanumGothicBold, '나눔고딕(굵게)'; font-size:16px; font-weight:normal;}
+.reservation_tbl .reserv_mon{background:url('../../images/homepage/common/reserve_topbg.gif') no-repeat 0 0; height:39px; padding-left:310px; font-family:NanumGothicBold, '나눔고딕(굵게)'; font-size:16px; font-weight:normal;}
+.reservation_tbl .reserv_mon .btn_left{float:left; padding-top:10px;}
+.reservation_tbl .reserv_mon .btn_mon{float:left; padding:10px 0 0 55px;}
+.reservation_tbl .reserv_mon .btn_right{float:left; padding-top:10px; padding-left:55px;}
+.reservation_tbl .reserv_patt{float:right;font-family:NanumGothicBold, '나눔고딕(굵게)'; font-size:13px; font-weight:normal;}
+.reservation_tbl .reserv_patt img {vertical-align:bottom;}
+
+/* .reservation_tbl{width:840px; margin-bottom:10px;}
+.reservation_tbl .reserv_top{height:25px;}
+.reservation_tbl .reserv_date{float:left; background:url('../../images/homepage/bu/bu_reservdate.gif') no-repeat 0 0; padding:3px 0 0 20px; height:20px;}
+.reservation_tbl .reserv_time{float:left; background:url('../../images/homepage/bu/bu_reservtime.gif') no-repeat 0 0; padding:4px 0 0 20px; height:20px;}
+.reservation_tbl .reserv_mon{background:url('../../images/homepage/common/reserve_topbg.gif') no-repeat 0 0; height:39px; padding-left:310px; font-family:NanumGothic, '나눔고딕'; font-size:16px; font-weight:bold;}
+.reservation_tbl .reserv_mon .btn_left{float:left; padding-top:14px;}
+.reservation_tbl .reserv_mon .btn_mon{float:left; padding:12px 0 0 55px;}
+.reservation_tbl .reserv_mon .btn_right{float:left; padding-top:14px; padding-left:55px;}
+.reservation_tbl .reserv_patt{float:right;}
+.reservation_tbl .reserv_patt img {vertical-align:bottom;} */
+
+
+/* 센터예약 테이블 */
+.tbl_center  {border-top:#6bb7b7 solid 2px;border-collapse:collapse;clear:both;}
+	.tbl_center th {
+		background-color:#f7f7f7;
+		color:#555;
+		border-right:#dddddd solid 1px;
+		border-bottom:#dddddd solid 1px;
+		text-align:center;
+		font-size:13px; 		
+		font-weight:bold;
+		height:25px;
+	}
+	.tbl_center th.row {border-top:0;}
+	.tbl_center td {
+		border-right:#dddddd solid 1px;
+		border-bottom:#dddddd solid 1px;
+		color:#333;
+		padding:0px;
+		font-size:13px; 		
+		text-align:center;
+		height:20px;
+	}
+
+	.tbl_center th.al, .tbl_center td.al {text-align:left} .tbl_center td.ac {text-align:center} .tbl_center td.ar {text-align:right}
+	.tbl_center th.ll, .tbl_center td.ll {border-right:0}  .tbl_center td.txt_b {font-weight:bold; background-color:#f7f7f7; color:#555; padding-top:3px; text-align:center;}
+    .tbl_center td.patten{background:url('../../images/homepage/common/reserve_patt011.gif') repeat-x 0 0;}
+
+
+.tb2_center  {border-top:#6bb7b7 solid 2px; border-collapse:collapse; clear:both;}
+	.tb2_center th {
+		background-color:#f7f7f7;
+		color:#555;
+		border-right:#dddddd solid 1px;
+		border-bottom:#dddddd solid 1px;
+		padding:5px 7px 3px 10px;
+		text-align:center;
+		font-size:13px; 		
+		font-weight:bold;
+		height:25px;
+		line-height:18px
+	}
+	.tb2_center th .bu_v {margin-left:5px; width:9px; height:8px; background: url('../../images/homepage/bu/bu_check.gif') no-repeat;}
+	.tb2_center th .none {visibility:hidden;}
+	.tb2_center th.row {border-top:0;}
+	.tb2_center td {
+		border-right:#dddddd solid 1px;
+		border-bottom:#dddddd solid 1px;
+		color:#555;
+		padding:5px 7px 3px 7px;
+		font-size:13px; 		
+		text-align:left;
+		height:25px;
+		line-height:18px
+	}
+	
+	.tb2_center th.al, .tb2_center td.al {text-align:left} .tb2_center td.ac {text-align:center} .tb2_center td.ar {text-align:right}
+	.tb2_center th.ll, .tb2_center td.ll {border-right:0}
+	.tb2_center td.tit_b {border-right:0; font-weight:bold;}
+	.tb2_center td.detatext {padding:10px; line-height:22px; vertical-align:top;}
+	.tb2_center.ellipsisStyle{table-layout:fixed;}
+	.tb2_center.ellipsisStyle .ellipsis a{display:block;width:99%;white-space:nowrap;overflow: hidden; text-overflow:ellipsis; text-overflow:ellipsis;}
+	.tb2_center.ellipsisStyle .ellipsis.lock a{width:95%;padding:0 0 0 20px;background:url('../../images/homepage/common/ico_lock.gif') no-repeat 0 0;}
+	.tb2_center.ellipsisStyle a.file{display:inline-block;width:15px;height:17px;background:url('../../images/homepage/common/ico_file.gif') no-repeat;}
+	.tb2_center.ellipsisStyle a.file span{position:absolute;top:-10000em;left:-10000em;visibility:visible;text-indent:-9999em;}
+	
+
+
+
+
+/* 이전글 다음글  */
+.tb3_center  {border-top:#ccc solid 2px;border-collapse:collapse;}
+	.tb3_center th {
+		background-color:#f3f2f2;
+		color:#555;
+		border-right:#dddddd solid 1px;
+		border-bottom:#dddddd solid 1px;
+		padding:5px 5px 5px 10px;
+		text-align:center;
+		font-size:13px; 		
+		font-weight:bold;
+		line-height:18px;
+		height:25px;
+	}
+	.tb3_center th.b {
+		background-color:#ffffff;
+		color:#555;
+		border-right:#dddddd solid 1px;
+		border-bottom:#dddddd solid 1px;
+		padding:5px 5px 5px 10px;
+		text-align:center;
+		font-size:13px; 		
+		font-weight:normal;
+		line-height:18px
+	}
+	.tb3_center th.row {border-top:0;}
+	.tb3_center td {
+		border-right:#dddddd solid 1px;
+		border-bottom:#dddddd solid 1px;
+		padding:5px 5px 5px 10px;
+		font-size:13px; 		
+		text-align:left;
+		line-height:18px;
+		height:25px;
+	}
+
+	.tb3_center th.al, .tb3_center td.al {text-align:left} .tb3_center td.ac {text-align:center} .tb3_center td.ar {text-align:right}
+	.tb3_center th.ll, .tb3_center td.ll {border-right:0}
+	.tb3_center td .text_gg{color:#67a501;}
+	.tb3_center td .text_oo{color:#ff5a00;}
+
+
+/********************  여기까지가 비지니스 센터 css 입니다 *******************************/
+

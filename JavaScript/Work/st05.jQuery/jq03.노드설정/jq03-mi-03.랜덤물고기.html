@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <style>
+   		pre   { font-size:13pt;	}
+        #panel { width: 600px; height: 400px; border: 1px solid #999; position: relative; }
+        #fish { position: absolute; left: 250px; top: 150px; } 
+    </style>
+    <script src='../jquery-3.1.0.js'></script>
+
+    <script>
+        $(document).ready(function(e) {
+            $('#btnStart').click(function (e) {
+
+                var result1 = Math.floor(Math.random() * 500) + 1;
+                var result2 = Math.floor(Math.random() * 300) + 1;
+                console.log(result1);
+                console.log(result2);
+
+                $('#fish').css({
+                    "left":result1,
+                    "top":result2,
+                })
+            });
+        });
+
+
+    </script>
+    
+</head>
+
+<body>
+    <pre>
+물고기 움직이기
+
+버튼을 클릭할 때마다 물고기를 랜덤하게 움직이도록 만드는 것입니다.
+단, 물고기가 패널(#panel) 영역을 벗어나지 않고 영역 안에서만 
+움직이게 만들어야 합니다.
+    </pre>
+
+    <button id="btnStart">
+        클릭하면 물고기가 움직여요.
+    </button>
+    <div id="panel">
+        <img src="images/fish.png" id="fish">
+    </div>
+
+</body>
+</html>
+
+

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        span    { display:block; margin: 5px; }
+        div     { cursor: pointer; width: 520px; background: #eaffbb; padding-bottom: 5px; }
+        p       { margin:4px;  font-weight:bolder; cursor:pointer; }
+        hr      { width: 500px; float: left; }
+        ul      { width: 300px; }
+        button  { cursor: pointer; }
+        img     { padding:5px; width:130px; height:130px; border:1px solid gray; }
+
+        .gray   { background-color: #959FA9; height: 20px; margin-top: 10px; }
+        .white  { background-color: white; }
+        .red    { background-color: red !important;}
+        .yellow { background-color: yellow; }
+
+        .toggleStyle { background-color: red;   color:white;}
+    </style>
+
+<script src='../jquery-3.1.0.js'></script>
+    <script>
+        var MYAPP = {};
+        MYAPP.init = function(e){
+            $('*').css('outline', '' );
+        };
+
+        $(document).ready(function(e){
+            $('#attr_read').click(function(e){
+                var a = $('#img1').attr('src')
+                $('#result_attr').text(a);
+            });
+            $('#attr_create').click(function(e){
+                $('#img2').attr('src', 'images/im5.jpg');
+            });
+            $('#attr_update').click(function(e){
+                $('#img2').attr('src', 'images/im4.jpg');
+            });
+            $('#attr_delete').click(function(e){
+                $('#img2').removeAttr('src');
+//                $('#img2').removeAttr('src', '');
+            });
+
+
+            $('#style_read').click(function(e){
+                var a = $('#style').css('border')
+                $('#result_style').text(a);
+            });
+            $('#style_create').click(function(e){
+                $('#style').css('border', '2px solid blue')
+            });
+            $('#style_update').click(function(e){
+                $('#style').css('border', '2px dashed blue')
+            });
+            $('#style_delete').click(function(e){
+                $('#style').css('border', '')
+            });
+
+
+            $('#class_read').click(function(e){
+                var a = $('#class').hasClass('white');
+                $('#result_class').text(a);
+            });
+            $('#class_create').click(function(e){
+                var a = $('#class').addClass('red')
+                $('#result_class').text($('#class').attr('class'));
+            });
+            $('#class_update').click(function(e){
+                var a = $('#class').removeClass('red').addClass('yellow')
+                $('#result_class').text($('#class').attr('class'));
+            });
+            $('#class_delete_part').click(function(e){
+                var a = $('#class').removeClass('white');
+                $('#result_class').text($('#class').attr('class'));
+            });
+            $('#class_delete_all').click(function(e){
+                var a = $('#class').removeClass();
+                $('#result_class').text($('#class').attr('class'));
+            });
+
+            $('.yellow').click(function(e){
+                $('.yellow').toggleClass('toggleStyle');
+
+//                $('.yellow').removeClass('yellow').addClass('toggleStyle');
+//                $('.yellow').removeClass('toggleStyle').addClass('yellow');
+            });
+
+
+
+            $('#data_create').click(function(e){
+
+            });
+            $('#data_read').click(function(e){
+
+            });
+            $('#data_update').click(function(e){
+
+            });
+            $('#data_delete').click(function(e){
+
+            });
+
+        });
+
+    </script>
+    
+</head>
+<body>
+
+    <h3>&lt;img src="" style="" class="" data-sw="" /&gt;</h3>
+
+
+    <div>
+        <h4>일반 속성 CRUD</h4>
+        <div class="pclick">
+            <img id="img1" src="images/im1.jpg" style="" class="" data-sw="data값" >
+            <img id="img2" >
+        </div>
+        <button id="attr_read"  >일반속성 읽기(R)</button>
+        <button id="attr_create">일반속성 추가(C)</button>
+        <button id="attr_update">일반속성 수정(U)</button>
+        <button id="attr_delete">일반속성 삭제(D)</button>
+        <div id="result_attr" class="gray"></div>
+    </div>
+    <hr>
+
+    <div>
+        <h4>style 속성 CRUD</h4>
+        <span id="style" style="border:2px dotted darkred; background-color: white;">엘리먼트에 style CRUD 하기</span>
+
+        <button id="style_read"  >style 읽기(R)</button>
+        <button id="style_create">style 추가(C)</button>
+        <button id="style_update">style 수정(U)</button>
+        <button id="style_delete">style 삭제(D)</button>
+        <div id="result_style" class="gray"></div>
+    </div>
+    <hr>
+
+    <div>
+        <h4>class 속성 CRUD</h4>
+        <span id="class" class="white">엘리먼트에 class CRUD 하기</span>
+
+        <button id="class_read"       >class 읽기(R)</button>
+        <button id="class_create"     >class 추가(C)</button>
+        <button id="class_update"     >class 수정(U)</button>
+        <button id="class_delete_part">class 부분삭제(D)</button>
+        <button id="class_delete_all" >class 전체삭제(D)</button>
+        <div id="result_class" class="gray"></div>
+    </div>
+    <hr>
+
+    <div>
+        <h4>toggle class</h4>
+        <p class="yellow">
+            toggleClass()는 선택된 엘리먼트에 해당 클래스가
+            적용되어 있으면 true를 리턴하고
+            아직 적용되어 있지 않으면 false를 리턴한다.
+        </p>
+    </div>
+
+    <div>
+        <h4>data- attribute CRUD</h4>
+        <button id="data_create">data 어트리뷰트 추가(C)</button>
+        <button id="data_read"  >data 어트리뷰트 읽기(R)</button>
+        <button id="data_update">data 어트리뷰트 수정(U)</button>
+        <button id="data_delete">data 어트리뷰트 삭제(D)</button>
+        <div id="result_data" class="gray">  </div>
+    </div>
+    <hr>
+</body>
+</html>
+

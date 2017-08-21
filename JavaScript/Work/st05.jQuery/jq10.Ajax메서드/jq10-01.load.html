@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>서버의 데이터를 대상 엘리먼트에 삽입하기</title>
+    <style>
+        div { width: 180px;  height: 80px; margin: 3px;  float: left; }
+    </style>
+<script src='../jquery-3.1.0.js'></script>
+	<script>
+        $(document).ready(function() {
+			$('#menu1').click(function(e) {
+				$('#message1').load('item.html');
+			});
+			$('#menu2').click(function() {
+				$('#message1').load('item.html ul');
+			});
+
+
+				// 			$.ajax({
+	// 				url : '주소',
+	// 				data: null, // 사용하는 경우에는 { data1:'test1', data2:'test2' }
+	// 				type: 'get', // get, post
+	// 				timeout: 30000, // 30초
+	// 				dataType: 'text', // text, html, xml, json, jsonp, script
+	// 				beforeSend : function() {
+	// 			}
+	// 		}).done( function(data, textStatus, xhr ){
+	// 		}).fail( function(xhr, textStatus, error ) {
+	// 		}).always( function(data, textStatus, xhr ) {
+	// 	});
+	// 	return false;
+	// });
+});
+
+    </script>
+
+
+
+</head>
+<body>
+<div>
+    <a href="#" id="menu1">메뉴 보기 1</a>
+    <span id="message1"></span>
+</div>
+<div>
+    <a href="#" id="menu2">메뉴 보기 2</a>
+    <span id="message2"></span>
+</div>
+</body>
+</html>
+
+

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Lecture0303-PhoneController/src/main/webapp/WEB-INF/views/Phone/writeListResultt.jsp&apos; to &apos;writeListResult.jsp&apos;" description="Rename resource &apos;writeListResultt.jsp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/webapp/WEB-INF/views/Phone/writeListResultt.jsp" name="writeListResult.jsp" stamp="1448785505605" updateReferences="true"/>
+</session>

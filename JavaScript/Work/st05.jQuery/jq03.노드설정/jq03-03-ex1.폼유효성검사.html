@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        div { padding: 5px 5px 5px 5px }
+        .item{float:left; width:100px; }
+    </style>
+
+    <script src='../jquery-3.1.0.js'></script>
+    <script>
+
+        var MYAPP = {};
+        MYAPP.init = function(a){
+            $('a').text('');
+        };
+
+
+        $(document).ready(function(e) {
+            $('#regBtn').click(function (e) {
+                if ($('#userId').val() == ''){
+                    $('#userId').focus();
+                    $('label[name]').text('');
+                    $('label[name="userId"]').text('아이디를 입력하세요');
+                    return false;
+                }
+                else if ($('#userName').val() == ''){
+                    $('#userName').focus();
+                    $('label[name]').text('');
+                    $('label[name="userName"]').text('이름을 입력하세요');
+                    return false;
+                }
+                else if ($('#pwd').val() == ''){
+                    $('#pwd').focus();
+                    $('label[name]').text('');
+                    $('label[name="pwd"]').text('비밀번호를 입력하세요');
+                    return false;
+                }
+                else if ($('#pwdConfirm').val() == ''){
+                    $('#pwdConfirm').focus();
+                    $('label[name]').text('');
+                    $('label[name="pwdConfirm"]').text('비밀번호확인을 입력하세요');
+                    return false;
+                }
+                else if ($('#pwd').val() != $('#pwdConfirm').val()){
+                    $('#pwd').focus();
+                    $('label[name]').text('');
+                    $('label[name="pwd"]').text('비밀번호 불일치!');
+                    return false;
+                }
+
+            });
+            $('#iniBtn').click(function (e) {
+                $('input[type="text"], input[type="password"]').val('');
+                $('label[name]').text('');
+            });
+        });
+
+    </script>
+
+</head>
+<body>
+<form name='fm'
+    action="http://www.naver.com"
+    enctype="application/x-www-form-urlencoded"
+    method="get">
+    <div>
+        <span class="item"> 아이디 * </span>
+        <input id="userId" name="userId" type="text" placeholder='아이디를 입력하시오'>
+        <label name="userId" ></label>
+    </div>
+    <div>
+        <span class="item"> 이름   * </span>
+        <input id="userName" name="userName" type="text">
+        <label name="userName"></label>
+    </div>
+    <div>
+        <span class="item"> 암호   * </span>
+        <input id="pwd" name="pwd" type="password">
+        <label name="pwd"></label>
+    </div>
+    <div>
+        <span class="item"> 암호 확인  * </span>
+        <input id="pwdConfirm" name="pwdConfirm" type="password">
+        <label name="pwdConfirm"></label>
+    </div>
+    <input id="regBtn" type="submit" value="회원가입">
+    <input id="iniBtn" type="button" value="초기화">
+</form>
+</body>
+</html>
+

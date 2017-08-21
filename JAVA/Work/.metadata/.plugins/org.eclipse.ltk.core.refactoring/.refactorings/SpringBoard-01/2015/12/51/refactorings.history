@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.lecture.spring.dao.DaoPhone&apos; to &apos;IDaoPhone&apos;&#x0D;&#x0A;- Original project: &apos;SpringBoard-01&apos;&#x0D;&#x0A;- Original element: &apos;com.lecture.spring.dao.DaoPhone&apos;&#x0D;&#x0A;- Renamed element: &apos;com.lecture.spring.dao.IDaoPhone&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;DaoPhone&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src\/main\/java&lt;com.lecture.spring.dao{DaoPhone.java[DaoPhone" matchStrategy="1" name="IDaoPhone" qualified="false" references="true" similarDeclarations="false" stamp="1449971403659" textual="false" version="1.0"/>
+</session>

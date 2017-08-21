@@ -1,0 +1,15 @@
+{
+  "libs": [
+    "ecma5",
+    "browser",
+    "jquery"
+  ],
+  "plugins": {
+    "browser-extension": {
+      
+    },
+    "jquery-extension": {
+      
+    }
+  }
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<style>
+	    div, p { background : #FFF; padding:10px; margin:5px; }
+	    li > p {height: 70px; }
+	    li > p > span { width: 50px; height: 60px; margin: 5px; float: left; border: 2px blue solid; }
+	    li.third { clear: both; }
+
+	    .border { border: 2px solid red; margin: 3px; }
+	    .yellow { background:yellow; }
+	    .pink   { background:pink; }
+	</style>
+    <script src='../jquery-3.1.0.js'></script>
+    <script>
+
+        $(document).ready(function() {
+            $('table td').hover(function (e){
+            });
+        });
+
+    </script>
+	
+</head>
+<body>
+    <div>
+        <ul>
+            <li>list item 0</li>
+            <li>list item 1</li>
+            <li>list item 2
+                <p>
+                    <span>sub item 0</span>
+                    <span>sub item 1</span>
+                    <span>sub item 2</span>
+                    <span>sub item 3</span>
+                    <span>sub item 4</span>
+                </p>
+            </li>
+            <li class='third'>list item 3</li>
+            <li>list item 4
+                <dl>
+                    <dt>Coffee</dt>
+                    <dd>Black hot drink</dd>
+                    <dd>americano</dd>
+                    <dd>ice coffee</dd>
+                    <dt>Milk</dt>
+                    <dd>White cold drink</dd>
+                </dl>
+            </li>
+        </ul>
+    </div>
+    <result>this is P</result>
+
+    <hr>
+    <input id="contents" type="button" value="contents()">
+    &nbsp; / &nbsp;
+    <input id="add"      type="button" value="add()">
+    <input id="addBack"  type="button" value="addBack()">
+    <input id="andSelf"  type="button" value="andSelf()">
+    <input id="end"      type="button" value="end()">
+    &nbsp; / &nbsp;
+    <input id="slice"    type="button" value="slice(1, 4)">
+    &nbsp; / &nbsp;
+    <input id="map"    type="button" value="map()">
+</body>
+</html>
+

@@ -1,0 +1,8 @@
+AbstractTextEditor.Color.Background.SystemDefault=true
+AbstractTextEditor.Color.Foreground.SystemDefault=true
+AbstractTextEditor.Color.SelectionForeground.SystemDefault=true
+eclipse.preferences.version=1
+html_content_assist_default_page_sort_order=com.genuitec.eclipse.modernweb.angular2.ui.proposalCategory.htmlTags\u0000org.eclipse.wst.html.ui.proposalCategory.htmlTags\u0000org.eclipse.wst.css.ui.proposalCategory.css\u0000org.eclipse.wst.html.ui.proposalCategory.htmlTemplates\u0000org.eclipse.wst.css.ui.proposalCategory.cssTemplates\u0000tern.eclipse.ide.jsdt.ui.contentassist.TernContentAssistProcessor\u0000
+html_content_assist_own_page_sort_order=org.eclipse.wst.html.ui.proposalCategory.htmlTemplates\u0000org.eclipse.wst.css.ui.proposalCategory.cssTemplates\u0000org.eclipse.wst.html.ui.proposalCategory.htmlTags\u0000org.eclipse.wst.css.ui.proposalCategory.css\u0000
+newFileTemplateName=New HTML File (5)
+org.eclipse.wst.sse.ui.custom_templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates><template autoinsert\="true" context\="html_tag" deleted\="false" description\="script     (commented)" enabled\="true" id\="org.eclipse.wst.html.ui.templates.script" name\="script">&lt;script&gt;\r\n    ${cursor}\r\n&lt;/script&gt;</template><template autoinsert\="true" context\="html_tag" deleted\="false" description\="style     (commented)" enabled\="true" id\="org.eclipse.wst.html.ui.templates.style" name\="style">&lt;style&gt;\r\n    ${cursor}\r\n&lt;/style&gt;</template></templates>

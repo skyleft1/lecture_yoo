@@ -1,0 +1,98 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+    <title>의정자료 전자유통 시스템</title>
+    <style>
+        body, table, tr, td { background-color:#ffffff; font-family:verdana, 돋움; font-size:11px; }
+        .title { height: 30px; font-family:HY헤드라인M, 돋움; font-size:18px; color:#7359C8; }
+        .line { background-color:#c1c1c1; }
+        .subtitle { background-color:#ffffff; font-family:verdana, 돋움; font-size:12px; font-weight:bold; color:#7359C8; }
+    </style>
+
+<script src = 'MYAPP.Variable.js'></script>
+<script src = 'MYAPP.Cookie.js'></script>
+
+
+</head>
+
+<body leftmargin="0" topmargin="0">
+	<table border="0" cellpadding="0" cellspacing="0">
+		<tr>
+			<td width="400" align="left" valign="middle" height="55">
+				<table border="0" cellpadding="0" cellspacing="0">
+					<tr>
+						<td align="right" valign="middle"></td>
+						<td style="padding-left:10px">
+							<font class="title" style="filter:dropshadow(color=c0c0c0 offx=2 offy=2 positive=1)">예산결산특별위원회 소속<BR>의원실 사용자 분들은 확인바랍니다!!</font>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td height="1" class="line"></td>
+		</tr>
+		<tr>
+			<td height="418" align="center" valign="top">
+				<br>
+				<table border="0" cellpadding="0" cellspacing="0">
+					<tr><td width="380" height="20">예산결산특별위원회 소속 의원실에서 제출기관을 대상으로 </td></tr>
+					<tr><td height="20">자료요구를 하는 방법은 아래의 두가지 방법이 있습니다.</td></tr>
+					<tr><td height="20">해당하는 방법에 맞게끔 순서를 따라 진행해 주시기 바랍니다.</td></tr>
+					<tr><td height="5"></td></tr>
+					<tr><td height="20" class="subtitle">[의원실 명의 자료 요구]</td></tr>
+					<tr><td height="20">① 인증서를 통한 로그인</td></tr>
+					<tr><td height="20">② 메인화면에서 자료요구 > 의원실자료요구 클릭</td></tr>
+					<tr><td height="20">③ 의원실 자료요구 > 요구함조회 > 작성중 요구함 클릭</td></tr>
+					<tr><td height="20">④ '요구함 작성' 버튼을 클릭해서 요구함 내용 및 요구 내용 작성</td></tr>
+					<tr><td height="20">⑤ 요구함 상세 보기에서 '요구서 발송' 버튼 클릭</td></tr>
+					<tr><td height="20">⑥ 요구서 발송 후 '발송완료요구함'에서 확인</td></tr>
+					<tr><td height="5"></td></tr>
+					<tr><td height="20" class="subtitle">[위원회 명의 자료 요구]</td></tr>
+					<tr><td height="20">① 인증서를 통한 로그인</td></tr>
+					<tr><td height="20">② 메인화면에서 자료요구 > 의원실자료요구 클릭</td></tr>
+					<tr><td height="20">③ 의원실 자료요구 > 요구함조회 > 작성중 요구함 클릭</td></tr>
+					<tr><td height="20">④ '요구함 작성' 버튼을 클릭해서 요구함 내용 및 요구 내용 작성</td></tr>
+					<tr><td height="20">⑤ 요구함 상세 보기에서 '위원회 명의 요구서 발송' 버튼 클릭</td></tr>
+					<tr><td height="20">⑥ 위원회 자료요구 > 요구함조회 > 접수완료요구함의 내용 조회</td></tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td height="1" class="line"></td>
+		</tr>
+		<tr>
+			<td height="25" align="right">
+                <input type="checkbox" name="chkClose"> 오늘 더 이상 이 창을 띄우지 않겠습니다.&nbsp;&nbsp;
+            </td>
+		</tr>
+	</table>
+
+
+<script>
+	window.onload = function(e){
+	    if(MYAPP.Cookie.read('naps')){  // 쿠키가 있는 경우 (nap 은 쿠키명)
+	        window.self.close();  // 자기 자신을 닫는다.
+		}
+		else{
+			// 쿠키가 없는경우
+		}
+
+		var chkClose = document.getElementsByName('chkClose');
+        chkClose[0].onclick = function(e){
+            if (chkClose[0].checked === true){
+                MYAPP.Cookie.create('naps', 'aaa', 1);  // 쿠키생성
+            }
+            window.self.close();
+		};
+	};
+
+
+
+</script>
+
+</body>
+
+</html>
+
+

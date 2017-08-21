@@ -1,0 +1,8 @@
+1434443847177	Rename type 'Document'
+1434443852528	Rename type 'Type'
+1434443891793	Rename type 'SearchEngine'
+1434445295156	Rename type 'MySearchEngine'
+1434617507059	Rename resource 'mydocuments-context.xml'
+1434683430030	Rename local variable 'pdfType'
+1434683442947	Rename local variable 'webType'
+1434759159328	Delete element

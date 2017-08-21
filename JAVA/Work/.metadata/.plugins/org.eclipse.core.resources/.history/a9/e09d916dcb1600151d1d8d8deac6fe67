@@ -1,0 +1,61 @@
+package com.lecture.database.model;
+
+import java.util.Date;
+
+public class ModelBoard extends ModelBase {
+    private String boardCd;
+    private String boardNm;
+    private String InsertUID;
+    private Date InsertDT;
+    private String UpdateUID;
+    private Date UpdateDT;
+
+    public String getBoardCd() {
+        return boardCd;
+    }
+
+    public void setBoardCd(String boardCd) {
+        this.boardCd = boardCd;
+    }
+
+    public String getBoardNm() {
+        return boardNm;
+    }
+
+    public void setBoardNm(String boardNm) {
+        this.boardNm = boardNm;
+    }
+
+    public String getInsertUID() {
+        return InsertUID;
+    }
+
+    public void setInsertUID(String insertUID) {
+        InsertUID = insertUID;
+    }
+
+    public Date getInsertDT() {
+        return InsertDT;
+    }
+
+    public void setInsertDT(Date insertDT) {
+        InsertDT = insertDT;
+    }
+
+    public String getUpdateUID() {
+        return UpdateUID;
+    }
+
+    public void setUpdateUID(String updaterUID) {
+        UpdateUID = updaterUID;
+    }
+
+    public Date getUpdateDT() {
+        return UpdateDT;
+    }
+
+    public void setUpdateDT(Date updaterDT) {
+        UpdateDT = updaterDT;
+    }
+
+}

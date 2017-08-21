@@ -1,0 +1,169 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>무제 문서</title>
+</head>
+
+<body>
+
+
+
+<table width="625" height="650" border="2" cellpadding="2" cellspacing="2">
+  <tr>
+    <td colspan="3" bgcolor="#FF0000">기본 정보 입력</td>
+  </tr>
+  <tr>
+    <td width="9">&nbsp;</td>
+    <td width="112">이름</td>
+    <td width="474"><form name="form1" method="post" action="">
+      <input name="username" type="text" id="username" size="15">
+    </form></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>주민등록번호</td>
+    <td><form name="form2" method="post" action="12">
+      <label for="num"></label>
+      <input name="num" id="num" size="12">
+    -
+    <label for="textfield"></label>
+    <input name="textfield" type="text" id="textfield" size="12">
+    </form></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>아이디 </td>
+    <td><p>
+      <label for="textfield2"></label>
+      <input name="textfield2" type="text" id="textfield2" size="8">
+      @naver.com 
+      <input type="submit" name="중복체크" id="중복체크" value="중복체크">
+    </p>
+    <p>영문으로 시작하는 4~10자리의 영문, 숫자 조합만 가능합니다.</p></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>별명</td>
+    <td><label for="textfield3">
+      <input type="text" name="textfield3" id="textfield3" value="홍길동" onFocus="this.value=''">
+    </label></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>비밀번호</td>
+    <td><p>
+      <label for="textfield4"></label>
+      <input type="password" name="textfield4" id="textfield4" value ="1234" onFocus="this.value=''">
+    </p>
+    <p>
+      <input name="textfield5" type="password" id="textfield5" value="1234" onFocus="this.value=''"> 
+    </p></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>비밀번호 힌트</td>
+    <td>
+		<p>
+		  <select name="dept" id="dept">
+		    <option value="다시 태어나면 되고 싶은건?">다시 태어나면 되고 싶은건?</option>
+		    <option value="아부지 뭐하시노?">아부지 뭐하시노?</option>
+	      </select>
+	  </p>
+		<p>
+		  <label for="textfield9"></label>
+		  <input name="textfield9" type="text" id="textfield9" value="답을 입력하세요." onFocus="this.value=''">
+        </p>
+    </td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>생년월일</td>
+    <td><label for="textfield6"></label>
+    <input name="textfield6" type="text" id="textfield6" size="6">
+	  <select name="month" id="month">
+			<option value="01">01</option>
+            <option value="02" selected>02</option>
+            <option value="03">03</option>
+            <option value="04">04</option>
+    </select>
+   	  <select name="date" id="date">
+			<option value="01">01</option>
+            <option value="02">02</option>
+            <option value="03" selected>03</option>
+            <option value="04">04</option>
+    </select>
+    <input name="" type="radio" value="" checked>
+    양
+<input name="" type="radio" value="">
+음    </td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>핸드폰</td>
+    <td>
+	  <select name="phonenum" id="phonenum">
+			<option value="010">010</option>
+            <option value="011">011</option>
+            <option value="016">016</option>
+            <option value="017">017</option>
+    </select>
+	  <input name="tel" type="tel" id="tel1" size="6">
+	  <input name="tel" type="tel" id="tel2" size="6">
+	  <input name="radio" type="radio" id="radio" value="radio" checked>SKT
+	  <label for="radio"></label>
+    <input type="radio" name="radio" id="radio2" value="radio">
+    KTF
+    <input type="radio" name="radio" id="radio3" value="radio">
+    LGT</td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>주로쓰는 메일</td>
+    <td><form name="form3" method="post" action="">
+      <label for="textfield10"></label>
+      <input name="textfield10" type="email" id="textfield10" value="1111" onFocus="this.value=''">
+      <input type="checkbox" name="checkbox6" id="checkbox6">
+      <label for="checkbox6"></label>
+      네이버 메일 사용
+    </form></td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>거주지</td>
+    <td>
+		<select name="loc" id="loc">
+			<option value="서울">서울</option>
+			<option value="인천">인천</option>
+			<option value="광주">광주</option>            
+            <option value="강원">강원</option>
+            <option value="부산" selected>부산</option>
+            <option value="대전">대전</option>
+	      </select>
+    </td>
+  </tr>
+  <tr>
+    <td>&nbsp;</td>
+    <td>메일 수신 여부</td>
+    <td><input name="checkbox" type="checkbox" id="checkbox" checked>
+    <label for="checkbox">네이버 뉴스레터<br>
+      <input name="checkbox2" type="checkbox" id="checkbox2" checked>
+      상품정보 메일<br>
+      <input name="checkbox3" type="checkbox" id="checkbox3" checked>
+      캐쉬정보 메일
+      <br>
+      <input type="checkbox" name="checkbox4" id="checkbox4">
+      게임정보 메일
+      <br>
+      <input type="checkbox" name="checkbox5" id="checkbox5">
+ sms정보 수신  </label></td>
+  </tr>
+  <tr>
+    <td colspan="3" align="center"><form name="form4" method="get" action="http://search.naver.com/search.naver" enctype="text/plain">
+      <input type="submit" name="button" id="button" value="확인">
+    </form></td>
+  </tr>
+</table>
+
+</body>
+</html>

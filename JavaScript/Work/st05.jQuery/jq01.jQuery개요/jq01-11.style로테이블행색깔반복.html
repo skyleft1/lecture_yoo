@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>style로 테이블 행 색깔 반복</title>
+    <style>
+        .pink {background: pink;}
+        .yellow {background: yellow;}
+		
+        table { width: 100%; border: 1px solid #002b36; }
+        table   tr:nth-child(even) { background: pink; }
+        table > tr:nth-child(odd)  { background: yellow; }
+    </style>
+</head>
+<body>
+    <table>
+            <tr> <td>zero</td> </tr>
+            <tr> <td>one</td> </tr>
+            <tr> <td>two</td> </tr>
+            <tr> <td>three</td> </tr>
+            <tr> <td>four</td> </tr>
+            <tr> <td>five</td> </tr>
+    </table>
+</body>
+</html>

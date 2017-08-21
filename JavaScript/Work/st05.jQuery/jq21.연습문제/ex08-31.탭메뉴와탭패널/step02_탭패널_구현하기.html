@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title> </title>
+
+    <style>
+	    .tab-menu {
+	    list-style: none;
+	    height:80px;
+	    }
+
+	    .tab-menu li {
+	    width:99px;
+	    height:40px;
+	    background-position-y:0;
+	    text-indent: -1000px;
+	    overflow: hidden;
+	    display: inline-block;
+	    float:left;
+	    }
+	    .tab-menu li:hover {
+	    background-position-y: -40px;
+	    }
+	    .tab-menu li.select {
+	    background-position-y: -80px;
+	    height:80px;
+	    }
+	    .tab-menu li.menuitem1 {
+	    background-image: url(images/newbtn.bar.1.png);
+	    }
+	    .tab-menu li.menuitem2 {
+	    background-image: url(images/newbtn.bar.2.png);
+	    }
+	    .tab-menu li.menuitem3 {
+	    background-image: url(images/newbtn.bar.3.png);
+	    }
+	    .tab-menu li.menuitem4 {
+	    background-image: url(images/newbtn.bar.4.png);
+	    }
+	    .tab-menu li.menuitem5 {
+	    background-image: url(images/newbtn.bar.6.png);
+	    }
+
+	    .tab-contents {
+	    position:relative;
+	    left:10px;
+	    top:10px;
+	    width:780px;
+	    height:340px;
+	    overflow:hidden;
+	    background:url(images/content_bg.png) no-repeat;
+	    }
+
+	    .tab-contents .content{
+	    position: absolute;
+	    left:10px;
+	    top:10px;
+	    display:none;
+	    }
+
+	    .tab-contents .content.select{
+	    display:block;
+	    }
+    </style>
+
+    
+    
+
+
+</head>
+	
+<body>
+    <ul class="tab-menu" id="tabMenu1">
+        <li class="menuitem1">google</li>
+        <li class="menuitem2">facebook</li>
+        <li class="menuitem3">pinterest</li>
+        <li class="menuitem4">twitter</li>
+        <li class="menuitem5">path</li>
+    </ul>
+    		
+    <div class="tab-contents">
+        <div class="content">
+            <img src="images/content_facebook.png">
+        </div>
+        <div class="content">
+            <img src="images/content_google.png">
+        </div>     
+        <div class="content">
+            <img src="images/content_pinterest.png">
+        </div>
+        <div class="content">
+            <img src="images/content_twitter.png">
+        </div>
+        <div class="content">
+            <img src="images/content_path.png">
+        </div>
+    </div>
+</body>
+
+</html>
+
+
+

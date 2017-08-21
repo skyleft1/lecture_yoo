@@ -1,0 +1,19 @@
+<application>
+  <component name="PropertiesComponent">
+    <property name="AndroidInitConfigurator.V4" value="true" />
+    <property name="AndroidInitConfigurator.V3" value="true" />
+    <property name="AndroidInitConfigurator.V1" value="true" />
+    <property name="AndroidInitConfigurator.V2" value="true" />
+    <property name="android-component-compatibility-check" value="1495429915262" />
+    <property name="file.chooser.recent.files" value="D:/DevTool/gradle/gradle-3.5&#10;D:/DevTool/jdk/jdk1.8.0_121/win64&#10;D:/DevTool/workspace/Lecture/JAVA/Work/JavaApplication&#10;D:/DevTool/android/config/settings.20170326.jar" />
+    <property name="selected.color.option.type" value="CONSOLE_DARKGRAY_OUTPUT" />
+    <property name="MemberChooser.showClasses" value="true" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="JUnitSupport.hidePassedTests" value="false" />
+    <property name="Copy.OpenInEditor" value="true" />
+    <property name="decompiler.legal.notice.accepted" value="true" />
+    <property name="fileTypeChangedCounter" value="1" />
+    <property name="last.used.gradle.home" value="D:/DevTool/gradle/gradle-3.5" />
+    <property name="export.settings.path" value="C:\Users\Administrator.Sc-201611111131\.AndroidStudio2.3\config\settings.20170523.jar" />
+  </component>
+</application>

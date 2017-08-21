@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    
+    
+</head>
+<body>
+    
+    <input id='prev'  type="button" value="<<" />
+    <input id='next'  type="button" value=">>" />
+    <input id='start' type="button" value="시작" />
+    <input id='stop'  type="button" value="정지" />
+
+    <div>
+    <img id='img' src="images/00.png" alt="달리는 사람">
+    </div>
+
+
+    <script>
+
+        var MYAPP = {timer: null, count : 0};
+        MYAPP.images = [
+             'images/00.png'   // conter = 0
+            , 'images/01.png'   // conter = 1
+            , 'images/02.png'   // conter = 2
+            , 'images/03.png'   // conter = 3
+            , 'images/04.png'   // conter = 4
+            , 'images/05.png'   // conter = 5
+            , 'images/06.png'   // conter = 6
+            , 'images/07.png'   // conter = 7
+            , 'images/08.png'   // conter = 8
+            , 'images/09.png'   // conter = 9
+            , 'images/10.png'   // conter = 10
+            , 'images/11.png'   // conter = 11
+            , 'images/12.png'   // conter = 12
+            , 'images/13.png'   // conter = 13
+            , 'images/14.png'   // conter = 14
+        ];
+
+        window.onload = function (e) {
+
+            MYAPP.img = document.getElementById('img');
+
+            MYAPP.next = document.getElementById('next');
+            MYAPP.next.onclick = function (e) {
+                var sno = MYAPP.img.src.substr(MYAPP.img.src.length - 6, 2);
+                var ino = Number(sno) + 1;
+                if (ino >= MYAPP.images.length) {
+                    ino = 0;
+                }
+                MYAPP.img.src = MYAPP.images[ino];
+            }
+
+            MYAPP.prev = document.getElementById('prev');
+            MYAPP.prev.onclick = function (e) {
+                var sno = MYAPP.img.src.substr(MYAPP.img.src.length - 6, 2);
+                var ino = Number(sno) - 1;
+                if (ino < 0) {
+                    ino = MYAPP.images.length - 1;
+                }
+                MYAPP.img.src = MYAPP.images[ino];
+            }
+
+            MYAPP.timer_start = document.getElementById('start');
+            MYAPP.timer_start.onclick = function (e) {
+
+                MYAPP.timer = window.setInterval(MYAPP.next.onclick , 100);
+            };
+
+            timer_stop = document.getElementById('stop');
+            window.timer_stop.onclick = function (e) {
+
+                window.clearInterval(MYAPP.timer);  // 어떤 타이머를 멈출지 지정하는 것
+            };
+        }
+
+    </script>
+
+</body>
+</html>
+

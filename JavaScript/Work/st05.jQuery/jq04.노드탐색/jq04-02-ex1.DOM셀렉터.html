@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        div,span { background: #FFF; padding: 10px; margin: 10px; }
+    </style>
+
+
+    <script src='../jquery-3.1.0.js'></script>
+
+    <script>
+    var MYAPP = {};
+    MYAPP.init = function (e) {
+        $('*').css('border', '');
+    }
+
+    $(document).ready(function () {
+        $('#firstSibling').click(function () {
+            MYAPP.init();
+            $('body:first').css('border', '2px red dotted')
+        });
+        $('#firstSibling').click(function () {
+            MYAPP.init();
+            $('#current').prev().css('border', '2px red dotted')
+        });
+        $('#nextSibling').click(function () {
+            MYAPP.init();
+            $('#current').next().css('border', '2px red dotted')
+        });
+        $('#lastSibling').click(function () {
+            MYAPP.init();
+            $('#current').prevAll().css('border', '2px red dotted')
+        });
+
+
+
+    });
+    </script>
+    
+</head>
+<body>
+    <h2>DOM Selector</h2>
+
+    <div>div sibling</div>
+    <span>span sibling (not div)</span>
+    <div>div sibling</div>
+
+    <span id="current">current</span>
+
+    <div>div sibling</div>
+    <span>span sibling (not div)</span>
+    <div>div sibling</div>
+
+    <hr>
+    <input id='firstSibling' type='button' value='큰형(first) 찾기'>
+    <input id='prevSibling' type='button' value='바로 위 형(prev) 찾기'>
+    <input id='nextSibling' type='button' value='바로 밑 동생(next) 찾기'>
+    <input id='lastSibling' type='button' value='막내 동생(last) 찾기'>
+</body>
+</html>

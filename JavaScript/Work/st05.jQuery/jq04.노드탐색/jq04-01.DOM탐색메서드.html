@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title> DOM 탐색</title>
+    <style>
+        #container div, .div { margin: 5px; border: 2px red solid;  background: #ccff0e; }
+        span { margin: 10px; border: 2px red solid;  background: #ffb42e; color: blue; }
+        .after { background: pink }
+        .selected {border: 4px blue solid !important; }
+    </style>
+
+<script src='../jquery-3.1.0.js'></script>
+
+<script>
+
+    var MYAPP = {};
+    MYAPP.init = function (e) {
+        $('*').css('border', '');
+    }
+
+    $(document).ready(function() {
+        $('.parents').click(function () {
+            MYAPP.init();
+            $('#center').css('border', '2px blue solid')
+            $('#center').parents().css('border', '1px red dotted')
+        });
+        $('.parent').click(function () {
+            MYAPP.init();
+            $('#center').css('border', '2px blue solid')
+            $('#center').parent().css('border', '1px red dotted')
+        });
+        $('.first').click(function () {
+            MYAPP.init();
+            $('#center').css('border', '2px blue solid')
+            $('#header > div').first().css('border', '1px red dotted')
+        });
+        $('.prevAll').click(function () {
+            MYAPP.init();
+            $('#center').css('border', '2px blue solid')
+            $('#center').prevAll().css('border', '1px red dotted')
+        });
+        $('.prev').click(function () {
+            MYAPP.init();
+            $('#center').css('border', '2px blue solid')
+            $('#center').prev().css('border', '1px red dotted')
+        });
+        $('.next').click(function () {
+            MYAPP.init();
+            $('#center').css('border', '2px blue solid')
+            $('#center').next().css('border', '1px red dotted')
+        });
+        $('.nextAll').click(function () {
+            MYAPP.init();
+            $('#center').css('border', '2px blue solid')
+            $('#center').nextAll().css('border', '1px red dotted')
+        });
+        $('.last').click(function () {
+            MYAPP.init();
+            $('#center').css('border', '2px blue solid')
+            $('#header > div').last().css('border', '1px red dotted')
+        });
+        $('.siblings').click(function () {
+            MYAPP.init();
+            $('#center').css('border', '2px blue solid')
+            $('#center').siblings().css('border', '1px red dotted')
+        });
+        $('.children').click(function () {
+            MYAPP.init();
+            $('#center').css('border', '2px blue solid')
+            $('#center').children().css('border', '1px red dotted')
+        });
+
+
+    });
+
+    //    setInterval(function () {
+//        $('.center').parents().toggle();
+//        }, 250);
+//
+//
+//    $(document).ready(function(e) {
+//        $('.parents').click(function (e) {
+////            setInterval(function () {
+////                $('.center').parents().toggle();
+////                }, 250);
+////            })
+//            setInterval();
+//
+////            $('.center').parents().toggle();
+////            }, 250);
+//        });
+//    });
+
+</script>
+
+</head>
+<body>
+    <p>부모, 형제, 자식 노드</p>
+
+    <div id="container">
+        <div id="header">
+            <div id="first">first</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div id="prev">prev</div>
+            <div id="center">
+                <span id="second" class="middle">
+                    sibling <span id="child">child</span>
+                </span>
+                <span id="third" class="middle">third</span>
+                <span id="fourth" class="middle">fourth</span>
+                <span id="fifth" class="middle">fifth</span>
+                <span id="sixth">sixth</span>
+            </div>
+            <div id="next">next</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div>&nbsp;</div>
+            <div id="last">last</div>
+        </div>
+    </div>
+
+    <hr>
+    <input class="parents"  type="button" value="parents()">
+    <input class="parent"   type="button" value="parent()">
+    &nbsp; / &nbsp;
+    <input class="first"    type="button" value="first()">
+    <input class="prevAll"  type="button" value="prevAll()">
+    <input class="prev"     type="button" value="prev()">
+    &nbsp; / &nbsp;
+    <input class="next"     type="button" value="next()">
+    <input class="nextAll"  type="button" value="nextAll()">
+    <input class="last"     type="button" value="last()">
+    &nbsp; / &nbsp;
+    <input class="siblings" type="button" value="siblings()">
+    &nbsp; / &nbsp;
+    <input class="children" type="button" value="children()">
+
+    <hr>
+    <div id="result">&nbsp;</div>
+</body>
+</html>
+

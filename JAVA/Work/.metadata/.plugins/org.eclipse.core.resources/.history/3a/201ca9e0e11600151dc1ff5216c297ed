@@ -1,0 +1,15 @@
+[2015-06-20 09:14:37,300] INFO  at lecture.log.Employee.<init>(Employee.java:18)     - hello~!
+[2015-06-20 09:14:37,315] DEBUG at lecture.log.EmployeeList.addEmployee(EmployeeList.java:19)     - addEmployee :: hello~!
+[2015-06-20 09:14:37,315] INFO  at lecture.log.Employee.<init>(Employee.java:18)     - hello~!
+[2015-06-20 09:14:37,315] DEBUG at lecture.log.EmployeeList.addEmployee(EmployeeList.java:19)     - addEmployee :: hello~!
+[2015-06-20 09:14:37,315] INFO  at lecture.log.Employee.<init>(Employee.java:18)     - hello~!
+[2015-06-20 09:14:37,315] DEBUG at lecture.log.EmployeeList.addEmployee(EmployeeList.java:19)     - addEmployee :: hello~!
+[2015-06-20 09:14:37,315] INFO  at lecture.log.Employee.<init>(Employee.java:18)     - hello~!
+[2015-06-20 09:14:37,315] DEBUG at lecture.log.EmployeeList.addEmployee(EmployeeList.java:19)     - addEmployee :: hello~!
+[2015-06-20 09:14:37,315] INFO  at lecture.log.Employee.<init>(Employee.java:18)     - hello~!
+[2015-06-20 09:14:37,315] DEBUG at lecture.log.EmployeeList.addEmployee(EmployeeList.java:19)     - addEmployee :: hello~!
+[2015-06-20 09:14:37,315] INFO  at lecture.log.EmployeeList.findEmployee(EmployeeList.java:45)     - findEmployee :: hello~!
+[2015-06-20 09:14:37,315] INFO  at lecture.log.EmployeeList.findEmployee(EmployeeList.java:45)     - findEmployee :: hello~!
+[2015-06-20 09:14:37,315] INFO  at lecture.log.EmployeeList.findEmployee(EmployeeList.java:45)     - findEmployee :: hello~!
+[2015-06-20 09:14:37,315] INFO  at lecture.log.EmployeeList.findEmployee(EmployeeList.java:45)     - findEmployee :: hello~!
+[2015-06-20 09:14:37,315] INFO  at lecture.log.EmployeeList.findEmployee(EmployeeList.java:45)     - findEmployee :: hello~!

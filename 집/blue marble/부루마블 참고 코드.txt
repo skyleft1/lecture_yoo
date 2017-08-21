@@ -1,0 +1,449 @@
+#include <Stdio.h>
+#include <stdlib.h>
+#include <conio.h>
+#include <time.h>
+#include <Windows.h>
+#define MAP 16
+/////////함수선언/////////
+int Dice();
+int PM(int a);
+void Local();
+void CLocal();
+void User_turn();
+void Computer_turn();
+void Buy_home();
+void Buy_hotel();
+/////////////////////////////////////
+////////전역변수///////////
+char local[MAP][30] = {"시작지점","한국","미국","일본","중국","영국","소련","독일","아르헨티나",
+"그리스","프랑스","스웨덴","오스트레일리아","터키","스위스","이집트"};
+int own_local[MAP] = {3,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+int own_home[MAP] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+int own_hotel[MAP] = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+int* p = &own_local[0];
+int* ph = &own_home[0];
+int* pht = &own_hotel[0];
+char own[15], loc[15];
+int dice1, dice2, temp;
+int money = 10000, cmoney = 10000;
+int i=0, uj=0, cj=0;
+int cho, cho2, cho3;
+int ure;
+int pass_money;
+/////////////////////////////////
+int main(void){
+	int pm;
+	printf("**BlueMarble**\n\nPress Any Key to Game Start");
+	getch();
+	srand(time(NULL));
+	while(1){
+		dice1 = dice2 = 0;
+		system("cls");
+		User_turn();
+		Computer_turn();
+	}
+	return 0;
+}
+int Dice(){
+	int a;
+	a = rand()%6+1;
+	return a;
+}
+int PM(int a){
+	int result;
+	if(a == 1){
+		result = uj*100+((ph[uj]*(uj*30))*2)+(pht[uj]*ph[uj]*350);
+	}else if(a == 2) {
+		result = cj*100+((ph[cj]*(cj*30))*2)+(pht[cj]*ph[cj]*350);
+	}else {
+		result = i*100*((ph[i]*(i*30))*2)+(pht[i]*ph[i]*350);
+	}
+	return result;
+}
+void Local(){
+	for(i=0; i != (uj+1); i++){
+		strcpy(loc, local[i]);
+	}
+}
+void CLocal(){
+	for(i=0; i != (cj+1); i++){
+		strcpy(loc, local[i]);
+	}
+}
+void Buy_home(){
+	system("cls");
+	puts("==========================");
+	if(cho3 == 1 && money >= uj*30) {
+		ph[uj] += 1;
+		money -= uj*30;
+		printf("주택 1개를 성공적으로 구입했습니다!\n	남은 돈 : %d원\n", money);
+	} else if(cho3 == 2 && money >= (uj*30)*2) {
+		ph[uj] += 2;
+		money -= (uj*30)*2;
+		printf("주택 2개를 성공적으로 구입했습니다!\n	남은 돈 : %d원\n", money);
+	} else if(cho3 == 3 && money >= (uj*30)*3) {
+		ph[uj] += 3;
+		money -= (uj*30)*3;
+		printf("주택 3개를 성공적으로 구입했습니다!\n	남은 돈 : %d원\n", money);
+	} else if(cho3 == 4 && money >= (uj*30)*4) {
+		ph[uj] += 4;
+		money -= (uj*30)*4;
+		printf("주택 4개를 성공적으로 구입했습니다!\n	남은 돈 : %d원\n", money);
+	} else {
+		puts("	돈이 부족하거나 잘못 입력했습니다!");
+		ure = 1;
+	}
+	puts("================================");
+	getch();
+}
+void Buy_hotel(){
+	system("cls");
+	puts("===============================");
+	if(money >= uj*150){
+		pht[uj] = 1;
+		money -= uj*150;
+		printf("호텔을 성공적으로 구입했습니다!\n	남은 돈 : %d원\n",money);
+	}else {
+	puts("	돈이 부족하거나 잘못 입력했습니다!");
+	ure = 1;
+	}
+	puts("================================");
+	getch();
+}
+void User_turn(){
+	Local();
+	puts("=============================");
+	printf(
+		"[당신의 차례입니다.]\n\n"
+		"현재 당신의 돈 : %d원\n"
+		"현재 당신의 장소 : %s(%d)\n",
+		money,loc,uj
+	);
+	puts("=============================");
+	puts("아무키나 누르면 주사위를 던집니다.");
+	getch();
+	dice1 = Dice();
+	dice2 = Dice();
+	puts("============================");
+	printf("	=주사위 결과=\n"
+		"	[%d]+[%d] = [%d]\n",dice1,dice2,dice1+dice2);
+	puts("============================");
+	getch();
+	temp = dice1+dice2;
+	uj += temp;
+
+	if(uj > MAP-1){
+		for(uj -= temp; uj < MAP; temp--){
+			uj += 1;
+		}
+		uj = 0;
+		puts("===========================");
+		printf("당신은 한바퀴를 돌아서 700원을 받습니다.\n");
+		puts("==========================");
+		uj += temp;
+		money += 700;
+		getch();
+	}
+	Local();
+	if(own_local[uj] == 2){
+		puts("================================");
+		printf("%s은(는) 컴퓨터의 영토입니다.\n\n",loc);
+		pass_money = PM(1);
+		printf(
+			"토지 가격 : %d원\n"
+			"주택 가격 : %d원\n"
+			"호텔 가격 : %d원\n"
+			"합계통행료 : %d원\n\n"
+			,uj*100,(ph[uj]*(uj*30))*2,pht[uj]*ph[uj]*350,pass_money);
+		money -= pass_money;
+		cmoney += pass_money;
+		printf("통행료 %d원을 지불합니다. \n남은 돈 : [%d원]\n", pass_money, money);
+		puts("===============================");
+		getch();
+	}
+	if(money <= 0){
+		system("cls");
+		puts("==============================");
+		printf("** Game Over **\n 당신은 파산했습니다!\n");
+		puts("==============================");
+		Sleep(3000);
+		exit(0);
+	}
+	do{
+		ure = 0;
+		system("cls");
+		if(p[uj] == 0){
+			strcpy(own, "빈 영토");
+		}else if(p[uj] == 1){
+			strcpy(own, "당신의 영토");
+		}else if(p[uj] == 2){
+			strcpy(own, "컴퓨터의 영토");
+		}else {
+			printf(
+				"현재 당신의 돈 : %d원\n"
+				"현재 당신의 장소 : %s(%d)\n"
+				"-------------------------\n"
+				"1. 현재 영토 구입\n"
+				"2. 영토소유권 확인\n"
+				"3. 턴 넘기기\n"
+				"영토소유자 : %s\n"
+				"주택 갯수 : %d개\n"
+				"호텔 갯수 : %d개\n"
+				"-------------------\n"
+				"선택 : []\b\b"
+				,money,loc,uj,own,ph[uj],pht[uj]
+			);
+			scanf("%d",&cho);
+			switch(cho){
+				case 1:
+					system("cls");
+					puts("=========================");
+					printf(
+						"토지 가격 : %d원\n"
+						"주택 가격 : %d원\n"
+						"호텔 가격 : %d원\n"
+						"현재 당신의 돈 : %d원\n"
+						,uj*100, uj*30, uj*150, money);
+
+					puts("========================");
+					printf(
+						"1.토지 구입\n"
+						"2.주택 구입\n"
+						"3.호텔 구입\n"
+						"입력 : [ ]\b\b"
+					);
+					scanf("%d", &cho2);
+					if(cho2 == 1) {
+						puts("=============");
+						if(money >= uj*100 && p[uj] == 0){
+							money -= uj*100;
+							p[uj] = 1;
+							printf("%s을(를) 성공적으로 구입했습니다!\n남은 돈 : %d원\n", loc,money);
+							puts("=========================");
+							getch();
+							break;
+						}else if(money < uj*100) {
+							printf(" 돈이 부족합니다!\n");
+							puts("=========================");
+							getch();
+							ure = 1;
+							break;
+						}else if(p[uj] == 3) {
+							printf("%s은(는) 구입하지 못 하는 영토입니다!\n", loc);
+							puts("=========================");
+							getch();
+							ure = 1;
+							break;
+						} else {
+							printf("%s은(는) 이미 소유권이 있는 영토입니다!\n", loc);
+							puts("=========================");
+							getch();
+							ure = 1;
+							break;
+						}
+					}else if(cho2 == 2){
+						if(own_local[uj] != 1){
+							puts("=========================");
+							printf("%s은(는) 당신의 영토가 아닙니다!\n", loc);
+							puts("=========================");
+							getch();
+							ure = 1;
+							break;
+						}
+						printf("구입할 주택의 갯수 입력 : ");
+						scanf("%d", &cho3);
+						if((ph[uj]+cho3) > 4) {
+							puts("=========================");
+							printf("주택은 4개까지만 건설할 수 있습니다!\n");
+							puts("=========================");
+							getch();
+							ure = 1;
+							break;
+						} else {
+							Buy_home();
+						}
+					}else if(cho2 == 3) {
+						if(own_local[uj] !=1){
+						puts("=========================");
+						printf(" %s은(는) 당신의 영토가 아닙니다!\n", loc);
+						puts("=========================");
+						getch();
+						ure = 1;
+						break;
+					}else if(ph[uj] < 4) {
+						puts("=========================");
+						printf("주택의 갯수가 모자랍니다!\n", loc);
+						puts("=========================");
+						getch();
+						ure = 1;
+						break;
+					}else if(ph[uj] > 0) {
+						puts("=========================");
+						printf("호텔은 1개까지만 건설할 수 있습니다!\n");
+						puts("=========================");
+						getch();
+						ure = 1;
+						break;
+					}else {
+						Buy_hotel();
+					}
+				}else {
+					puts(
+						"=========================\n"
+						"	잘못 입력했습니다!\n"
+						"========================="
+					);
+					getch();
+					ure = 1;
+					break;
+				}
+				break;
+				case 2:
+					system("cls");
+					printf(
+						"현재 당신의 소유 영토\n"
+						"---------------------------------------\n"
+					);
+					for(i=0;i<MAP;i++){
+						pass_money = PM(3);
+						if(p[i] == 1) {
+							printf("%s(%d) - 통행료 : %d원\n",local[i],i,pass_money);
+						}
+					}
+					puts("-----------------------------\n\n");
+					printf(
+						"현재 컴퓨터의 소유 영토\n"
+						"-----------------------------\n"
+					);
+					for(i=0; i<MAP; i++){
+						pass_money = PM(3);
+						if(p[i] == 2){
+							printf("%s(%d) - 통행료 : %d원\n", local[i],i,pass_money);
+						}
+					}
+					puts("---------------------------------");
+					getch();
+					system("cls");
+					ure = 1;
+					break;
+				case 3:
+					system("cls");
+					puts("=========================");
+					puts("	당신의 턴을 마칩니다.");
+					puts("=========================");
+					getch();
+					system("cls");
+					break;
+			}
+		} while(ure == 1);
+	}
+void Computer_turn(){
+	CLocal();
+	system("cls");
+	puts("=========================");
+	printf(
+		"[컴퓨터의 차례입니다.]\n\n"
+		"현재 컴퓨터의 돈 : %d원\n"
+		"현재 컴퓨터의 장소 : %s(%d)\n",
+		cmoney,loc,cj
+	);
+	puts("=========================");
+	puts("아무키나 누르면 주사위를 굴립니다.");
+	getch();
+	dice1 = Dice();
+	dice2 = Dice();
+	puts("=========================");
+	printf("	=주사위 결과=\n"
+		"	[%d]+[%d] = [%d]\n", dice1,dice2,dice1+dice2);
+	puts("=========================");
+	getch();
+	temp = dice1 + dice2;
+	cj += temp;
+	if(cj > MAP-1){
+		for(cj-=temp; cj<MAP; temp--){
+			cj+=1;
+		}
+		cj = 0;
+		puts("=========================");
+		printf("컴퓨터는 한바퀴를 돌아서 700원을 받았습니다.\n");
+		puts("=========================");
+		cj += temp;
+		cmoney += 700;
+		getch();
+	}
+	CLocal();
+	if(p[cj] == 1){
+		puts("=========================");
+		printf("%s은(는) 당신의 영토입니다.\n\n", loc);
+		pass_money = PM(2);
+		printf(
+			"토지 가격 : %d원\n"
+			"주택 가격 : %d원\n"
+			"호텔 가격 : %d원\n"
+			"합계통행료 : %d원\n\n"
+			, cj*100,(ph[cj]*(cj*30))*2, pht[cj]*ph[cj]*350,pass_money);
+		money += pass_money;
+		cmoney -= pass_money;
+		printf("통행료 %d원을 지불합니다.\n남은 돈 : [%d원]\n", pass_money,cmoney);
+		puts("=========================");
+		getch();
+	}
+	if(cmoney <= 0) {
+		system("cls");
+		puts("=========================");
+		printf("** YOU WIN **\n축하합니다!\n당신이 승자입니다!\n");
+		puts("=========================");
+		Sleep(3000);
+		exit(0);
+	}
+	puts("===========================");
+	if(p[cj] == 0){
+		strcpy(own, "빈 영토");
+	} else if(p[cj] == 1){
+		strcpy(own, "당신의 영토");
+	} else if(p[cj] == 2){
+		strcpy(own, "컴퓨터의 영토");
+	} else {
+		strcpy(own, "중립 영토");
+	}
+	printf(
+		"현재 컴퓨터의 돈 : %d원\n"
+		"현재 컴퓨터의 장소 : %s(%d)\n"
+		"영토소유자 : %s\n"
+		"주택 갯수 : %d개\n"
+		"호텔 갯수 : %d개\n"
+		,cmoney,loc,cj,own,ph[cj],pht[cj]);
+	puts("=========================");
+	getch();
+	cho = rand()%3+1;
+	cho2 = rand()%4+1;
+	puts("=========================");
+	if(cho >= 2 && cmoney >= cj*100 && own_local[cj] == 0){
+		cmoney -= cj*100;
+		p[cj]=2;
+		printf("컴퓨터는 %s(%d)를 구입했습니다!\n남은 돈 : %d원\n",loc,cj,cmoney);
+	}else if(cho2==4 && cho2+ph[cj]<4 && cmoney>=cj*120 && own_local[cj] == 2){
+		cmoney -= cj*120;
+		ph[cj]+=4;
+		printf("컴퓨터는 주택 4개를 구입했습니다!\n남은 돈 : [%d원]\n", cmoney);
+	} else if(cho2==3 && cho2+ph[cj]<4 && cmoney>=cj*90 && own_local[cj] == 2){
+		cmoney -= cj*90;
+		ph[cj]+=3;
+		printf("컴퓨터는 주택 3개를 구입했습니다!\n남은 돈 : [%d원]\n",cmoney);
+	} else if(cho2==2 && cho2+ph[cj]<4 && cmoney>=cj*60 && own_local[cj] == 2){
+		cmoney -= cj*60;
+		ph[cj]+=2;
+		printf("컴퓨터는 주택 2개를 구입했습니다!\n남은 돈 : [%d원]\n", cmoney);
+	} else if(cho2 == 1 && cho2+ph[cj]<4 && cmoney>=cj*30 && own_local[cj] == 2){
+		cmoney -= cj*30;
+		ph[cj]+=1;
+		printf("컴퓨터는 주택 1개를 구입했습니다!\n남은 돈 : [%d원]\n", cmoney);
+	} else if(ph[cj]==4&&pht[cj]==0 && cmoney>=cj*150 && own_local[cj] == 2) {
+		cmoney -= cj*150;
+		pht[cj] = 1;
+		printf("컴퓨터는 호텔을 구입했습니다!\n남은 돈 : [%d원]\n", cmoney);
+	}
+	else puts("	컴퓨터가 턴을 마쳤습니다.");
+	puts("=========================");
+	getch();
+	}

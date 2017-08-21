@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/mvc"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:beans="http://www.springframework.org/schema/beans"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xmlns:tx="http://www.springframework.org/schema/tx"
+    
+    xsi:schemaLocation="http://www.springframework.org/schema/mvc 
+        http://www.springframework.org/schema/mvc/spring-mvc.xsd
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans.xsd        
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context.xsd
+        
+        http://www.springframework.org/schema/aop 
+        http://www.springframework.org/schema/aop/spring-aop.xsd
+        http://www.springframework.org/schema/tx 
+        http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+<!-- 
+    <bean id="sampleService2" class="mybatis.service.ServiceBook">
+        <property name="session" ref="sqlSession" />
+        <property name="dao"     ref="daobook" />
+    </bean>
+    
+    <bean id="daobook" class="mybatis.dao.DaoBook">
+        <property name="session" ref="sqlSession" />
+    </bean>
+-->
+        
+    <!-- step1. annotation 설정 -->
+    <!-- Enables the Spring MVC @Controller programming model -->
+    <!-- Controller에서 스프링 어노테이션 사용할 수 있도록 하는 설정 -->
+    <!-- @RequestMapping , @ExceptionHandler 등과 같은 어노테이션을 사용하는 경우 설정해야 함  -->
+    <!-- RequestMappingHandlerMapping, RequestMappingHandlerAdapter, ExceptionHandlerExceptionResolver등을 dispatcher에서 사용하게 하는 역활  -->  
+    <!-- Spring Web 프로젝트인 경우만 사용해야 함. dispatcher가 없는 경우에 사용하면 에러 발생 -->  
+    <!-- <annotation-driven />  -->
+    
+    <!-- step2. component scan 설정 -->
+    <!-- @Controller 어노테이션이 지정된 클래스를 컨테이너에 자동으로 등록 되게 하는 설정 -->
+    <!-- base-package 속성에 자동 스캔할 패키지 경로를 입력                             -->
+    <!-- 복수의 패키지를 사용하고 싶은 경우 <context:component-scan> 태그를 복수개 작성  -->
+    <context:component-scan base-package="java23.mybatis" /> 
+    
+    <!-- step3. 데이터베이스 커넥션 설정 -->
+    <beans:bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource">
+        <beans:property name="driverClassName"   value="com.mysql.jdbc.Driver" />
+        <beans:property name="url"               value="jdbc:mysql://localhost:3306/book_db?useUnicode=true&amp;characterEncoding=utf8" />
+        <beans:property name="username"          value="root" />
+        <beans:property name="password"          value="1234" />
+             
+        <beans:property name="defaultAutoCommit"          value="true"/> 
+        <beans:property name="poolPreparedStatements"     value="true"/>
+        <beans:property name="cacheState"                 value="true"/>
+    </beans:bean>
+    
+    <!-- SessionFactory 설정 :: MyBatis가 사용할 Database에 연결하도록 설정 -->
+    <beans:bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <beans:property name="dataSource"         ref="dataSource" />
+        <!-- <beans:property name="configLocation"     value="classpath:Configuration.xml" /> -->
+        
+        <!-- mybatis 디렉토리에 xml 파일만 추가해주면 알아서 xml내의 쿼리 자동 인식 -->
+        <!-- <beans:property name="mapperLocations"    value="classpath*:mybatis/**/mapper*.xml" />  -->
+    </beans:bean>
+ 
+    <!-- MyBatis의 CRUD 템플릿을 사용할 수 있도록 설정 -->
+    <beans:bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate" scope="singleton">
+        <beans:constructor-arg index="0" ref="sqlSessionFactory" />
+    </beans:bean>   
+    
+    
+    <!-- step4. 트랜잭션 설정 :  commit, rollback -->
+    <beans:bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <beans:property name="dataSource" ref="dataSource" />
+    </beans:bean>
+
+    <!-- 실질적으로 트랜잭션 advice가 어디서 필요한지 알려줌 -->
+    <aop:config proxy-target-class="true">
+        <!-- 패키지 mybatis. 이하의 모든 메서드에 pointcut을 걸음. -->
+        <aop:pointcut id="controllerTx"  expression="execution(public * ..Service*.*(..))" />
+                
+        <aop:advisor pointcut-ref="controllerTx"  advice-ref="txAdvice"  />
+    </aop:config>
+    
+    <!-- Transaction 대상 설정 -->
+    <tx:advice id="txAdvice" transaction-manager="transactionManager">
+        <tx:attributes>
+            <tx:method name="insert*"       rollback-for="RuntimeException" />
+            <tx:method name="write*"        rollback-for="RuntimeException" />
+            <tx:method name="add*"          rollback-for="RuntimeException" />
+            <tx:method name="create*"       rollback-for="RuntimeException" />
+            <tx:method name="regist*"       rollback-for="RuntimeException" />
+            <tx:method name="set*"          rollback-for="RuntimeException" />
+
+            <tx:method name="update*"       rollback-for="RuntimeException" />
+            <tx:method name="modify*"       rollback-for="RuntimeException" />
+            <tx:method name="edit*"         rollback-for="RuntimeException" />
+            <tx:method name="change*"       rollback-for="RuntimeException" />
+
+            <tx:method name="delete*"       rollback-for="RuntimeException" />
+            <tx:method name="remove"        rollback-for="RuntimeException" />
+            <tx:method name="terminate*"    rollback-for="RuntimeException" />
+
+            <tx:method name="read*"         read-only="true" />
+            <tx:method name="select*"       read-only="true" />
+            <tx:method name="get*"          read-only="true" />
+        </tx:attributes>
+    </tx:advice>
+</beans:beans>

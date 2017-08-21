@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="view-port" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi" />
+    <title>Mobile Project</title>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/app_icon.png" />
+    <link rel="apple-touch-icon-precomposed" href="images/app_icon.png" />
+
+    <link rel="stylesheet" href="common.css">
+
+    
+    
+    
+    
+    
+
+    <!-- 구글 지도 -->
+    
+
+    <!-- GoogoleMap Asynchronously Loading the API ********************************************* -->
+    
+</head>
+
+</head>
+<body>
+
+<section id="page1" data-role="page">
+    <div w3-include-header="header.html"></div>
+
+    <div data-role="content" class="content" class="m_bg">
+        <div class="s_main">
+            <h2 class="sub_tit helv bold">LOCATION</h2>
+            <div id="map-canvas" style="height:330px;"></div>
+
+            <table width="100%" border="0" cellspacing="0" cellpadding="0" class="ad_box">
+                <colgroup>
+                    <col width="80px" />
+                    <col />
+                </colgroup>
+                <tr>
+                    <th>Address</th>
+                    <td>서울시 강남구 강남대로</td>
+                </tr>
+                <tr>
+                    <th>Tel</th>
+                    <td>
+                        <span class="tab_text">02.1234.5678</span>
+                        <input type="button" class="btn_base btn_tel" value="통화하기" onClick="location.href='tel:0212345678';" />
+                    </td>
+                </tr>
+                <tr>
+                    <th>E-mail</th>
+                    <td>
+                        <span class="tab_text">aaa@aa.co.kr</span>
+                        <input type="button" class="btn_base btn_email" value="이메일 보내기" onClick="location.href='mailto:aaa@aa.co.kr';" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+ 
+    <div w3-include-footer="footer.html"></div>
+</section>
+
+</body>
+</html>

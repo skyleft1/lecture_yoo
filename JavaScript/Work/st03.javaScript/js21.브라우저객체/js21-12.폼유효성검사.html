@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    
+</head>
+<body>
+
+<form id="fm" name="fm" action="http://www.naver.com" method="get"
+      enctype="multipart/form-data" >
+
+    <label>text</label>     <input type="text" name="text" value=""/><br/>
+    <label>password</label> <input type="password" name="password" value=""/><br/>
+    <label>textarea</label> <textarea name="textarea" rows="4" cols="30"></textarea><br/>
+    <label>radio</label>    <input type="radio" name="radio" value="f1">사과
+                            <input type="radio" name="radio" value="f2">귤
+                            <input type="radio" name="radio" value="f3">딸기<br/>
+    <label>checkbox</label> <input type="checkbox" name="checkbox" value="PC">사과
+                            <input type="checkbox" name="checkbox" value="SP">귤
+                            <input type="checkbox" name="checkbox" value="RD">딸기<br/>
+    <label>select</label>   <select name="fruits">
+                                <option value="apple">사과
+                                <option value="orange">오렌지
+                                <option value="strawberry" selected>딸기
+                            </select><br/>
+    <label>multiple select</label>  <select name="OS" multiple="multiple">
+                                        <option value="WIN">WIN
+                                        <option value="MAC">MAC
+                                        <option value="UNIX" selected>UNIX
+                                    </select><br/>
+    <label>file</label>     <input type=file name="file"><br/>
+    <label>button</label>   <input type="button" name="button" value="버튼" /><br/>
+    <label>submit</label>   <input type="submit" value="송신" id="submit" /><br/>
+    <label>reset</label>    <input type="reset" value="취소" /><br/>
+</form>
+
+</body>
+</html>
+
+

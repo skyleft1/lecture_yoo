@@ -1,0 +1,23 @@
+body {
+	margin: 0;
+	padding: 0;
+	background: #000000;
+	font-size: 11px;
+/*	text-align: justify; */
+	color: #C0C0C0;
+}
+
+#outline {
+	width: 800px;
+	margin: 0 auto;
+	padding: 0;
+	border:#C0C0C0 solid 1px;
+	height:1000px;
+	}
+
+.main {
+  width: 799px;
+  height:400px ;
+  top:0px;
+  position:fixed;
+}

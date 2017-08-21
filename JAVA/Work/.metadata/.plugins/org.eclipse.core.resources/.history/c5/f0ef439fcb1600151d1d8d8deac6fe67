@@ -1,0 +1,598 @@
+package com.lecture.database.dao;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
+import org.apache.ibatis.session.SqlSession;
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.lecture.database.model.ModelArticle;
+import com.lecture.database.model.ModelAttachFile;
+import com.lecture.database.model.ModelBoard;
+import com.lecture.database.model.ModelComment;
+
+public class DaoBoard extends BaseDao implements IBoard {
+    
+    // SLF4J Logging
+    protected static Logger logger = LoggerFactory.getLogger(BaseDao.class);
+
+    public static SqlSessionFactory sqlMapper = MyBatisManager.getInstance();
+    
+	/*
+	 * 게시판 목록
+	 */
+    /* (non-Javadoc)
+     * @see com.lecture.database.dao.IBoard#getArticleList(java.lang.String, java.lang.String, int, int)
+     */
+    @Override
+    public List<ModelArticle> getArticleList(String boardCd, String searchWord, int start, int end) {
+	      
+        List<ModelArticle> list = new ArrayList<ModelArticle>();
+        
+        SqlSession session = sqlMapper.openSession();
+        try {
+            Integer startRownum = start;
+            Integer endRownum = end;
+            HashMap<String, String> hashmap = new HashMap<String, String>();
+            
+            hashmap.put("boardCd"   , boardCd);
+            hashmap.put("searchWord", searchWord);
+            hashmap.put("start"     , startRownum.toString());
+            hashmap.put("end"       , endRownum.toString());
+            
+            list = session.selectList("com.lecture.database.mapper.mapperBoard.getArticleList", hashmap);
+            
+        } catch (Exception e){
+            logger.error(e.toString());
+        } finally {
+            session.close();
+        }
+        
+        return list;
+	}
+	
+	/*
+	 * 특정 게시판의 총 게시물 갯수 구하기
+	 */
+	/* (non-Javadoc)
+     * @see com.lecture.database.dao.IBoard#getTotalRecord(java.lang.String, java.lang.String)
+     */
+	@Override
+    public int getTotalRecord(String boardCd, String searchWord) {
+	    
+        int result = 0 ;        
+        
+        SqlSession session = sqlMapper.openSession();
+        try {
+            HashMap<String,String> hashmap = new HashMap<String,String>();
+            
+            hashmap.put("boardCd", boardCd);
+            hashmap.put("searchWord", searchWord);
+            
+            result = session.selectOne("com.lecture.database.mapper.mapperBoard.getTotalRecord", hashmap);
+            session.commit();
+        } catch (Exception e){
+            
+            logger.error(e.toString());
+            
+            throw e;
+        } finally {
+            session.close();
+        }
+        
+        return result; 
+	}
+
+	/*
+	 * 새로운 게시글  추가
+	 */
+	/* (non-Javadoc)
+     * @see com.lecture.database.dao.IBoard#insert(com.lecture.database.model.ModelArticle)
+     */
+	@Override
+    public int insert(ModelArticle article) {		
+
+        int result = 0 ;        
+        
+        SqlSession session = sqlMapper.openSession();
+        try {
+            result = session.insert("com.lecture.database.mapper.mapperBoard.insert", article);
+            session.commit();
+        } catch (Exception e){
+            session.rollback();
+            
+            logger.error(e.toString());
+            
+            throw e;
+        } finally {
+            session.close();
+        }
+        
+        return result; 
+	}
+
+	/*
+	 * 첨부파일
+	 */
+	/* (non-Javadoc)
+     * @see com.lecture.database.dao.IBoard#getAttachFile(int)
+     */
+	@Override
+    public ModelAttachFile getAttachFile(int attachFileNo) {
+        
+	    ModelAttachFile result = null;        
+        
+        SqlSession session = sqlMapper.openSession();
+        try {
+            
+            result = (ModelAttachFile)session.selectOne("com.lecture.database.mapper.mapperBoard.getAttachFile", attachFileNo);
+            session.commit();
+        } catch (Exception e){
+            
+            logger.error(e.toString());
+            
+            throw e;
+        } finally {
+            session.close();
+        }
+        
+        return result; 
+	}
+
+	/*
+	 * 새로운 첨부파일 추가 
+	 */
+	/* (non-Javadoc)
+     * @see com.lecture.database.dao.IBoard#insertAttachFile(com.lecture.database.model.ModelAttachFile)
+     */
+	@Override
+    public int insertAttachFile(ModelAttachFile attachFile) {
+
+        int result = 0 ;        
+        
+        SqlSession session = sqlMapper.openSession();
+        try {
+            result = session.insert("com.lecture.database.mapper.mapperBoard.insertAttachFile", attachFile);
+            session.commit();
+        } catch (Exception e){
+            session.rollback();
+            
+            logger.error(e.toString());
+            
+            throw e;
+        } finally {
+            session.close();
+        }
+        
+        return result; 
+	}
+	
+	/*
+	 * 게시글 수정
+	 */
+	/* (non-Javadoc)
+     * @see com.lecture.database.dao.IBoard#update(com.lecture.database.model.ModelArticle)
+     */
+	@Override
+    public int update(ModelArticle article) {
+
+        int result = 0 ;            
+        SqlSession session = sqlMapper.openSession();
+        
+        try {
+            result = session.update("com.lecture.database.mapper.mapperBoard.update", article);
+            session.commit();            
+        } catch (Exception e){
+            session.rollback();
+            
+            logger.error(e.toString());
+            
+            throw e;
+        } finally {
+            session.close();
+        }
+                
+        return result; 
+	}
+	
+	/*
+	 * 게시글 삭제
+	 */
+	/* (non-Javadoc)
+     * @see com.lecture.database.dao.IBoard#delete(int)
+     */
+	@Override
+    public int delete(int articleNo) {
+		
+        int result = 0 ;  
+        
+        SqlSession session = sqlMapper.openSession();
+        try {
+            result = session.delete("com.lecture.database.mapper.mapperBoard.delete", articleNo);
+            session.commit();            
+        } catch (Exception e){
+            session.rollback();
+            
+            logger.error(e.toString());
+            
+            throw e;
+        } finally {
+            session.close();
+        }
+           
+        return result; 
+	}
+	
+	/*
+	 * 조회수 증가
+	 */
+	/* (non-Javadoc)
+     * @see com.lecture.database.dao.IBoard#increaseHit(int)
+     */
+	@Override
+    public int increaseHit(int articleNo) {
+
+        int result = 0 ;        
+        
+        SqlSession session = sqlMapper.openSession();
+        try {
+            result = session.insert("com.lecture.database.mapper.mapperBoard.increaseHit", articleNo);
+            session.commit();
+        } catch (Exception e){
+            session.rollback();
+            
+            logger.error(e.toString());
+            
+            throw e;
+        } finally {
+            session.close();
+        }
+        
+        return result; 
+	}
+	
+	/*
+	 * 게시글 상세보기
+	 */
+	/* (non-Javadoc)
+     * @see com.lecture.database.dao.IBoard#getArticle(int)
+     */
+	@Override
+    public ModelArticle getArticle(int articleNo) {
+        
+		ModelArticle result = null;        
+        
+        SqlSession session = sqlMapper.openSession();
+        try {
+            
+            result = (ModelArticle)session.selectOne("com.lecture.database.mapper.mapperBoard.getArticle", articleNo);
+            session.commit();
+        } catch (Exception e){
+            
+            logger.error(e.toString());
+            
+            throw e;
+        } finally {
+            session.close();
+        }
+        
+        return result;
+	}
+	
+	/*
+	 * 다음글 보기
+	 */
+	/* (non-Javadoc)
+     * @see com.lecture.database.dao.IBoard#getNextArticle(int, java.lang.String, java.lang.String)
+     */
+	@Override
+    public ModelArticle getNextArticle(int articleNo, String boardCd, String searchWord) {
+		
+        ModelArticle result = null;        
+        
+        SqlSession session = sqlMapper.openSession();
+        try {
+            HashMap<String, String> hashmap = new HashMap<String, String>();
+            Integer no = articleNo;
+            hashmap.put("articleNo", no.toString());
+            hashmap.put("boardCd", boardCd);
+            hashmap.put("searchWord", searchWord);
+            
+            result = (ModelArticle)session.selectOne("com.lecture.database.mapper.mapperBoard.getNextArticle", hashmap);
+            session.commit();
+        } catch (Exception e){
+            
+            logger.error(e.toString());
+            
+            throw e;
+        } finally {
+            session.close();
+        }
+        
+        return result;
+	}
+	
+	/*
+	 * 이전글 보기
+	 */
+	/* (non-Javadoc)
+     * @see com.lecture.database.dao.IBoard#getPrevArticle(int, java.lang.String, java.lang.String)
+     */
+	@Override
+    public ModelArticle getPrevArticle(int articleNo, String boardCd, String searchWord) {
+        
+		ModelArticle result = null;        
+        
+        SqlSession session = sqlMapper.openSession();
+        try {
+            HashMap<String, String> hashmap = new HashMap<String, String>();
+            Integer no = articleNo;
+            hashmap.put("articleNo", no.toString());
+            hashmap.put("boardCd", boardCd);
+            hashmap.put("searchWord", searchWord);
+            
+            result = (ModelArticle)session.selectOne("com.lecture.database.mapper.mapperBoard.getPrevArticle", hashmap);
+            session.commit();
+        } catch (Exception e){
+            
+            logger.error(e.toString());
+            
+            throw e;
+        } finally {
+            session.close();
+        }
+        
+        return result; 
+	}
+	
+	/*
+	 * 게시글의 첨부파일 리스트
+	 */
+    /* (non-Javadoc)
+     * @see com.lecture.database.dao.IBoard#getAttachFileList(int)
+     */
+    @Override
+    public List<ModelAttachFile> getAttachFileList(int articleNo) {
+		
+        List<ModelAttachFile> list = new ArrayList<ModelAttachFile>();
+        
+        SqlSession session = sqlMapper.openSession();
+        try {
+            list = session.selectList("com.lecture.database.mapper.mapperBoard.getAttachFileList", articleNo);
+            
+        } catch (Exception e){
+            
+            logger.error(e.toString());
+            
+            throw e;
+        } finally {
+            session.close();
+        }
+        
+        return list;		
+	}
+	
+	/*
+	 * 첨부파일 삭제
+	 */
+	/* (non-Javadoc)
+     * @see com.lecture.database.dao.IBoard#deleteFile(int)
+     */
+	@Override
+    public int deleteFile(int attachFileNo) {
+
+        int result = 0 ;  
+        
+        SqlSession session = sqlMapper.openSession();
+        try {
+            result = session.delete("com.lecture.database.mapper.mapperBoard.deleteFile" ,attachFileNo);
+            session.commit();            
+        } catch (Exception e){
+            session.rollback();
+            
+            logger.error(e.toString());
+            
+            throw e;
+        } finally {
+            session.close();
+        }
+           
+        return result;
+	}
+	
+	/*
+	 * 게시판이름 구하기
+	 */
+	/* (non-Javadoc)
+     * @see com.lecture.database.dao.IBoard#getBoardNm(java.lang.String)
+     */
+	@Override
+    public String getBoardNm(String boardCd) {		
+        
+        String result = null;        
+        
+        SqlSession session = sqlMapper.openSession();
+        try {            
+            result = (String)session.selectOne("com.lecture.database.mapper.mapperBoard.getBoardNm", boardCd);
+            session.commit();
+        } catch (Exception e){
+            
+            logger.error(e.toString());
+            
+            throw e;
+        } finally {
+            session.close();
+        }
+        
+        return result; 
+	}
+	
+	/*
+	 * 게시판종류 리스트 구하기
+	 */
+    /* (non-Javadoc)
+     * @see com.lecture.database.dao.IBoard#getBoardList()
+     */
+    @Override
+    public List<ModelBoard> getBoardList() {
+		
+        List<ModelBoard> list = new ArrayList<ModelBoard>();
+        
+        SqlSession session = sqlMapper.openSession();
+        try {
+            list = session.selectList("com.lecture.database.mapper.mapperBoard.getBoardList");
+            
+        } catch (Exception e){
+            
+            logger.error(e.toString());
+            
+            throw e;
+        } finally {
+            session.close();
+        }
+        
+        return list;
+	}
+	
+	/*
+	 * 덧글쓰기
+	 */
+	/* (non-Javadoc)
+     * @see com.lecture.database.dao.IBoard#insertComment(com.lecture.database.model.ModelComment)
+     */
+	@Override
+    public int insertComment(ModelComment comment) {
+
+        int result = 0 ;        
+        
+        SqlSession session = sqlMapper.openSession();
+        try {
+            result = session.insert("com.lecture.database.mapper.mapperBoard.insertComment",comment);
+            session.commit();
+        } catch (Exception e){
+            session.rollback();
+            
+            logger.error(e.toString());
+            
+            throw e;
+        } finally {
+            session.close();
+        }
+        
+        return result;  
+	}
+	
+	/*
+	 * 덧글수정
+	 */
+	/* (non-Javadoc)
+     * @see com.lecture.database.dao.IBoard#updateComment(com.lecture.database.model.ModelComment)
+     */
+	@Override
+    public int updateComment(ModelComment comment) {
+
+        int result = 0 ;            
+        SqlSession session = sqlMapper.openSession();
+        
+        try {
+            result = session.update("com.lecture.database.mapper.mapperBoard.updateComment", comment);
+            session.commit();            
+        } catch (Exception e){
+            session.rollback();
+            
+            logger.error(e.toString());
+            
+            throw e;
+        } finally {
+            session.close();
+        }
+                
+        return result; 
+	}
+	
+	/*
+	 * 덧글삭제
+	 */
+	/* (non-Javadoc)
+     * @see com.lecture.database.dao.IBoard#deleteComment(int)
+     */
+	@Override
+    public int deleteComment(int commentNo) {
+	    
+        int result = 0 ;  
+        
+        SqlSession session = sqlMapper.openSession();
+        try {
+            result = session.delete("com.lecture.database.mapper.mapperBoard.deleteComment", commentNo);
+            session.commit();            
+        } catch (Exception e){
+            session.rollback();
+            
+            logger.error(e.toString());
+            
+            throw e;
+        } finally {
+            session.close();
+        }
+           
+        return result;
+	}
+	
+	/*
+	 * 덧글가져오기
+	 */
+	/* (non-Javadoc)
+     * @see com.lecture.database.dao.IBoard#getComment(int)
+     */
+	@Override
+    public ModelComment getComment(int commentNo) {
+        
+		ModelComment result = null;        
+        
+        SqlSession session = sqlMapper.openSession();
+        try {            
+            result = (ModelComment)session.selectOne("com.lecture.database.mapper.mapperBoard.getComment", commentNo);
+            session.commit();
+        } catch (Exception e){
+            
+            logger.error(e.toString());
+            
+            throw e;
+        } finally {
+            session.close();
+        }
+        
+        return result; 
+	}
+	
+	/*
+	 * 게시글의 덧글리스트 구하기
+	 */
+    /* (non-Javadoc)
+     * @see com.lecture.database.dao.IBoard#getCommentList(int)
+     */
+    @Override
+    public List<ModelComment> getCommentList(int articleNo) {
+        
+        List<ModelComment> list = new ArrayList<ModelComment>();
+        
+        SqlSession session = sqlMapper.openSession();
+        try {
+            list = session.selectList("com.lecture.database.mapper.mapperBoard.getCommentList", articleNo);
+            
+        } catch (Exception e){
+            
+            logger.error(e.toString());
+            
+            throw e;
+        } finally {
+            session.close();
+        }
+        
+        return list;
+	}
+	
+}

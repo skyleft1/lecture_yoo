@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>margin을 포함한 너비와 높이 값 알아내기</title>
+    <style>
+        div{ width: 70px; height: 50px;
+             background-color: red; cursor: pointer;
+
+            border : 10px dotted blue;
+            padding: 20px;
+            margin: 30px;
+        }
+        span { display :block }
+    </style>
+    <script src='../jquery-3.1.0.js'></script>
+    <script>
+
+        $(document).ready(function() {
+            $('.width').click(function (e) {
+                $('#result2').text($('div').width());
+                });
+            $('.innerWidth').click(function (e) {
+                $('#result2').text($('div').innerWidth());
+            });
+            $('.outerWidth').click(function (e) {
+                $('#result2').text($('div').outerWidth());
+            });
+            $('.outerWidth_true').click(function (e){
+                $('#result2').text($('div').outerWidth(true));
+            });
+        });
+
+    </script>
+    
+</head>
+<body>
+    <div></div>
+    <span id="result1">  </span>
+    <span id="result2"></span>
+    <input type='button' class='width' value='width'/>
+    <input type='button' class='innerWidth' value='innerWidth'/>
+    <input type='button' class='outerWidth' value='outerWidth'/>
+    <input type='button' class='outerWidth_true' value='outerWidth_true'/>
+</body>
+</html>
+

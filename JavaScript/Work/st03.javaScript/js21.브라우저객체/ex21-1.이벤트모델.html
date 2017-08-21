@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+    <input id = 'btn11' type='button' value='고전 이벤트 모델임'>
+    <input class = 'btn22' type='button' value='표준 이벤트 모델임'>
+    <a class = 'btn22' href = 'http://www.naver.com'> 네이버</a>
+    <p name = 'name'> 고전 이벤트 모델</p>
+    <p name = 'name'> 고전 이벤트 모델</p>
+    <p name = 'name'> 고전 이벤트 모델</p>
+    <p name = 'name'> 고전 이벤트 모델</p>
+    <p name = 'name'> 고전 이벤트 모델</p>
+
+<script>
+    window.onload = function () {
+        var btn = document.getElementById('btn11');
+        btn.onclick = function (event) {
+            window.alert('버튼이 클릭됨');
+        }
+        var btn2 = document.getElementsByClassName('btn22');
+        btn2[1].onclick = function (event) {
+            window.alert('aaa 클릭됨');
+            this.onclick = null;// onclick 리스너 제거 역할
+            return false; // 이벤트 취소 역할
+        }
+        var aa = document.getElementsByName('name');
+
+        for (var i in aa) {
+            aa[i].onclick = function (event) {
+                window.alert('name 클릭됨');
+            }
+        }
+        for (var i = 0; i < aa.length; i++) {
+            aa[i].count = i;
+            aa[i].onclick = function (event) {
+                window.alert(this.count + 'name 클릭됨');
+            }
+        }
+    }
+
+</script>
+
+</body>
+</html>
+

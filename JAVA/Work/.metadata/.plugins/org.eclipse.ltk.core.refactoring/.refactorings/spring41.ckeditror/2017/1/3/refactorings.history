@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename package &apos;com.spring22.jstl&apos; to &apos;com.spring13.ckeditor&apos;&#x0D;&#x0A;- Original project: &apos;spring13.ckeditror&apos;&#x0D;&#x0A;- Original element: &apos;spring13.ckeditror/src/main/java/com.spring22.jstl&apos;&#x0D;&#x0A;- Renamed element: &apos;spring13.ckeditror/src/main/java/com.spring13.ckeditor&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename package &apos;com.spring22.jstl&apos;" flags="589830" hierarchical="false" id="org.eclipse.jdt.ui.rename.package" input="/src\/main\/java&lt;com.spring22.jstl" name="com.spring13.ckeditor" qualified="false" references="true" stamp="1484475192405" textual="false" version="1.0"/>
+</session>

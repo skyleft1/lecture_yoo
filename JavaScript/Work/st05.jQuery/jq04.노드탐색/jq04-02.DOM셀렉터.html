@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body { margin:10px; }
+        div,span { background: #FFF; padding: 10px; margin: 10px; }
+    </style>
+    <script src='../jquery-3.1.0.js'></script>
+
+    <script>
+        var MYAPP = {};
+        MYAPP.init = function (e) {
+            $('*').css('border', '');
+        }
+
+        $(document).ready(function() {
+            $('#children').click(function () {
+                MYAPP.init();
+//                $('#siteUrl').children().css('border', '2px red dotted');
+                $('#siteUrl > li').css('border', '2px red dotted');
+            });
+            $('#descendant').click(function () {
+                MYAPP.init();
+                $('#siteUrl li').css('border', '2px red dotted')
+            });
+            $('#parent').click(function () {
+                MYAPP.init();
+                $('#siteUrl').parent().css('border', '2px red dotted')
+            });
+            $('#ancestor').click(function () {
+                MYAPP.init();
+                $('#siteUrl').parents().css('border', '2px red dotted')
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <h2>DOM Selector</h2>
+
+    <div>
+        <h3>첫번째 ul</h3>
+        <ul class="siteUrl">
+            <li>Sqler : http://www.sqler.com</li>
+            <li>jQuery : http://jquery.com</li>
+            <li>
+                <ul>
+                    <li>Blog : http://www.hows.kr</li>
+                    <li>Community : http://www.hoons.kr</li>
+                </ul>
+            </li>
+            <li>Items</li>
+            <li>Items</li>
+            <li>Items</li>
+        </ul>
+    </div>
+
+    <div class="aa">
+        <h3>두번째 ul</h3>
+        <ul  id="siteUrl"  class="siteUrl">
+            <li>Sqler : http://www.sqler.com</li>
+            <li>jQuery : http://jquery.com</li>
+            <li>
+                <ul>
+                    <li>Blog : http://www.hows.kr</li>
+                    <li>Community : http://www.hoons.kr</li>
+                </ul>
+            </li>
+            <li>Items</li>
+            <li>Items</li>
+            <li>Items</li>
+        </ul>
+    </div>
+
+
+    <div>
+        <h3>세번째 ul</h3>
+        <ul  class="siteUrl">
+            <li>Sqler : http://www.sqler.com</li>
+            <li>jQuery : http://jquery.com</li>
+            <li>
+                <ul>
+                    <li>Blog : http://www.hows.kr</li>
+                    <li>Community : http://www.hoons.kr</li>
+                </ul>
+            </li>
+            <li>Items</li>
+            <li>Items</li>
+            <li>Items</li>
+        </ul>
+    </div>
+    <hr>
+    <input id='children'   type='button' value='자식 li 찾기'>
+    <input id='descendant' type='button' value='자손 li 찾기'>
+    <input id='parent'     type='button' value='부모 찾기'>
+    <input id='ancestor'   type='button' value='조상 찾기'>
+</body>
+</html>

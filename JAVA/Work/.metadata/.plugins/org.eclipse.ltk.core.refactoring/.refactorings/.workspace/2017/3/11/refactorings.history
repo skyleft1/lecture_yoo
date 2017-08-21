@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;spring71.webflow&apos; to &apos;spring81.webflow&apos;" description="Rename resource &apos;spring71.webflow&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/spring71.webflow" name="spring81.webflow" stamp="1489648391014" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;spring61.bbs&apos; to &apos;spring71.bbs&apos;" description="Rename resource &apos;spring61.bbs&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/spring61.bbs" name="spring71.bbs" stamp="1489648399972" updateReferences="true"/>
+</session>

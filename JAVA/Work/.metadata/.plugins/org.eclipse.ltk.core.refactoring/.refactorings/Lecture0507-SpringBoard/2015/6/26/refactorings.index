@@ -1,0 +1,36 @@
+1435312277032	Delete elements
+1435312747031	Delete element
+1435315315160	Delete element
+1435315470864	Rename package 'com.lecture.database.mapper'
+1435315686400	Copy file
+1435317440620	Copy compilation unit
+1435317452352	Rename type 'IBoard'
+1435317968183	Rename package 'com.lecture.spring.database.mapper'
+1435318041094	Move 'mapperArticle.xml' to '올빼미'
+1435360231928	Copy compilation unit
+1435391323119	Copy file
+1435392092497	Rename resource 'list.jsp'
+1435392199379	Rename resource 'writeform.jsp'
+1435392285710	Rename resource 'articleWriteform.jsp'
+1435392387453	Rename resource 'view.jsp'
+1435392486812	Rename resource 'modifyform.jsp'
+1435392517778	Rename resource 'articlemodifyform.jsp'
+1435392624654	Rename resource 'articleView.jsp'
+1435392668537	Rename resource 'articleWrite.jsp'
+1435392740703	Rename resource 'articleList.jsp'
+1435392765943	Rename resource 'boardList.jsp'
+1435393466654	Copy files
+1435393476903	Rename resource 'Copy of articlemodify.jsp'
+1435393483034	Rename resource 'Copy of articleview.jsp'
+1435393488806	Rename resource 'Copy of articlewrite.jsp'
+1435394934605	Delete element
+1435442652234	Extract interface 'IBBB'
+1435443581028	Delete element
+1435446457004	Rename method 'removeArticle'
+1435446490122	Rename method 'modifyArticle'
+1435446505208	Rename method 'addAttachFile'
+1435446518125	Rename method 'addArticle'
+1435446553864	Rename method 'addComment'
+1435446562803	Rename method 'modifyComment'
+1435446570463	Rename method 'removeComment'
+1435446600321	Rename method 'getListItemNo'

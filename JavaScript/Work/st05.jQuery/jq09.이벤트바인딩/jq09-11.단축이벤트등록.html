@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        ul { float:left; margin:5px}
+        #id2 { width: 100px; height: 100px; margin-left: 50px; }
+        div,span { width: 70px; height: 50px; float:left;
+            background-color: red; cursor: pointer; margin: 5px
+        }
+        hr { clear:both; }
+    </style>
+
+    <script src='../jquery-3.1.0.js'></script>
+    <script>
+        $(document).ready(function () {
+            $('#image3').click(function (e) {
+                var aa1 = $('#image3').attr('href');
+                $('#img2').attr('src', aa1);
+                return false;
+            });
+            $('#image4').click(function (e) {
+                var aa2 = $('#image4').attr('href');
+                $('#img2').attr('src', aa2);
+                return false;
+            });
+
+            $('#but1').mouseenter(function (e) {
+                $(this).attr('src', 'images/but2.gif');
+            }).mouseleave(function(){
+                $(this).attr('src', 'images/but1.gif');
+            });
+            $('#img-swap').mouseenter(function (e) {
+                $(this).attr('src', 'images/img_swap_on.png');
+            }).mouseleave(function(){
+                $(this).attr('src', 'images/img_swap_off.png');
+            });
+
+            $('span').mouseover(function (e) {
+                $(this).css('background-color', 'yellow');
+            });
+            $('span').mousedown(function (e) {
+                $(this).css('background-color', 'blue');
+            });
+            $('span').mouseup(function (e) {
+                $(this).css('background-color', 'pink');
+            });
+            $('span').mouseout(function (e) {
+                $(this).css('background-color', 'red');
+            });
+            $("#sel").change(function(){
+                $('#img').attr('src', $(this).val());
+            });
+            $('#ID').focusin(function (e) {
+                $(this).css('border', '3px blue dotted');
+            }).focusout(function (e) {
+                $(this).css('border', '');
+            });
+        });
+    </script>
+    
+</head>
+<body>
+<pre>
+글자를 클릭하면 href 에 있는 값을 "img2"영역 에 나오게 하시오
+</pre>
+<ul>
+    <li><a id="image3" href="images/image3.jpg"> 강아지 사진 </a></li>
+    <li><a id="image4" href="images/image4.jpg"> 고양이 사진 </a></li>
+</ul>
+<hr>
+
+<pre>
+이미지 위에 마우스를 올리거나 내리면
+</pre>
+<img src="images/but1.gif" id="but1" />
+<img src="images/img_swap_off.png" id="img-swap">
+<hr>
+<pre>
+박스에 mouseover 시 background를 yellow로
+박스에 mousedown 시 background를 blue로
+박스에 mouseup   시 background를 pink로
+박스에 mouseout  시 background를 red로
+</pre>
+</span>
+<span></span>
+<span></span>
+<span></span>
+<hr>
+
+<select id="sel">
+    <option value="./images/strawberry.gif">딸기
+    <option value="./images/banana.gif">바나나
+    <option value="./images/apple.gif" selected>사과
+</select>
+<img id="img" >
+<hr>
+
+<input TYPE="text" id="ID">
+<hr>
+
+<img id="img2"  />
+</body>
+</html>
